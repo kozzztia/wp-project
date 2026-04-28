@@ -1,3 +1,4 @@
 <?php get_header(); ?>
-<h1>auto deploy v3</h1>
+<h1>hello   world</h1>
+<p>Lorem ipsum dolor sit amet.</p>
 <?php get_footer(); ?>
