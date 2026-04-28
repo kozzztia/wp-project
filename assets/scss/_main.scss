@@ -1,0 +1,42 @@
+html {
+	scroll-behavior: smooth;
+}
+
+main {
+	z-index: 100;
+	position: relative;
+	overflow: clip;
+	flex: 1 0 auto;
+}
+
+body {
+	background: grey;
+	font-family: sans-serif;
+	font-weight: 500;
+	line-height: 1.6;
+	position: relative;
+	display: flex;
+	overflow-x: hidden;
+	align-items: stretch;
+	flex-direction: column;
+	justify-content: space-between;
+	height: 100%;
+	min-height: 100vh;
+	min-height: 100dvh;
+	text-align: left;
+	font-feature-settings: 'pnum' on, 'lnum' on;
+	-webkit-font-smoothing: antialiased;
+	text-rendering: optimizeLegibility;
+	font-optical-sizing: auto;
+
+	&.headroom--not-top {
+		.header-wrapper {
+		}
+	}
+
+	&.headroom--pinned {
+	}
+
+	&.headroom--unpinned {
+	}
+}
