@@ -3,15 +3,14 @@ html {
 }
 
 main {
-	z-index: 100;
 	position: relative;
+	z-index: 100;
 	overflow: clip;
 	flex: 1 0 auto;
 }
 
 body {
-	background: grey;
-	font-family: sans-serif;
+	font-family: var(--primary-font), sans-serif;
 	font-weight: 500;
 	line-height: 1.6;
 	position: relative;
@@ -24,6 +23,8 @@ body {
 	min-height: 100vh;
 	min-height: 100dvh;
 	text-align: left;
+	color: var(--color-black);
+	background: var(--color-white);
 	font-feature-settings: 'pnum' on, 'lnum' on;
 	-webkit-font-smoothing: antialiased;
 	text-rendering: optimizeLegibility;
@@ -36,5 +37,17 @@ body {
 	}
 
 	&.headroom--unpinned {
+	}
+}
+
+.header-wrapper {
+	.header {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		max-width: calc(var(--primary-width) + (var(--primary-padding) * 2));
+		height: var(--header-height);
+		padding: var(--primary-padding);
+		margin-inline: auto;
 	}
 }

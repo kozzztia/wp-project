@@ -1,7 +1,12 @@
-<?php get_header(); ?>
-<h1>Hello world ! v10.0</h1>
-<p>Lorem ipsum dolor sit amet.</p>
-<p>Lorem ipsum dolor sit amet.1</p>
-<p>Lorem ipsum dolor sit amet.2</p>
-<p>clear merge  message</p>
-<?php get_footer(); ?>
+<?php
+    get_template_part('views/overall/layout');
+    function render_content() {
+
+    //content
+
+    echo '<section class="custom-block">';
+    echo '<h2>Заголовок блока</h2>';
+    echo '<p>Тут будет твой текст или динамика из WP.</p>';
+    echo '</section>';
+}
+
