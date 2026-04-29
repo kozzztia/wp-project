@@ -2,13 +2,6 @@ html {
 	scroll-behavior: smooth;
 }
 
-main {
-	position: relative;
-	z-index: 100;
-	overflow: clip;
-	flex: 1 0 auto;
-}
-
 body {
 	font-family: var(--primary-font), sans-serif;
 	font-weight: 500;
@@ -40,13 +33,39 @@ body {
 	}
 }
 
+main {
+	position: relative;
+	z-index: 100;
+	overflow: clip;
+	flex: 1 0 auto;
+	padding-top: var(--header-height);
+}
+
 .header-wrapper {
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	z-index: 1000;
+
 	.header {
 		display: flex;
 		align-items: center;
 		justify-content: space-between;
 		max-width: calc(var(--primary-width) + (var(--primary-padding) * 2));
 		height: var(--header-height);
+		padding: var(--primary-padding);
+		margin-inline: auto;
+	}
+}
+
+.footer-wrapper {
+	.footer{
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		max-width: calc(var(--primary-width) + (var(--primary-padding) * 2));
+		height: auto;
 		padding: var(--primary-padding);
 		margin-inline: auto;
 	}

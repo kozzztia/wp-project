@@ -1,3 +1,3 @@
 <footer class="footer-wrapper">
-    <div class="footer-inner">footer</div>
+    <div class="footer">footer</div>
 </footer>
