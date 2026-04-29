@@ -1,11 +1,16 @@
+<?php $fields = $args['fields'] ?? null;
+    $style = $fields['style'] ?? '';
+    $class = $fields['class'] ?? '';
+?>
 
-    <div class="customWrapper example-wrapper animate">
-        <div class="customBlock example"
-             style="
-                 /*background-image: url('*/<?php //echo get_template_directory_uri() . '/assets/img/example-bg.webp' ?>/*')*/
-                 ">
-            <div class="example-inner">
-                example
-            </div>
+<?php if (!empty($fields)): ?>
+<div class="customWrapper example-wrapper" >
+    <div class="customBlock example <?=$class = $fields['class'] ?? ''?>"
+        <?php echo $style ? 'style="'.$style.'"' : ''; ?>
+    >
+        <div class="example-inner">
+            example
         </div>
     </div>
+</div>
+<?php endif;?>

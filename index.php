@@ -1,9 +1,18 @@
 <?php
-    get_template_part('views/overall/layout');
-    function render_content() {
+get_template_part('views/overall/layout');
+function render_content()
+{
 
     //content
 
-        get_template_part('views/blocks/example');
+    get_template_part('views/blocks/example', null,
+        [
+            'fields' => [
+                'type' => 'block',
+                'style' => 'color : red',
+                'class' => 'example',
+            ],
+        ]
+    );
 }
 
