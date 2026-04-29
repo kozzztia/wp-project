@@ -2,7 +2,7 @@
 
 
 function get_version (){
-    return date("Y-m-d H:i:s");
+    return time();
 }
 
 function debian_scripts() {
