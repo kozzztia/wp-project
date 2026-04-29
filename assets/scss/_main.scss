@@ -14,7 +14,7 @@ body {
 	justify-content: space-between;
 	height: 100%;
 	min-height: 100vh;
-	min-height: 100dvh;
+	min-height: 100svh;
 	text-align: left;
 	color: var(--color-black);
 	background: var(--color-white);
@@ -24,6 +24,7 @@ body {
 	font-optical-sizing: auto;
 
 	&.headroom--not-top {
+
 	}
 
 	&.headroom--pinned {
@@ -66,6 +67,15 @@ main {
 		justify-content: space-between;
 		max-width: calc(var(--primary-width) + (var(--primary-padding) * 2));
 		height: auto;
+		padding: var(--primary-padding);
+		margin-inline: auto;
+	}
+}
+
+.customWrapper{
+	width: 100%;
+	.customBlock{
+		max-width: calc(var(--secondary-width) + (var(--primary-padding) * 2));
 		padding: var(--primary-padding);
 		margin-inline: auto;
 	}
