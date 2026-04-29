@@ -1,7 +1,10 @@
 
 .example-wrapper{
-
 	.example{
-
+		&-inner{
+			max-width: var(--secondary-width);
+			margin-inline: auto;
+			padding: var(--primary-padding);
+		}
 	}
 }

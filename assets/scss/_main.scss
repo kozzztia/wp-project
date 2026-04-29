@@ -74,9 +74,9 @@ main {
 
 .customWrapper{
 	width: 100%;
+	padding-inline: var(--primary-inline-padding);
 	.customBlock{
-		max-width: calc(var(--secondary-width) + (var(--primary-padding) * 2));
-		padding: var(--primary-padding);
+		max-width: calc(var(--primary-width) + (var(--primary-padding) * 2));
 		margin-inline: auto;
 	}
 }

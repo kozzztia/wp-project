@@ -1,6 +1,5 @@
 (function ($) {
     $(document).ready(function () {
-
         /** header */
         $("body").headroom({
             tolerance: {
@@ -8,6 +7,8 @@
                 down: 16
             }
         });
+
+        console.log('go');
 
         /** textarea autogrow */
         if ($('textarea').length) {
@@ -18,5 +19,7 @@
                 thisEl.css("height", thisTextAreaHeight);
             });
         }
+
+
     });
 })(jQuery);
