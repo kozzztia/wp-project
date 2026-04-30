@@ -4,7 +4,7 @@ function render_content()
 {
 
     //content
-    echo "page";
+    echo get_title();
     get_template_part('views/blocks/example', null,
         [
             'fields' => [
