@@ -4,12 +4,12 @@ function render_content()
 {
 
     //content
-    echo "index";
+    echo "page";
     get_template_part('views/blocks/example', null,
         [
             'fields' => [
                 'type' => 'block',
-                'style' => 'color : red',
+                'style' => 'color : yellow',
                 'class' => 'example',
             ],
         ]
