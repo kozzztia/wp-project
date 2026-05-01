@@ -4,12 +4,12 @@ function render_content()
 {
 
     //content
-    get_template_part('views/blocks/example', null,
+    get_template_part('views/blocks/hero', null,
         [
             'fields' => [
                 'type' => 'block',
                 'style' => 'color : green',
-                'class' => 'example',
+                'class' => 'animate',
             ],
         ]
     );

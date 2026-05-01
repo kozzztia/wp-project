@@ -3,7 +3,10 @@
 //main
 @use 'reset';
 @use 'variables';
+@use 'mixins';
+@use 'animations';
 @use 'main';
 // blocks
 @use 'blocks/example';
+@use 'blocks/hero';
 

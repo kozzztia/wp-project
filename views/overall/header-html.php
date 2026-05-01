@@ -1,8 +1,15 @@
 <header class="header-wrapper">
     <div class="header">
-        <div class="header-logo">
-            logo
+
+        <div class="header-controls">
+            <button>
+                <-
+            </button>
+            <button>
+                ->
+            </button>
         </div>
+
         <nav class="header-nav">
             <ul>
                 <li><a href="#">about</a></li>

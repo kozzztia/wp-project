@@ -24,7 +24,11 @@ body {
 	font-optical-sizing: auto;
 
 	&.headroom--not-top {
-
+		.header{
+			&-logo{
+				opacity: .5;
+			}
+		}
 	}
 
 	&.headroom--pinned {
@@ -46,25 +50,39 @@ main {
 	top: 0;
 	left: 0;
 	right: 0;
-	z-index: 1000;
+	z-index: 200;
 
 	.header {
 		position: relative;
 		display: flex;
 		align-items: center;
+		justify-content: flex-end;
 		max-width: calc(var(--primary-width) + (var(--primary-padding) * 2));
 		margin-inline: auto;
 		padding : var(--primary-padding);
 
 		&-nav{
 			position: absolute;
-			top: 100%;
+			top: 0;
 			left: 0;
 			ul{
 				display: flex;
 				flex-direction: column;
 				justify-content: stretch;
 				padding : var(--primary-padding);
+			}
+		}
+
+		&-controls{
+			button{
+				background: transparent;
+				border: none;
+				color: var(--color-white);
+				outline: none;
+				width: 40px;
+				height: 40px;
+				padding: 0;
+				cursor: pointer;
 			}
 		}
 	}
@@ -84,9 +102,9 @@ main {
 
 .customWrapper{
 	width: 100%;
-	padding-inline: var(--primary-inline-padding);
 	.customBlock{
 		max-width: calc(var(--primary-width) + (var(--primary-padding) * 2));
 		margin-inline: auto;
 	}
 }
+

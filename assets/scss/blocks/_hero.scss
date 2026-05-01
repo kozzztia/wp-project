@@ -1,0 +1,8 @@
+@use '../mixins' as *;
+
+.hero-wrapper{
+	.hero{
+		@include min-height();
+		padding: var(--secondary-padding);
+	}
+}

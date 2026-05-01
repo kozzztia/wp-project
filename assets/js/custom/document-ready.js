@@ -18,5 +18,12 @@
                 thisEl.css("height", thisTextAreaHeight);
             });
         }
+
+        if($('.animate').length) {
+            $('.animate').each(function () {
+                init_animation($(this));
+            });
+        }
+
     });
 })(jQuery);

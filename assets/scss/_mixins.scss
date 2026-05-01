@@ -1,0 +1,13 @@
+
+
+@mixin min-height {
+	min-height: 100vh;
+	min-height: 100dvh;
+}
+
+@mixin text-limit($size) {
+	display: -webkit-box;
+	-webkit-line-clamp: $size;
+	-webkit-box-orient: vertical;
+	overflow: hidden;
+}

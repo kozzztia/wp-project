@@ -1,0 +1,16 @@
+<?php $fields = $args['fields'] ?? null;
+    $style = $fields['style'] ?? '';
+    $class = $fields['class'] ?? '';
+?>
+
+<?php if (!empty($fields)): ?>
+<div class="customWrapper hero-wrapper" >
+    <div class="customBlock hero <?=$class = $fields['class'] ?? ''?>"
+        <?php echo $style ? 'style="'.$style.'"' : ''; ?>
+    >
+        <div class="hero-inner">
+            example
+        </div>
+    </div>
+</div>
+<?php endif;?>
