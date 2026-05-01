@@ -18,9 +18,9 @@ function debian_scripts() {
 }
 add_action('wp_enqueue_scripts', 'debian_scripts');
 
-function debian_register_menus() {
-    register_nav_menus(array(
-        'primary' => __('Primary Menu', 'debian'),
-    ));
-}
-add_action('after_setup_theme', 'debian_register_menus');
+//function debian_register_menus() {
+//    register_nav_menus(array(
+//        'primary' => __('Primary Menu', 'debian'),
+//    ));
+//}
+//add_action('after_setup_theme', 'debian_register_menus');

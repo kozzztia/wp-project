@@ -16,8 +16,8 @@ body {
 	min-height: 100vh;
 	min-height: 100svh;
 	text-align: left;
-	color: var(--color-black);
-	background: var(--color-white);
+	color: var(--color-white);
+	background: var(--color-black);
 	font-feature-settings: 'pnum' on, 'lnum' on;
 	-webkit-font-smoothing: antialiased;
 	text-rendering: optimizeLegibility;
@@ -39,7 +39,6 @@ main {
 	z-index: 100;
 	overflow: clip;
 	flex: 1 0 auto;
-	padding-top: var(--header-height);
 }
 
 .header-wrapper {
@@ -50,13 +49,24 @@ main {
 	z-index: 1000;
 
 	.header {
+		position: relative;
 		display: flex;
 		align-items: center;
-		justify-content: space-between;
 		max-width: calc(var(--primary-width) + (var(--primary-padding) * 2));
-		height: var(--header-height);
-		padding: var(--primary-padding);
 		margin-inline: auto;
+		padding : var(--primary-padding);
+
+		&-nav{
+			position: absolute;
+			top: 100%;
+			left: 0;
+			ul{
+				display: flex;
+				flex-direction: column;
+				justify-content: stretch;
+				padding : var(--primary-padding);
+			}
+		}
 	}
 }
 

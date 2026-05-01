@@ -3,14 +3,13 @@
         <div class="header-logo">
             logo
         </div>
-<!--        <div class="header-nav">-->
-<!--            --><?php
-//            wp_nav_menu(array(
-//                    'theme_location' => 'primary',
-//                    'menu_id'        => 'primary-menu',
-//                    'menu_class'     => 'nav',
-//            ));
-//            ?>
-<!--        </div>-->
+        <nav class="header-nav">
+            <ul>
+                <li><a href="#">about</a></li>
+                <li><a href="#">portfolio</a></li>
+                <li><a href="#">expiriance</a></li>
+                <li><a href="#">study</a></li>
+            </ul>
+        </nav>
     </div>
 </header>
