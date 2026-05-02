@@ -39,44 +39,49 @@ function init_navigation(el) {
         el.find('.header-btn.next').toggleClass('is-disabled', currentIndex === navigationItems.length - 1);
     }
 
-    function setActive(index, scroll = true) {
-        navigationItems.removeClass('active');
-        currentIndex = index;
-        const currentItem = navigationItems.eq(currentIndex);
-        currentItem.addClass('active');
-        updateButtons();
-
-        if (scroll) {
-            const targetId = currentItem.find('a').attr('href');
-            const targetEl = $(targetId);
-            if (targetEl.length) {
-                targetEl[0].scrollIntoView({ behavior: 'smooth' });
+    function setActiveByHash() {
+        const hash = window.location.hash;
+        if (hash) {
+            const index = navigationItems.find('a[href="' + hash + '"]').parent().index();
+            if (index !== -1) {
+                navigationItems.removeClass('active');
+                navigationItems.eq(index).addClass('active');
+                currentIndex = index;
+                updateButtons();
             }
         }
     }
 
-    setActive(0, false);
+    setActiveByHash();
 
     el.find('.header-btn.prev').on('click', function() {
-        if (currentIndex > 0) setActive(currentIndex - 1);
+        if (currentIndex > 0) {
+            currentIndex--;
+            const targetId = navigationItems.eq(currentIndex).find('a').attr('href');
+            window.location.hash = targetId;
+            setActiveByHash();
+        }
     });
 
     el.find('.header-btn.next').on('click', function() {
-        if (currentIndex < navigationItems.length - 1) setActive(currentIndex + 1);
+        if (currentIndex < navigationItems.length - 1) {
+            currentIndex++;
+            const targetId = navigationItems.eq(currentIndex).find('a').attr('href');
+            window.location.hash = targetId;
+            setActiveByHash();
+        }
     });
 
-    navigationItems.find('a').on('click', function(e) {
-        e.preventDefault();
-        const index = navigationItems.find('a').index(this);
-        setActive(index);
+    navigationItems.find('a').on('click', function() {
+        setTimeout(setActiveByHash, 300);
     });
 
     const observer = new IntersectionObserver(entries => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
                 const id = entry.target.id;
-                const index = navigationItems.find('a[href="#' + id + '"]').parent().index();
-                if (index !== -1) setActive(index, false);
+                window.location.hash = '#' + id;
+                setActiveByHash();
             }
         });
     }, { threshold: 0.5 });
@@ -85,6 +90,7 @@ function init_navigation(el) {
         observer.observe(this);
     });
 }
+
 
 
 
