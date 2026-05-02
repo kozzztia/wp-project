@@ -45,49 +45,6 @@ main {
 	flex: 1 0 auto;
 }
 
-.header-wrapper {
-	position: fixed;
-	top: 0;
-	left: 0;
-	right: 0;
-	z-index: 200;
-
-	.header {
-		position: relative;
-		display: flex;
-		align-items: center;
-		justify-content: flex-end;
-		max-width: calc(var(--primary-width) + (var(--primary-padding) * 2));
-		margin-inline: auto;
-		padding : var(--primary-padding);
-
-		&-nav{
-			position: absolute;
-			top: 0;
-			left: 0;
-			ul{
-				display: flex;
-				flex-direction: column;
-				justify-content: stretch;
-				padding : var(--primary-padding);
-			}
-		}
-
-		&-controls{
-			button{
-				background: transparent;
-				border: none;
-				color: var(--color-white);
-				outline: none;
-				width: 40px;
-				height: 40px;
-				padding: 0;
-				cursor: pointer;
-			}
-		}
-	}
-}
-
 .footer-wrapper {
 	.footer{
 		display: flex;

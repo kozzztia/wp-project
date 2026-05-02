@@ -3,6 +3,10 @@
 function get_version (){
     return time();
 }
+
+function get_sprite($icon){
+    return "/wp-content/themes/debian/assets/svg/sprite.svg" . "?v=" . get_version() . "#" . $icon ;
+}
 function debian_setup() {
     add_theme_support('title-tag');
     add_theme_support('post-thumbnails');
