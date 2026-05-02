@@ -1,6 +1,25 @@
 @use '../mixins' as *;
 
 .hero-wrapper{
+	background-repeat: no-repeat;
+	background-position: center center;
+	background-size: cover;
+	position: relative;
+
+	&:before{
+		content: '';
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		background-image: radial-gradient(
+						ellipse at center,
+						rgba(var(--color-black-rgb),0) 30%,
+						rgba(var(--color-black-rgb),1) 100%
+		);
+	}
+
 	.hero{
 		@include min-height();
 		padding: var(--secondary-padding);
