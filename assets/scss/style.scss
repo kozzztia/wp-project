@@ -6,9 +6,10 @@
 @use 'mixins';
 @use 'animations';
 @use 'main';
-@use 'header';
+
 // blocks
 
+@use 'blocks/header';
 @use 'blocks/example';
 @use 'blocks/hero';
 
