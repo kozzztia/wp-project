@@ -1,7 +1,6 @@
 <?php $fields = $args['fields'] ?? null;
     $style = $fields['style'] ?? '';
     $class = $fields['class'] ?? '';
-    $title = get_field('hero_title') ?? "default title";
 ?>
 
 <?php if (!empty($fields)): ?>
@@ -10,9 +9,7 @@
         <?php echo $style ? 'style="'.$style.'"' : ''; ?>
     >
         <div class="hero-inner" >
-            <?php if (!empty($title)): ?>
-                <h1><?php echo $title ?></h1>
-            <?php endif ?>
+            <h1>example</h1>
         </div>
     </div>
 </div>
