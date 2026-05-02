@@ -1,15 +1,17 @@
 <header class="header-wrapper">
     <div class="header">
-
         <div class="header-controls">
-            <button>
-                <-
+            <button type="button" class="header-btn prev">
+                <svg>
+                    <use href="/wp-content/themes/debian/assets/svg/sprite.svg#arrow-icon"></use>
+                </svg>
             </button>
-            <button>
-                ->
+            <button type="button" class="header-btn next">
+                <svg>
+                    <use href="/wp-content/themes/debian/assets/svg/sprite.svg#arrow-icon"></use>
+                </svg>
             </button>
         </div>
-
         <nav class="header-nav">
             <ul>
                 <li><a href="#">about</a></li>
