@@ -37,16 +37,6 @@ function render_content()
         ]
     );
 
-    get_template_part('views/blocks/hero', null,
-        [
-            'fields' => [
-                'style' => '',
-                'class' => 'animate',
-                'id' => 'experience',
-                'image' => get_template_directory_uri() . '/assets/img/hero.webp',
-            ],
-        ]
-    );
 
     get_template_part('views/blocks/hero', null,
         [

@@ -23,11 +23,19 @@
 			@include min-height();
 			display: flex;
 			border-right: 1px solid rgba(var(--color-white-rgb), 0.2);
+
 			ul {
 				display: flex;
 				flex-direction: column;
 				justify-content: stretch;
 				padding: var(--primary-padding);
+
+
+				.active{
+					a{
+						color: var(--color-green);
+					}
+				}
 			}
 		}
 
@@ -57,6 +65,11 @@
 
 				&.next{
 					transform: rotate(180deg);
+				}
+
+				&.is-disabled{
+					pointer-events: none;
+					opacity: 0.5;
 				}
 			}
 

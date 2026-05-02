@@ -9,6 +9,10 @@
             }
         });
 
+        if($(".header .header-nav").length){
+            init_navigation($(".header"));
+        }
+
         /** textarea autogrow */
         if ($('textarea').length) {
             $('textarea').each(function () {
