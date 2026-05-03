@@ -3,7 +3,8 @@ html {
 }
 
 body {
-	font-family: var(--primary-font), sans-serif;
+	font-family: var(--primary-font-family), sans-serif;
+	font-size: var(--primary-font-size);
 	font-weight: 500;
 	line-height: 1.6;
 	position: relative;
@@ -24,8 +25,8 @@ body {
 	font-optical-sizing: auto;
 
 	&.headroom--not-top {
-		.header{
-			&-logo{
+		.header {
+			&-logo {
 				opacity: .5;
 			}
 		}
@@ -46,7 +47,10 @@ main {
 }
 
 .footer-wrapper {
-	.footer{
+	z-index: 300;
+	background: var(--color-black);
+
+	.footer {
 		display: flex;
 		align-items: center;
 		justify-content: space-between;
@@ -57,9 +61,10 @@ main {
 	}
 }
 
-.customWrapper{
+.customWrapper {
 	width: 100%;
-	.customBlock{
+
+	.customBlock {
 		max-width: calc(var(--primary-width) + (var(--primary-padding) * 2));
 		margin-inline: auto;
 	}

@@ -24,10 +24,13 @@
 			border-right: 1px solid rgba(var(--color-white-rgb), 0.1);
 			@include min-height();
 			@media (max-width: 1024px) {
-				min-width: auto;
 				border-right: none;
 			}
-			padding-right: var(--secondary-padding);
+			@media (max-width: 768px) {
+				display: none;
+			}
+
+			padding: var(--secondary-padding);
 
 			ul {
 				display: flex;
@@ -45,26 +48,22 @@
 						align-items: center;
 						justify-content: center;
 						width: 100%;
-						aspect-ratio: 1/1;
-						padding: var(--secondary-padding);
 						text-decoration: none;
-						transition: background-color .3s ease, color .3s ease;
+						transition: color .3s ease;
 						color: var(--color-white);
 						overflow: hidden;
 						filter: var(--primary-shadow);
 						text-transform: uppercase;
 
 						svg {
-							width: 100%;
-							height: 100%;
+							aspect-ratio: 1/1;
 						}
 					}
 
-					&.next, &.prev, &.active {
+					&.active {
 
 						a {
-							background-color: var(--color-green);
-							color: var(--color-black);
+							color: var(--color-green);
 						}
 					}
 
