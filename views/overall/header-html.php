@@ -13,11 +13,20 @@
                 </svg>
             </button>
         </div>
-        <nav class="header-nav">
+        <nav class="header-menu">
             <ul>
-                <li class="header-nav-item">
+                <li class="menu-item">
                     <?php get_template_part('views/overall/logo');?>
                 </li>
+
+                <?php
+                wp_nav_menu([
+                        'theme_location' => 'header-menu',
+                        'container'      => false,
+                        'items_wrap'     => '%3$s',
+                        'menu_class'     => '',
+                ]);
+                ?>
             </ul>
         </nav>
     </div>

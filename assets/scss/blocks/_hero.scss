@@ -15,20 +15,10 @@
 						rgba(var(--color-black-rgb),0) 0%,
 						rgba(var(--color-black-rgb),1) 100%
 		);
-		animation: breatheGradient 10s ease-in-out infinite;
-	}
-
-	@keyframes breatheGradient {
-		0%   { opacity: 0.1; }
-		50%  { opacity: 1; }
-		100% { opacity: 0.1; }
 	}
 
 	.hero{
 		@include min-height();
 		padding: var(--secondary-padding);
-
-
-
 	}
 }

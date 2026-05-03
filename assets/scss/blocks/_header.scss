@@ -16,24 +16,32 @@
 		padding: var(--primary-padding);
 		margin-inline: auto;
 
-		&-nav {
+		&-menu{
 			position: absolute;
 			top: 0;
 			left: 0;
-			height: 100vh;
-			height: 100dvh;
 			display: flex;
 			border-right: 1px solid rgba(var(--color-white-rgb), 0.1);
+			@include min-height();
+			@media (max-width: 1024px){
+				border-right: none;
+			}
 
 			ul {
 				display: flex;
 				flex-direction: column;
-				justify-content: stretch;
+				justify-content: flex-start;
 				padding: var(--primary-padding);
+				gap :10px;
 
+				li {
+					display: flex;
+					align-items: center;
+				}
 
-				.active{
-					a{
+				li.active {
+
+					a {
 						color: var(--color-green);
 					}
 				}

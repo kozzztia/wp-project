@@ -9,7 +9,7 @@
             }
         });
 
-        if($(".header .header-nav").length){
+        if($(".header .header-menu").length){
             init_navigation($(".header"));
         }
 
