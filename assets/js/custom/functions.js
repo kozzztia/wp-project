@@ -40,20 +40,22 @@ function init_navigation(el) {
         }
     }
 
-    // IntersectionObserver → следим за секциями
     const observer = new IntersectionObserver(entries => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
-                setActiveById(entry.target.id);
+                const id = entry.target.id;
+                // обновляем hash в URL
+                history.replaceState(null, null, '#' + id);
+                setActiveById(id);
             }
         });
     }, { threshold: 0.6 });
+
 
     wrappers.each(function() {
         observer.observe(this);
     });
 
-    // клики по ссылкам → плавный скролл
     navigationItems.find('a').on('click', function(e) {
         e.preventDefault();
         const targetId = $(this).attr('href');
@@ -63,7 +65,6 @@ function init_navigation(el) {
         }
     });
 
-    // кнопки → имитация клика на соседний линк
     el.find('.header-btn.prev').on('click', function() {
         if (currentIndex > 0) {
             navigationItems.eq(currentIndex - 1).find('a')[0].click();
@@ -76,7 +77,6 @@ function init_navigation(el) {
         }
     });
 
-    // стартовое состояние
     updateButtons();
 }
 
