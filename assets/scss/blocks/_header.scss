@@ -45,17 +45,21 @@
 					opacity: .5;
 
 					a {
-						display: block;
+						display: flex;
+						align-items: center;
+						flex-direction: row;
 						overflow: hidden;
 						width: 100%;
 						transition: color .3s ease;
 						text-decoration: none;
+						gap : var(--primary-padding);
 						font-size: 14px;
 						color: var(--color-white);
 						border-radius: 5px;
 						filter: var(--primary-shadow);
 
 						svg {
+							width :40px;
 							aspect-ratio: 1/1;
 							display: block;
 						}

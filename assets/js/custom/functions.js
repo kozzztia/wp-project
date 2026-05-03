@@ -104,24 +104,16 @@ function init_navigation(el) {
 }
 
 
+function init_menu_toggler(el) {
+    const menuList = $('.header-menu > ul');
 
+    el.on('click', function(e) {
+        e.preventDefault();
 
+        if (window.innerWidth > 768) {
+            menuList.toggleClass('show');
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+            el.toggleClass('close');
+        }
+    });
+}

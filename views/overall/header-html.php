@@ -19,21 +19,49 @@
         </div>
 
         <nav class="header-menu">
-            <ul>
+            <ul class="animate down-menu">
                 <li class="menu-item">
-                    <a href="#about">about</a>
+                    <a href="#about">
+                        <svg>
+                            <use href="<?php echo get_sprite('person-icon')?>" ></use>
+                        </svg>
+
+                        <span>about</span>
+                    </a>
                 </li>
                 <li class="menu-item">
-                    <a href="#portfolio">portfolio</a>
+                    <a href="#portfolio">
+                        <svg>
+                            <use href="<?php echo get_sprite('picture-icon')?>" ></use>
+                        </svg>
+
+                        <span>portfolio</span>
+                    </a>
                 </li>
                 <li class="menu-item">
-                    <a href="#study">study</a>
+                    <a href="#study">
+                        <svg>
+                            <use href="<?php echo get_sprite('idea-icon')?>" ></use>
+                        </svg>
+                        <span>study</span>
+                    </a>
                 </li>
                 <li class="menu-item">
-                    <a href="#experience">experience</a>
+                    <a href="#experience">
+                        <svg>
+                            <use href="<?php echo get_sprite('briefcase-icon')?>" ></use>
+                        </svg>
+                        <span>experience</span>
+                    </a>
                 </li>
                 <li class="menu-item">
-                    <a href="#contacts">contacts</a>
+                    <a href="#contacts">
+                        <svg>
+                            <use href="<?php echo get_sprite('info-icon')?>" ></use>
+                        </svg>
+
+                        <span>contacts</span>
+                    </a>
                 </li>
             </ul>
         </nav>

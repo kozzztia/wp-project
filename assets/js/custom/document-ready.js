@@ -11,6 +11,7 @@
 
         if($(".header").length){
             init_navigation($(".header"));
+            init_menu_toggler($(".logo"));
         }
 
         /** textarea autogrow */

@@ -9,7 +9,7 @@ function render_content()
         [
             'fields' => [
                 'style' => '',
-                'class' => 'animate',
+                'class' => 'animate up',
                 'id' => 'about',
                 'image' => get_template_directory_uri() . '/assets/img/hero.webp',
             ],
@@ -20,7 +20,7 @@ function render_content()
         [
             'fields' => [
                 'style' => '',
-                'class' => 'animate',
+                'class' => 'animate up',
                 'id' => 'portfolio',
                 'image' => get_template_directory_uri() . '/assets/img/hero.webp',
             ],
@@ -32,7 +32,7 @@ function render_content()
         [
             'fields' => [
                 'style' => '',
-                'class' => 'animate',
+                'class' => 'animate up',
                 'id' => 'study',
                 'image' => get_template_directory_uri() . '/assets/img/hero.webp',
             ],
@@ -43,7 +43,7 @@ function render_content()
         [
             'fields' => [
                 'style' => '',
-                'class' => 'animate',
+                'class' => 'animate up',
                 'id' => 'experience',
                 'image' => get_template_directory_uri() . '/assets/img/hero.webp',
             ],
@@ -55,7 +55,7 @@ function render_content()
         [
             'fields' => [
                 'style' => '',
-                'class' => 'animate',
+                'class' => 'animate up',
                 'id' => 'contacts',
                 'image' => get_template_directory_uri() . '/assets/img/hero.webp',
             ],

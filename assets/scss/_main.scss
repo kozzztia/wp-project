@@ -73,6 +73,20 @@ main {
 	align-items: center;
 	justify-content: center;
 	gap : var(--primary-padding);
+	cursor: pointer;
+
+	&:hover{
+		svg{
+			transition: color .2s ease;
+			color :var(--color-green);
+		}
+	}
+
+	&.close{
+		svg{
+			color :var(--color-green);
+		}
+	}
 }
 
 
