@@ -8,21 +8,26 @@
 	left: 0;
 
 	.header {
+		z-index: 300;
 		position: relative;
 		display: flex;
 		align-items: center;
-		justify-content: flex-end;
+		justify-content: space-between;
 		max-width: calc(var(--primary-width) + (var(--primary-padding) * 2));
 		padding: var(--primary-padding);
 		margin-inline: auto;
+		height: var(--header-height);
 
 		&-menu {
+			z-index: -1;
 			position: absolute;
 			top: 0;
 			left: 0;
 			display: flex;
-			border-right: 1px solid rgba(var(--color-white-rgb), 0.1);
+			padding: var(--primary-padding);
+			padding-top: calc(var(--header-height) + var(--primary-padding));
 			@include min-height();
+			border-right: 1px solid rgba(var(--color-white-rgb), 0.1);
 			@media (max-width: 1024px) {
 				border-right: none;
 			}
@@ -30,44 +35,39 @@
 				display: none;
 			}
 
-			padding: var(--secondary-padding);
-
 			ul {
 				display: flex;
 				flex-direction: column;
 				justify-content: flex-start;
-				gap: var(--secondary-padding);
+				gap: var(--primary-padding);
 
 				li {
-
-					opacity: .6;
+					opacity: .5;
 
 					a {
-						border-radius: 5px;
-						display: flex;
-						align-items: center;
-						justify-content: center;
-						width: 100%;
-						text-decoration: none;
-						transition: color .3s ease;
-						color: var(--color-white);
+						display: block;
 						overflow: hidden;
+						width: 100%;
+						transition: color .3s ease;
+						text-decoration: none;
+						font-size: 14px;
+						color: var(--color-white);
+						border-radius: 5px;
 						filter: var(--primary-shadow);
-						text-transform: uppercase;
 
 						svg {
 							aspect-ratio: 1/1;
+							display: block;
 						}
 					}
 
 					&.active {
-
 						a {
 							color: var(--color-green);
 						}
 					}
 
-					&.active{
+					&.active {
 						opacity: 1;
 					}
 				}
@@ -88,15 +88,17 @@
 				height: 40px;
 				padding: 0;
 				cursor: pointer;
-				color: var(--color-green);
+				color: var(--color-white);
 				border: none;
 				outline: none;
 				background: transparent;
+				transition: opacity .2s ease;
 
 				svg {
 					display: block;
 					width: 20px;
 					height: 20px;
+					filter: var(--primary-shadow);
 				}
 
 				&.next {

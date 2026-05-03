@@ -26,9 +26,6 @@ body {
 
 	&.headroom--not-top {
 		.header {
-			&-logo {
-				opacity: .5;
-			}
 		}
 	}
 
@@ -63,11 +60,19 @@ main {
 
 .customWrapper {
 	width: 100%;
+	padding-top: var(--header-height);
 
 	.customBlock {
 		max-width: calc(var(--primary-width) + (var(--primary-padding) * 2));
 		margin-inline: auto;
 	}
+}
+
+.customLogo{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	gap : var(--primary-padding);
 }
 
 

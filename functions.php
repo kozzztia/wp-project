@@ -21,9 +21,3 @@ function debian_scripts() {
     wp_enqueue_script('debian-custom', get_template_directory_uri() . '/assets/js/custom.min.js', array('jquery'), get_version(), true);
 }
 add_action('wp_enqueue_scripts', 'debian_scripts');
-
-
-function register_my_menu() {
-    register_nav_menu('header-menu', __( 'Header Menu' ));
-}
-add_action('after_setup_theme', 'register_my_menu');

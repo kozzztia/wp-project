@@ -1,9 +1,7 @@
-<?php
-    $link = $args['link'] ?? "main";
-?>
-
-<a class="customLogo" href= <?php echo "#" . $link ?>>
-    <svg width="20px" height="20px">
+<figure class="customLogo logo" >
+    <svg width="40px" height="40px">
         <use href=<?php echo get_sprite("logo-icon")?>></use>
     </svg>
-</a>
+
+    <p class="logo-text">Front-end developer</p>
+</figure>

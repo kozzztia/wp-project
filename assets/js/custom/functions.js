@@ -18,11 +18,24 @@ function init_animation(el) {
 function init_navigation(el) {
     const navigationItems = el.find('.menu-item');
     const wrappers = $('.customWrapper[id]');
+    const logoText = $('.logo-text'); // логотип берём один раз
     let currentIndex = 0;
 
     function updateButtons() {
         el.find('.header-btn.prev').toggleClass('is-disabled', currentIndex === 0);
         el.find('.header-btn.next').toggleClass('is-disabled', currentIndex === navigationItems.length - 1);
+    }
+
+    function updateLogoTextById(id) {
+        if (window.innerWidth <= 768) {
+            const target = document.getElementById(id);
+            if (target) {
+                const text = target.getAttribute('data-title') || target.id;
+                logoText.text(text);
+            }
+        } else {
+            logoText.text('Front-end developer');
+        }
     }
 
     function setActiveById(id) {
@@ -37,6 +50,9 @@ function init_navigation(el) {
 
             currentIndex = index;
             updateButtons();
+
+            // синхронизируем логотип
+            updateLogoTextById(id);
         }
     }
 
@@ -44,13 +60,11 @@ function init_navigation(el) {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
                 const id = entry.target.id;
-                // обновляем hash в URL
                 history.replaceState(null, null, '#' + id);
                 setActiveById(id);
             }
         });
     }, { threshold: 0.6 });
-
 
     wrappers.each(function() {
         observer.observe(this);
@@ -77,8 +91,23 @@ function init_navigation(el) {
         }
     });
 
+    // слушаем ресайз, чтобы логотип возвращался к дефолту
+    $(window).on('resize', function() {
+        const id = window.location.hash.replace('#', '');
+        if (id) updateLogoTextById(id);
+    });
+
+    // стартовое состояние
+    const startId = window.location.hash.replace('#', '');
+    if (startId) setActiveById(startId);
     updateButtons();
 }
+
+
+
+
+
+
 
 
 
