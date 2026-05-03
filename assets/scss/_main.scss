@@ -74,17 +74,32 @@ main {
 	justify-content: center;
 	gap : var(--primary-padding);
 	cursor: pointer;
+	filter: var(--primary-shadow);
+	height: 100%;
+
+	svg{
+		display: block;
+		transition: transform .2s ease;
+		height: 100%;
+		width: auto;
+		transform: scale(0.9);
+	}
+
+	.logo-text{
+		font-size: var(--secondary-font-size);
+		color: var(--color-white);
+		text-transform: capitalize;
+	}
 
 	&:hover{
 		svg{
-			transition: color .2s ease;
-			color :var(--color-green);
+			transform: scale(1);
 		}
 	}
 
 	&.close{
 		svg{
-			color :var(--color-green);
+
 		}
 	}
 }
