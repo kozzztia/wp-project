@@ -5,6 +5,7 @@
 	background-position: center center;
 	background-size: cover;
 	position: relative;
+	border-bottom: 1px solid rgba(var(--color-white-rgb), .1);
 
 	&:before{
 		content: '';
@@ -19,6 +20,5 @@
 
 	.hero{
 		@include min-height();
-		padding: var(--primary-padding);
 	}
 }

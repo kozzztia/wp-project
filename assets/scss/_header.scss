@@ -1,4 +1,4 @@
-@use '../mixins' as *;
+@use 'mixins' as *;
 
 .header-wrapper {
 	position: fixed;
@@ -8,23 +8,24 @@
 	left: 0;
 
 	.header {
-		z-index: 300;
 		position: relative;
+		z-index: 300;
 		display: flex;
 		align-items: center;
 		justify-content: space-between;
 		max-width: calc(var(--primary-width) + (var(--primary-padding) * 2));
+		height: var(--header-height);
 		padding-inline: var(--primary-padding);
 		margin-inline: auto;
-		height: var(--header-height);
 
-		&-logo{
+		&-logo {
+			z-index: inherit;
 			height: var(--header-height);
 		}
 
 		&-menu {
-			z-index: -1;
 			position: absolute;
+			z-index: 200;
 			top: 0;
 			left: 0;
 			display: flex;
@@ -45,32 +46,32 @@
 				gap: var(--primary-padding);
 
 				li {
-					opacity: .3;
+					opacity: var(--disabled-opacity);
 
 					a {
+						font-size: 14px;
+						font-weight: 600;
 						display: flex;
+						overflow: hidden;
 						align-items: center;
 						flex-direction: row;
-						overflow: hidden;
 						width: 100%;
 						transition: color .3s ease;
 						text-decoration: none;
-						gap : var(--primary-padding);
-						font-size: 14px;
+						text-transform: capitalize;
 						color: var(--color-white);
 						border-radius: 5px;
+						gap: var(--primary-padding);
 						filter: var(--primary-shadow);
-						text-transform: capitalize;
 
 						svg {
-							width :40px;
-							aspect-ratio: 1/1;
 							display: block;
+							width: 40px;
+							aspect-ratio: 1/1;
 						}
 
-						span{
+						span {
 							display: block;
-
 							@media (max-width: 1024px) {
 								display: none;
 							}
@@ -91,10 +92,10 @@
 		}
 
 		&-controls {
-			flex-shrink: 0;
 			display: flex;
 			align-items: center;
 			flex-direction: row;
+			flex-shrink: 0;
 
 			button {
 				display: flex;
@@ -104,11 +105,11 @@
 				height: 40px;
 				padding: 0;
 				cursor: pointer;
+				transition: opacity .2s ease;
 				color: var(--color-white);
 				border: none;
 				outline: none;
 				background: transparent;
-				transition: opacity .2s ease;
 
 				svg {
 					display: block;
@@ -123,7 +124,7 @@
 
 				&.is-disabled {
 					pointer-events: none;
-					opacity: 0.5;
+					opacity: var(--disabled-opacity);
 				}
 			}
 		}

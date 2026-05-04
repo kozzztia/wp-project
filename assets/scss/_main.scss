@@ -66,44 +66,19 @@ main {
 	.customBlock {
 		max-width: calc(var(--primary-width) + (var(--primary-padding) * 2));
 		margin-inline: auto;
-	}
-}
+		padding: var(--primary-padding) var(--primary-padding) var(--primary-padding) 180px;
 
-.customLogo{
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	gap : var(--primary-padding);
-	cursor: pointer;
-	filter: var(--primary-shadow);
-	height: 100%;
-
-	svg{
-		display: block;
-		transition: transform .2s ease;
-		height: 100%;
-		width: auto;
-		transform: scale(0.9);
-	}
-
-	.logo-text{
-		font-size: var(--secondary-font-size);
-		color: var(--color-white);
-		text-transform: capitalize;
-	}
-
-	&:hover{
-		svg{
-			transform: scale(1);
+		@media(max-width: 1024px){
+			padding-left: 80px;
 		}
-	}
 
-	&.close{
-		svg{
-
+		@media(max-width: 768px){
+			padding-left: var(--primary-padding);
 		}
 	}
 }
+
+
 
 
 
