@@ -15,13 +15,30 @@ function render_content()
                 'title' => 'Front-End Developer',
                 'name' => 'Zadorozhniy Kostiantyn',
                 'techtitle' => 'technology',
-                'tech' => ['HTML', 'CSS', 'JavaScript', 'PHP'],
+                'tech' => ['HTML', 'CSS', 'JavaScript', 'PHP', 'React', 'Next'],
                 'slides' => [
-                    ['slug' => 'experience', 'text' =>'have  3  years  of  experience', 'image' => 'document-icon'],
-                    ['slug' => 'start', 'text' =>'start at 2022 year to  learn', 'image' => 'document-icon'],
-                    ['slug' => 'animation', 'text' =>'id  like  to work with  svg and  js', 'image' => 'document-icon'],
-                    ['slug' => 'education', 'text' =>'have  technical  education of  computer  systems , learn programming for  yet', 'image' => 'document-icon'],
+                    [
+                        'slug'  => 'experience',
+                        'text'  => 'Over three years of practical experience in front‑end development',
+                        'image' => 'document-icon'
+                    ],
+                    [
+                        'slug'  => 'start',
+                        'text'  => 'Began learning and working with web technologies in 2022',
+                        'image' => 'document-icon'
+                    ],
+                    [
+                        'slug'  => 'animation',
+                        'text'  => 'Passionate about creating interactive animations with SVG and JavaScript',
+                        'image' => 'document-icon'
+                    ],
+                    [
+                        'slug'  => 'education',
+                        'text'  => 'Technical background in computer systems, continuously improving programming skills',
+                        'image' => 'document-icon'
+                    ],
                 ],
+
             ],
         ]
     );

@@ -9,7 +9,7 @@
                     <use href="<?php echo get_sprite($slide['image'])?>"></use>
                 </svg>
             </figure>
-            <span><?= $slide['text']?></span>
+            <span class="slide-text"><?= $slide['text']?></span>
         </div>
         <?php endforeach; ?>
     </div>

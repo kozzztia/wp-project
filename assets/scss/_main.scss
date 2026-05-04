@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
 html {
 	scroll-behavior: smooth;
 }
@@ -60,34 +61,42 @@ main {
 }
 
 .customWrapper {
+	display: flex;
 	width: 100%;
 	padding-top: var(--header-height);
-	display: flex;
 
 	.customBlock {
 		flex: 1;
-		gap: calc(var(--primary-padding)*2);
 		max-width: calc(var(--primary-width) + (var(--primary-padding) * 2));
-		margin-inline: auto;
 		padding: var(--primary-padding) var(--primary-padding) var(--primary-padding) 180px;
-
-		@media(max-width: 1024px){
+		gap: calc(var(--primary-padding) * 2);
+		margin-inline: auto;
+		@media(max-width: 1024px) {
 			padding-left: 80px;
 		}
-
-		@media(max-width: 768px){
+		@media(max-width: 768px) {
 			padding-left: var(--primary-padding);
 		}
 	}
 }
 
 .decor-text {
-	z-index: -1;
-	font-weight: 800;
-	letter-spacing: 5px;
-	line-height: 1;
+	overflow: hidden;
 	font-size: 200px;
+	font-weight: 800;
+	line-height: 1;
+	position: absolute;
+	z-index: -1;
+	top: 0;
+	left: calc(var(--secondary-padding) * -1);
+	letter-spacing: 5px;
 	color: rgba(var(--color-white-rgb), .02);
+	@media(max-width: 1024px) {
+		font-size: 150px;
+	}
+	@media(max-width: 768px) {
+		font-size: 100px;
+	}
 }
 
 
