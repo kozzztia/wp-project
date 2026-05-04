@@ -142,6 +142,9 @@
 			width: auto;
 
 			&:before{
+				position: absolute;
+				right: calc(100% + var(--primary-padding));
+				top: 50%;
 				flex-shrink: 0;
 				content: '';
 				display: block;
@@ -162,7 +165,7 @@
 			font-weight: 800;
 			font-size: var(--title-font-size);
 			margin-bottom: var(--primary-padding);
-			@include text-limit(1);
+			@include text-limit(2);
 
 			@media (max-width: 768px) {
 				margin-bottom: 0;

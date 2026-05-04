@@ -7,6 +7,10 @@
 	filter: var(--primary-shadow);
 	height: 100%;
 
+	@media (max-width: 768px) {
+		pointer-events: none;
+	}
+
 	svg{
 		display: block;
 		transition: transform .2s ease , color .2s ease;
