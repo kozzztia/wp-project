@@ -117,3 +117,17 @@ function init_menu_toggler(el) {
         }
     });
 }
+
+function init_slider(el) {
+    const swiper = new Swiper(el.find('.swiper')[0], {
+        loop: false,          // без бесконечного цикла
+        slidesPerView: 1,     // по одному слайду
+        spaceBetween: 0,      // без отступов
+        navigation: {
+            nextEl: el.find('.swiper-button-next')[0],
+            prevEl: el.find('.swiper-button-prev')[0],
+        },
+        // пагинацию пока не подключаем
+    });
+}
+

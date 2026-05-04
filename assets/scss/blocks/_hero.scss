@@ -23,7 +23,7 @@
 		position: relative;
 		display: flex;
 		flex-direction: column;
-		justify-content: end;
+		justify-content: center;
 		align-items: flex-end;
 
 		@media (max-width: 768px) {
@@ -36,7 +36,24 @@
 			left: calc(var(--secondary-padding) * -1);
 		}
 
+		&-single-slider{
+			width: 100%;
+			height: 100%;
+			flex : 1;
+			.single-slider{
+				height: 100%;
+				background: #000;
+			}
+
+			.swiper-button{
+				&-next, &-prev{
+					display: none;
+				}
+			}
+		}
+
 		&-article{
+			width: 100%;
 			display: flex;
 			flex-direction: column;
 			align-items: flex-end;

@@ -16,6 +16,7 @@ function render_content()
                 'name' => 'Zadorozhniy Kostiantyn',
                 'techtitle' => 'technology',
                 'tech' => ['HTML', 'CSS', 'JavaScript', 'PHP'],
+                'slides' => ['one', 'two', 'three', 'four', 'five', 'six', 'seven', 'eight'],
             ],
         ]
     );

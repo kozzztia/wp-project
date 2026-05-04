@@ -30,5 +30,11 @@
             });
         }
 
+        if($('.hero-single-slider').length) {
+            $('.hero-single-slider').each(function () {
+                init_slider($(this));
+            });
+        }
+
     });
 })(jQuery);

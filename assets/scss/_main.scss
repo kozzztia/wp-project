@@ -65,7 +65,8 @@ main {
 	display: flex;
 
 	.customBlock {
-		flex: 1 1 auto;
+		flex: 1;
+		gap: calc(var(--primary-padding)*2);
 		max-width: calc(var(--primary-width) + (var(--primary-padding) * 2));
 		margin-inline: auto;
 		padding: var(--primary-padding) var(--primary-padding) var(--primary-padding) 180px;
