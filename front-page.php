@@ -16,7 +16,12 @@ function render_content()
                 'name' => 'Zadorozhniy Kostiantyn',
                 'techtitle' => 'technology',
                 'tech' => ['HTML', 'CSS', 'JavaScript', 'PHP'],
-                'slides' => ['one', 'two', 'three', 'four', 'five', 'six', 'seven', 'eight'],
+                'slides' => [
+                    ['slug' => 'experience', 'text' =>'have  3  years  of  experience', 'image' => 'document-icon'],
+                    ['slug' => 'start', 'text' =>'start at 2022 year to  learn', 'image' => 'document-icon'],
+                    ['slug' => 'animation', 'text' =>'id  like  to work with  svg and  js', 'image' => 'document-icon'],
+                    ['slug' => 'education', 'text' =>'have  technical  education of  computer  systems , learn programming for  yet', 'image' => 'document-icon'],
+                ],
             ],
         ]
     );

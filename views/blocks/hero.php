@@ -56,9 +56,8 @@
             <?php endif; ?>
         </article>
 
-
         <?php if(!empty($slides)): ?>
-        <div class="single-slider-pagination"></div>
+        <div class="single-slider-pagination"><span class="single-slider-thumb"></span></div>
         <?php endif;?>
     </div>
 </div>

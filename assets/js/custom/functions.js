@@ -131,7 +131,9 @@ function init_slider(el) {
     });
 
     const paginationEl = el.find('.single-slider-pagination');
-    paginationEl.empty();
+    const thumb = paginationEl.find('.single-slider-thumb'); // уже есть в HTML
+
+    const bullets = [];
 
     swiper.slides.forEach((slide, index) => {
         const slug = slide.getAttribute('data-slug') || (index + 1);
@@ -146,15 +148,31 @@ function init_slider(el) {
         });
 
         paginationEl.append(bullet);
+        bullets.push(bullet);
     });
 
-    paginationEl.find('.single-slider-bullet').eq(swiper.activeIndex).addClass('active');
+    function updateThumb() {
+        const activeBullet = bullets[swiper.activeIndex];
+        if (!activeBullet) return;
 
-    swiper.on('slideChange', () => {
-        const bullets = paginationEl.find('.single-slider-bullet');
-        bullets.removeClass('active');
-        bullets.eq(swiper.activeIndex).addClass('active');
-    });
+        bullets.forEach(b => b.removeClass('active'));
+        activeBullet.addClass('active');
+
+        // считаем позицию относительно контейнера
+        const left = activeBullet.offset().left - paginationEl.offset().left;
+        const width = activeBullet.outerWidth();
+
+        thumb.css({
+            transform: `translateX(${left}px)`,
+            width: width
+        });
+    }
+
+
+    updateThumb();
+    swiper.on('slideChange', updateThumb);
 }
+
+
 
 

@@ -3,11 +3,13 @@
 <div class="single-slider swiper" >
     <div class="swiper-wrapper">
         <?php foreach ($slides as $slide): ?>
-        <div class="single-slide swiper-slide" data-slug="<?= $slide ?>">
+        <div class="single-slide swiper-slide" data-slug="<?= $slide['slug'] ?>">
             <figure class="slide-image">
-                <?= $slide; ?>
+                <svg>
+                    <use href="<?php echo get_sprite($slide['image'])?>"></use>
+                </svg>
             </figure>
-            <span>text</span>
+            <span><?= $slide['text']?></span>
         </div>
         <?php endforeach; ?>
     </div>
