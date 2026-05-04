@@ -11,24 +11,47 @@
 	--secondary-width: 1200px;
 	--primary-padding: 20px;
 	--secondary-padding: 10px;
+	--header-height: 80px;
+	//font-sizes
 	--primary-font-size: 16px;
 	--secondary-font-size: 20px;
-	--title-font-size: 80px;
+	--decor-font-size: 32px;
 	--subtitle-font-size: 40px;
-	--header-height: 80px;
+	--title-font-size: 55px;
+
 	// other
 	--primary-font-family: 'Poppins', sans-serif;
 	--primary-shadow: drop-shadow(0px 0px 2px black) drop-shadow(0px 0px 2px black) drop-shadow(0px 0px 5px black);
 	--disabled-opacity: 0.4;
+	--decor-spacing: 10px;
 
 
 //	media
+	@media (max-width: 1024px){
+		//font-sizes
+		--subtitle-font-size: 35px;
+		--title-font-size: 50px;
+		--decor-font-size: 26px;
+
+	}
+
 	@media (max-width: 768px){
 		--primary-padding: 16px;
+		--header-height: 60px;
+		//font-sizes
 		--primary-font-size: 14px;
 		--secondary-font-size: 16px;
-		--header-height: 60px;
-		--title-font-size: 50px;
+		--decor-font-size: 20px;
 		--subtitle-font-size: 25px;
+		--title-font-size: 35px;
+
+	}
+
+	@media (max-width: 390px){
+		//font-sizes
+		--decor-font-size: 20px;
+		--subtitle-font-size: 20px;
+		--title-font-size: 25px;
+
 	}
 }

@@ -1,9 +1,7 @@
 <header class="header-wrapper">
     <div class="header">
 
-        <div class="header-logo">
-            <?php  get_template_part('views/overall/logo') ?>
-        </div>
+        <div class="header-logo"><?php  get_template_part('views/overall/logo') ?></div>
 
         <div class="header-controls">
             <button type="button" class="header-btn prev">

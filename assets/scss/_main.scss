@@ -62,8 +62,10 @@ main {
 .customWrapper {
 	width: 100%;
 	padding-top: var(--header-height);
+	display: flex;
 
 	.customBlock {
+		flex: 1 1 auto;
 		max-width: calc(var(--primary-width) + (var(--primary-padding) * 2));
 		margin-inline: auto;
 		padding: var(--primary-padding) var(--primary-padding) var(--primary-padding) 180px;
@@ -80,9 +82,6 @@ main {
 
 .decor-text {
 	z-index: -1;
-	position: absolute;
-	top: 0;
-	left: calc(var(--secondary-padding) * -1);
 	font-weight: 800;
 	letter-spacing: 5px;
 	line-height: 1;

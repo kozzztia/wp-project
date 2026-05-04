@@ -6,6 +6,7 @@
 	background-size: cover;
 	position: relative;
 	border-bottom: 1px solid rgba(var(--color-white-rgb), .1);
+	@include min-height();
 
 	&:before{
 		content: '';
@@ -19,11 +20,94 @@
 	}
 
 	.hero{
-		@include min-height();
 		position: relative;
+		display: flex;
+		flex-direction: column;
+		justify-content: end;
+		align-items: flex-end;
+
+		@media (max-width: 768px) {
+			align-items: center;
+		}
 
 		&-decor{
+			position: absolute;
+			top: 0;
+			left: calc(var(--secondary-padding) * -1);
+		}
 
+		&-article{
+			display: flex;
+			flex-direction: column;
+			align-items: flex-end;
+			gap: var(--primary-padding);
+			text-align: right;
+			line-height: 1.2;
+			filter: var(--primary-shadow);
+
+			@media (max-width: 768px) {
+				align-items: center;
+				text-align: center;
+			}
+
+		}
+
+		.with-line{
+			font-size: var(--decor-font-size);
+			color : rgba(var(--color-white-rgb), var(--disabled-opacity));
+			display: flex;
+			flex-direction: row;
+			align-items: center;
+			position: relative;
+			gap: var(--primary-padding);
+			text-transform: uppercase;
+			letter-spacing: var(--decor-spacing);
+
+			&:before{
+				content: '';
+				display: block;
+				width : 80px;
+				height :  1px;
+				background: currentColor;
+
+				@media (max-width: 1024px) {
+					width : 60px;
+				}
+				@media (max-width: 768px) {
+					display: none;
+				}
+			}
+		}
+
+		&-title{
+
+		}
+		&-techtile{
+
+		}
+
+		&-name{
+			font-weight: 800;
+			font-size: var(--title-font-size);
+			margin-bottom: var(--primary-padding);
+
+			@media (max-width: 768px) {
+				margin-bottom: 0;
+			}
+		}
+
+		&-tech{
+			font-weight: 800;
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: center;
+			gap: var(--secondary-padding);
+			font-size: var(--subtitle-font-size);
+			margin-bottom: var(--primary-padding);
+
+			@media (max-width: 768px) {
+				margin-bottom: 0;
+			}
 		}
 	}
 }
