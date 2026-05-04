@@ -12,6 +12,10 @@ function render_content()
                 'class' => 'animate up',
                 'id' => 'about',
                 'image' => get_template_directory_uri() . '/assets/img/hero.webp',
+                'title' => 'Front-End Developer',
+                'name' => 'Zadorozhniy Kostiantyn',
+                'techtitle' => 'technology',
+                'tech' => ['HTML', 'CSS', 'JavaScript', 'PHP'],
             ],
         ]
     );

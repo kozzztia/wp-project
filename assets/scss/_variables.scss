@@ -1,7 +1,7 @@
 :root {
 	//	color
 	--color-white: #fff;
-	--color-white-rgb: 155, 255, 255;
+	--color-white-rgb: 255, 255, 255;
 	--color-black: #171919;
 	--color-black-rgb: 23, 25, 25;
 	--color-green: #4AF6CD;
@@ -13,6 +13,8 @@
 	--secondary-padding: 10px;
 	--primary-font-size: 16px;
 	--secondary-font-size: 20px;
+	--title-font-size: 80px;
+	--subtitle-font-size: 40px;
 	--header-height: 80px;
 	// other
 	--primary-font-family: 'Poppins', sans-serif;
@@ -26,6 +28,7 @@
 		--primary-font-size: 14px;
 		--secondary-font-size: 16px;
 		--header-height: 60px;
+		--title-font-size: 50px;
+		--subtitle-font-size: 25px;
 	}
-
 }

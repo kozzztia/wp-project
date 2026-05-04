@@ -78,6 +78,19 @@ main {
 	}
 }
 
+.decor-text {
+	z-index: -1;
+	position: absolute;
+	top: 0;
+	left: calc(var(--secondary-padding) * -1);
+	font-weight: 800;
+	letter-spacing: 5px;
+	line-height: 1;
+	font-size: 200px;
+	color: rgba(var(--color-white-rgb), .02);
+}
+
+
 
 
 

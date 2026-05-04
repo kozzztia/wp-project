@@ -20,5 +20,10 @@
 
 	.hero{
 		@include min-height();
+		position: relative;
+
+		&-decor{
+
+		}
 	}
 }
