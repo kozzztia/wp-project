@@ -30,8 +30,8 @@
             });
         }
 
-        if($('.hero-single-slider').length) {
-            $('.hero-single-slider').each(function () {
+        if($('.hero').length) {
+            $('.hero').each(function () {
                 init_slider($(this));
             });
         }

@@ -119,15 +119,42 @@ function init_menu_toggler(el) {
 }
 
 function init_slider(el) {
-    const swiper = new Swiper(el.find('.swiper')[0], {
-        loop: false,          // без бесконечного цикла
-        slidesPerView: 1,     // по одному слайду
-        spaceBetween: 0,      // без отступов
+    const swiperEl = el.find('.swiper')[0];
+    const swiper = new Swiper(swiperEl, {
+        loop: false,
+        slidesPerView: 1,
+        spaceBetween: 16,
         navigation: {
             nextEl: el.find('.swiper-button-next')[0],
             prevEl: el.find('.swiper-button-prev')[0],
-        },
-        // пагинацию пока не подключаем
+        }
+    });
+
+    const paginationEl = el.find('.single-slider-pagination');
+    paginationEl.empty();
+
+    swiper.slides.forEach((slide, index) => {
+        const slug = slide.getAttribute('data-slug') || (index + 1);
+        const num = (index + 1 < 10) ? '0' + (index + 1) : (index + 1);
+        const bullet = $('<span/>', {
+            class: 'single-slider-bullet',
+            html: '<i>' + num + '</i> ' + slug
+        });
+
+        bullet.on('click', () => {
+            swiper.slideTo(index);
+        });
+
+        paginationEl.append(bullet);
+    });
+
+    paginationEl.find('.single-slider-bullet').eq(swiper.activeIndex).addClass('active');
+
+    swiper.on('slideChange', () => {
+        const bullets = paginationEl.find('.single-slider-bullet');
+        bullets.removeClass('active');
+        bullets.eq(swiper.activeIndex).addClass('active');
     });
 }
+
 
