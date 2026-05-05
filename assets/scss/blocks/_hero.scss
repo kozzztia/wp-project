@@ -107,6 +107,7 @@
 					letter-spacing: 5px;
 
 					@media(max-width: 768px) {
+						transform: translateY(-10px);
 						max-width: 100%;
 					}
 				}
