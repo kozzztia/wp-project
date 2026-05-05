@@ -5,7 +5,9 @@
         <?php foreach ($slides as $slide): ?>
         <div class="single-slide swiper-slide" data-slug="<?= $slide['slug'] ?>">
             <figure class="slide-image">
-                <img src="<?php echo $slide['image'] . '?ver=' . get_version()?>" alt="<?= $slide['slug'] ?>"/>
+<!--                <img src="--><?php //echo $slide['image'] ?><!--" alt="--><?php //= $slide['slug'] ?><!--"/>-->
+
+                <?php echo get_svg_code( $slide['image']); ?>
             </figure>
             <span class="slide-text"><?= $slide['text']?></span>
         </div>

@@ -21,24 +21,24 @@ function render_content()
                         'slug'  => 'experience',
                         'text'  => 'Over three years of practical experience in front‑end development',
 //                        'image' => 'experience'
-                        'image' => get_template_directory_uri() . '/assets/svg/experience.svg',
+                        'image' => 'experience',
                     ],
                     [
                         'slug'  => 'start',
                         'text'  => 'Began learning and working with web technologies in 2022',
 //                        'image' => 'start'
-                        'image' => get_template_directory_uri() . '/assets/svg/start.svg',
+                        'image' => 'start',
                     ],
                     [
                         'slug'  => 'animation',
                         'text'  => 'Passionate about creating interactive animations with SVG and JavaScript',
 //                        'image' => 'animation'
-                        'image' => get_template_directory_uri() . '/assets/svg/animation.svg',
+                        'image' => 'animation',
                     ],
                     [
                         'slug'  => 'education',
                         'text'  => 'Technical background in computer systems, continuously improving programming skills',
-                        'image' => get_template_directory_uri() . '/assets/svg/education.svg',
+                        'image' => 'education',
                     ],
                 ],
 

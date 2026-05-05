@@ -4,6 +4,20 @@ function get_version (){
     return time();
 }
 
+function get_svg_code($filename) {
+    $path = get_template_directory() . '/assets/svg/' . $filename . '.svg';
+
+    if (file_exists($path)) {
+        return file_get_contents($path);
+    } else {
+        return null;
+    }
+}
+
+// пример использования
+echo get_svg_code('experience');
+
+
 function get_sprite($icon){
     return "/wp-content/themes/debian/assets/svg/sprite.svg" . "?v=" . get_version() . "#" . $icon ;
 }
