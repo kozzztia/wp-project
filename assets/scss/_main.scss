@@ -63,13 +63,12 @@ main {
 .customWrapper {
 	display: flex;
 	width: 100%;
-	padding-top: var(--header-height);
 
 	.customBlock {
 		flex: 1;
 		max-width: calc(var(--primary-width) + (var(--primary-padding) * 2));
 		padding: var(--primary-padding) var(--primary-padding) var(--primary-padding) 180px;
-		gap: calc(var(--primary-padding) * 2);
+		gap: var(--primary-padding);
 		margin-inline: auto;
 		@media(max-width: 1024px) {
 			padding-left: 80px;

@@ -17,6 +17,10 @@
 		height: 100%;
 		width: auto;
 		transform: scale(0.9);
+
+		@media (max-width: 768px) {
+			color: var(--color-green);
+		}
 	}
 
 	.logo-text{
