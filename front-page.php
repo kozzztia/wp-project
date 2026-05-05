@@ -18,23 +18,21 @@ function render_content()
                 'tech' => ['HTML', 'CSS', 'JavaScript', 'PHP', 'React', 'Next'],
                 'slides' => [
                     [
+                        'slug'  => 'animation',
+                        'text'  => 'Passionate about creating interactive animations with SVG and JavaScript',
+                        'image' => 'animation',
+                    ],
+                    [
                         'slug'  => 'experience',
                         'text'  => 'Over three years of practical experience in front‑end development',
-//                        'image' => 'experience'
                         'image' => 'experience',
                     ],
                     [
                         'slug'  => 'start',
                         'text'  => 'Began learning and working with web technologies in 2022',
-//                        'image' => 'start'
                         'image' => 'start',
                     ],
-                    [
-                        'slug'  => 'animation',
-                        'text'  => 'Passionate about creating interactive animations with SVG and JavaScript',
-//                        'image' => 'animation'
-                        'image' => 'animation',
-                    ],
+
                     [
                         'slug'  => 'education',
                         'text'  => 'Technical background in computer systems, continuously improving programming skills',
