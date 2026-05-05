@@ -60,6 +60,13 @@
 				width: 100%;
 				height: auto;
 				color: var(--color-green);
+				opacity: 0;
+				transition: opacity .5s;
+				user-select: none;
+
+				&.swiper-slide-active{
+					opacity: 1;
+				}
 
 				.slide-image {
 					width: 100%;
