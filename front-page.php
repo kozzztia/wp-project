@@ -50,6 +50,7 @@ function render_content()
                 'style' => '',
                 'class' => '',
                 'id' => 'portfolio',
+                'timer' => '3000',
                 'slides' => [
                     [
                         'slug'  => 'commercial',
@@ -71,9 +72,39 @@ function render_content()
                     ],
 
                     [
-                        'slug'  => get_template_directory_uri() . '/assets/img/hero.webp',
+                        'slug'  => 'pet project',
                         'text'  => 'Technical background in computer systems, continuously improving programming skills',
-                        'image' => 'education',
+                        'image' => get_template_directory_uri() . '/assets/img/hero.webp',
+                        'link' => ['url'=> '#', 'title' => 'view' ]
+                    ],
+                    [
+                        'slug'  => 'pet project',
+                        'text'  => 'Technical background in computer systems, continuously improving programming skills',
+                        'image' => get_template_directory_uri() . '/assets/img/hero.webp',
+                        'link' => ['url'=> '#', 'title' => 'view' ]
+                    ],
+                    [
+                        'slug'  => 'pet project',
+                        'text'  => 'Technical background in computer systems, continuously improving programming skills',
+                        'image' => get_template_directory_uri() . '/assets/img/hero.webp',
+                        'link' => ['url'=> '#', 'title' => 'view' ]
+                    ],
+                    [
+                        'slug'  => 'pet project',
+                        'text'  => 'Technical background in computer systems, continuously improving programming skills',
+                        'image' => get_template_directory_uri() . '/assets/img/hero.webp',
+                        'link' => ['url'=> '#', 'title' => 'view' ]
+                    ],
+                    [
+                        'slug'  => 'pet project',
+                        'text'  => 'Technical background in computer systems, continuously improving programming skills',
+                        'image' => get_template_directory_uri() . '/assets/img/hero.webp',
+                        'link' => ['url'=> '#', 'title' => 'view' ]
+                    ],
+                    [
+                        'slug'  => 'pet project',
+                        'text'  => 'Technical background in computer systems, continuously improving programming skills',
+                        'image' => get_template_directory_uri() . '/assets/img/hero.webp',
                         'link' => ['url'=> '#', 'title' => 'view' ]
                     ],
                 ],

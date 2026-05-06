@@ -4,12 +4,15 @@
     <div class="swiper-wrapper">
         <?php foreach ($slides as $slide): ?>
         <div class="single-slide swiper-slide" data-slug="<?= $slide['slug'] ?>">
-            <figure class="slide-image">
-<!--                <img src="--><?php //echo $slide['image'] ?><!--" alt="--><?php //= $slide['slug'] ?><!--"/>-->
+            <?php if(!empty($slide['image'])): ?>
+                <div class="slide-image">
+                    <?php echo get_svg_code( $slide['image']); ?>
+                </div>
+            <?php endif; ?>
 
-                <?php echo get_svg_code( $slide['image']); ?>
-            </figure>
-            <span class="slide-text"><?= $slide['text']?></span>
+            <?php if(!empty($slide['slug'])): ?>
+                <span class="slide-text"><?= $slide['text']?></span>
+            <?php endif; ?>
         </div>
         <?php endforeach; ?>
     </div>

@@ -174,5 +174,21 @@ function init_slider(el) {
 }
 
 
+function init_multi_slider(el){
+    const swiperEl = el.find('.swiper')[0];
+    console.log(swiperEl);
+    const swiper = new Swiper(swiperEl, {
+        loop: false,
+        slidesPerView: 4,
+        spaceBetween: 16,
+        navigation: {
+            nextEl: el.find('.swiper-button-next')[0],
+            prevEl: el.find('.swiper-button-prev')[0],
+        }
+    });
+
+}
+
+
 
 

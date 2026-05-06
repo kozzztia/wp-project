@@ -10,10 +10,11 @@
     $slides = $fields['slides'] ?? null;
 ?>
 <?php if (!empty($fields)): ?>
-<div class="customWrapper hero-wrapper" <?php if(!empty($id)) echo 'id="' . $id . '"'; ?>
-     style="background-image: url('<?php echo $image; ?>');">
+<div class="customWrapper hero-wrapper <?php if(!empty($class)) echo $class?>"
+        <?php if(!empty($id)) echo 'id="' . $id . '"';?>
+        style="background-image: url('<?php echo $image; ?>');">
 
-    <div class="customBlock hero <?php if(!empty($class)) echo $class?>"
+    <div class="customBlock hero"
         <?php if(!empty($style)) echo 'style="' . $style . '"'; ?>>
 
         <?php if(!empty($title)): ?>
