@@ -9,7 +9,7 @@ function render_content()
         [
             'fields' => [
                 'style' => '',
-                'class' => 'animate up',
+                'class' => '',
                 'id' => 'about',
                 'image' => get_template_directory_uri() . '/assets/img/hero.webp',
                 'title' => 'Front-End Developer',
@@ -44,13 +44,40 @@ function render_content()
         ]
     );
 
-    get_template_part('views/blocks/hero', null,
+    get_template_part('views/blocks/multi-slider', null,
         [
             'fields' => [
                 'style' => '',
-                'class' => 'animate up',
+                'class' => '',
                 'id' => 'portfolio',
-                'image' => get_template_directory_uri() . '/assets/img/hero.webp',
+                'slides' => [
+                    [
+                        'slug'  => 'commercial',
+                        'text'  => 'Passionate about creating interactive animations with SVG and JavaScript',
+                        'image' => get_template_directory_uri() . '/assets/img/hero.webp',
+                        'link' => ['url'=> '#', 'title' => 'view' ]
+                    ],
+                    [
+                        'slug'  => 'pet project',
+                        'text'  => 'Over three years of practical experience in front‑end development',
+                        'image' => get_template_directory_uri() . '/assets/img/hero.webp',
+                        'link' => ['url'=> '#', 'title' => 'link to' ]
+                    ],
+                    [
+                        'slug'  => 'art  project',
+                        'text'  => 'Began learning and working with web technologies in 2022',
+                        'image' => get_template_directory_uri() . '/assets/img/hero.webp',
+                        'link' => ['url'=> '#', 'title' => 'show' ]
+                    ],
+
+                    [
+                        'slug'  => get_template_directory_uri() . '/assets/img/hero.webp',
+                        'text'  => 'Technical background in computer systems, continuously improving programming skills',
+                        'image' => 'education',
+                        'link' => ['url'=> '#', 'title' => 'view' ]
+                    ],
+                ],
+
             ],
         ]
     );

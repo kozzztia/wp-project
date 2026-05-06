@@ -48,71 +48,6 @@
 			overflow: visible;
 			flex: 1;
 
-
-			.swiper-wrapper {
-			}
-
-			.single-slide {
-				display: flex;
-				overflow: visible;
-				align-items: center;
-				flex-direction: column;
-				justify-content: center;
-				width: 100%;
-				height: auto;
-				user-select: none;
-				transition: opacity .5s;
-				opacity: 0;
-				color: var(--color-green);
-				position: relative;
-
-				.slide-image {
-					width: auto;
-					height: 100%;
-					filter: var(--primary-shadow);
-
-					svg {
-						width: 100%;
-						height: 100%;
-						object-fit: contain;
-						object-position: center;
-						scale: 1.2;
-
-						* {
-							animation-play-state: paused;
-						}
-					}
-				}
-
-				&.swiper-slide-active {
-					opacity: 1;
-
-					.slide-image {
-						svg {
-							* {
-								animation-play-state: running;
-							}
-						}
-					}
-				}
-
-				.slide-text {
-					transform: translateY(-40px);
-					font-size: var(--decor-font-size);
-					font-weight: 400;
-					max-width: 70%;
-					text-align: center;
-					color: var(--color-white);
-					filter: var(--primary-shadow);
-					letter-spacing: 5px;
-
-					@media(max-width: 768px) {
-						transform: translateY(-10px);
-						max-width: 100%;
-					}
-				}
-			}
-
 			&-pagination {
 				position: relative;
 				align-self: center;
@@ -149,6 +84,67 @@
 				height: 2px;
 				transition: transform 0.3s ease, width 0.3s ease;
 				background: var(--color-green);
+			}
+		}
+
+		.single-slide {
+			display: flex;
+			overflow: visible;
+			align-items: center;
+			flex-direction: column;
+			justify-content: center;
+			width: 100%;
+			height: auto;
+			user-select: none;
+			transition: opacity .5s;
+			opacity: 0;
+			color: var(--color-green);
+			position: relative;
+
+			.slide-image {
+				width: auto;
+				height: 100%;
+				filter: var(--primary-shadow);
+
+				svg {
+					width: 100%;
+					height: 100%;
+					object-fit: contain;
+					object-position: center;
+					scale: 1.2;
+
+					* {
+						animation-play-state: paused;
+					}
+				}
+			}
+
+			&.swiper-slide-active {
+				opacity: 1;
+
+				.slide-image {
+					svg {
+						* {
+							animation-play-state: running;
+						}
+					}
+				}
+			}
+
+			.slide-text {
+				transform: translateY(-40px);
+				font-size: var(--decor-font-size);
+				font-weight: 400;
+				max-width: 70%;
+				text-align: center;
+				color: var(--color-white);
+				filter: var(--primary-shadow);
+				letter-spacing: 5px;
+
+				@media(max-width: 768px) {
+					transform: translateY(-10px);
+					max-width: 100%;
+				}
 			}
 		}
 

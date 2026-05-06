@@ -1,0 +1,20 @@
+@use '../mixins' as *;
+
+.multi-slider-wrapper {
+	position: relative;
+	border-bottom: 1px solid rgba(var(--color-white-rgb), .1);
+	background-repeat: no-repeat;
+	background-position: center center;
+	background-size: cover;
+	@include min-height();
+
+	.multi-slider {
+		position: relative;
+		display: flex;
+		align-items: stretch;
+		flex-direction: column;
+		justify-content: center;
+		width: 100%;
+		padding: 0;
+	}
+}
