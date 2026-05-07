@@ -28,9 +28,14 @@
 			.swiper-slide {
 				opacity: 0;
 				transition: opacity 0.2s;
+				position: relative;
+				z-index: 1;
 
 				&-visible{
 					opacity: 1;
+				}
+
+				&-active{
 				}
 			}
 		}

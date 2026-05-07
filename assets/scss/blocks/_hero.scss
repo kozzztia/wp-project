@@ -11,11 +11,7 @@
 	&:before {
 		position: absolute;
 		content: '';
-		background-image: radial-gradient(
-						ellipse at center,
-						rgba(var(--color-black-rgb), 0.2) 0%,
-						rgba(var(--color-black-rgb), 1) 100%
-		);
+		background-image: var(--black-gradient);
 		inset: 0;
 	}
 

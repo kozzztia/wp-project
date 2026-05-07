@@ -6,6 +6,16 @@
 	--color-black-rgb: 23, 25, 25;
 	--color-green: #4AF6CD;
 	--color-green-rgb: 74, 246, 205;
+	--black-gradient: radial-gradient(
+					ellipse at center,
+					rgba(var(--color-black-rgb), 0.2) 0%,
+					rgba(var(--color-black-rgb), 1) 100%
+	);
+	--white-gradient: radial-gradient(
+					ellipse at center,
+					rgba(var(--color-white-rgb), 0.2) 0%,
+					rgba(var(--color-white-rgb), 1) 100%
+	);
 	//	sizes
 	--primary-width: 1440px;
 	--secondary-width: 1200px;

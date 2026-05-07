@@ -50,7 +50,7 @@ function render_content()
                 'style' => '',
                 'class' => '',
                 'id' => 'portfolio',
-                'timer' => '3000',
+//                'timer' => '3000',
                 'slides' => [
                     [
                         'slug'  => 'commercial',
@@ -61,13 +61,13 @@ function render_content()
                     [
                         'slug'  => 'pet project',
                         'image' => get_template_directory_uri() . '/assets/img/pet-portfolio.webp',
-                        'link' => ['url'=> 'https://kozzztia.github.io/scooter/home', 'title' => 'show it' ]
+                        'link' => ['url'=> 'https://kozzztia.github.io/my-project/', 'title' => 'show it' ]
                     ],
                     [
                         'slug'  => 'animation project',
                         'title'  => 'Scooter landing project',
                         'image' => get_template_directory_uri() . '/assets/img/scooter.webp',
-                        'link' => ['url'=> 'https://kozzztia.github.io/my-project/', 'title' => 'show' ]
+                        'link' => ['url'=> 'https://kozzztia.github.io/scooter/home', 'title' => 'show' ]
                     ],
 
                     [
@@ -78,7 +78,6 @@ function render_content()
                     ],
                     [
                         'slug'  => 'pet project',
-                        'link' => ['url'=> '#', 'title' => 'view' ]
                     ],
                     [
                         'slug'  => 'commercial',
@@ -106,7 +105,6 @@ function render_content()
                     ],
                     [
                         'slug'  => 'pet project',
-                        'link' => ['url'=> '#', 'title' => 'view' ]
                     ],
                 ],
 
