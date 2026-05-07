@@ -50,8 +50,6 @@ function init_navigation(el) {
 
             currentIndex = index;
             updateButtons();
-
-            // синхронизируем логотип
             updateLogoTextById(id);
         }
     }
@@ -91,13 +89,11 @@ function init_navigation(el) {
         }
     });
 
-    // слушаем ресайз, чтобы логотип возвращался к дефолту
     $(window).on('resize', function() {
         const id = window.location.hash.replace('#', '');
         if (id) updateLogoTextById(id);
     });
 
-    // стартовое состояние
     const startId = window.location.hash.replace('#', '');
     if (startId) setActiveById(startId);
     updateButtons();

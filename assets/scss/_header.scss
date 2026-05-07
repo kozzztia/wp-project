@@ -18,6 +18,15 @@
 		padding-inline: var(--primary-padding);
 		margin-inline: auto;
 
+		&:before{
+			transition: all .2s ease-in-out ;
+			position: absolute;
+			content: '';
+			display: block;
+			inset: 0;
+			background-color: transparent;
+		}
+
 
 		&-logo {
 			z-index: inherit;
@@ -32,16 +41,6 @@
 			display: flex;
 			padding: var(--primary-padding);
 			padding-top: calc(var(--header-height) + var(--primary-padding));
-
-			//&:before{
-			//	transition: .2s background-color ease-in-out;
-			//	position: absolute;
-			//	content: '';
-			//	display: block;
-			//	inset: 0;
-			//	filter: blur(10px);
-			//	background-color: rgba(var(--color-black-rgb), .5);
-			//}
 
 			@media (max-width: 1024px) {
 				border-right: none;
