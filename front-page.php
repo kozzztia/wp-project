@@ -56,52 +56,48 @@ function render_content()
                         'slug'  => 'commercial',
                         'title'  => 'Stolen Life',
                         'image' => get_template_directory_uri() . '/assets/img/stolen-life.webp',
-                        'link' => ['url'=> 'https://stolenlife.org/', 'title' => 'view' ]
+                        'link' => ['url'=> 'https://stolenlife.org/', 'title' => 'view', 'class' => 'green', 'target' => '_blank' ],
                     ],
                     [
                         'slug'  => 'pet project',
                         'image' => get_template_directory_uri() . '/assets/img/pet-portfolio.webp',
-                        'link' => ['url'=> 'https://kozzztia.github.io/my-project/', 'title' => 'show it' ]
+                        'link' => ['url'=> 'https://kozzztia.github.io/my-project/', 'title' => 'show it', 'class' => 'green', 'target' => '_blank' ]
                     ],
                     [
                         'slug'  => 'animation project',
-                        'title'  => 'Scooter landing project',
                         'image' => get_template_directory_uri() . '/assets/img/scooter.webp',
-                        'link' => ['url'=> 'https://kozzztia.github.io/scooter/home', 'title' => 'show' ]
+                        'link' => ['url'=> 'https://kozzztia.github.io/scooter/home', 'title' => 'show', 'class' => 'green', 'target' => '_blank' ]
                     ],
 
                     [
                         'slug'  => 'pet project',
-                        'title'  => 'Diploma project at Beetroot Academy',
                         'image' => get_template_directory_uri() . '/assets/img/i-love-my-bike.webp',
-                        'link' => ['url'=> 'https://i-love-my-bike.netlify.app/', 'title' => 'view' ]
+                        'link' => ['url'=> 'https://i-love-my-bike.netlify.app/', 'title' => 'view', 'class' => 'green', 'target' => '_blank' ]
                     ],
                     [
-                        'slug'  => 'pet project',
+                        'slug'  => 'empty project',
                     ],
                     [
                         'slug'  => 'commercial',
                         'title'  => 'Stolen Life',
                         'image' => get_template_directory_uri() . '/assets/img/stolen-life.webp',
-                        'link' => ['url'=> 'https://stolenlife.org/', 'title' => 'view' ]
+                        'link' => ['url'=> 'https://stolenlife.org/', 'title' => 'view', 'class' => 'green', 'target' => '_blank' ]
                     ],
                     [
                         'slug'  => 'pet project',
                         'image' => get_template_directory_uri() . '/assets/img/pet-portfolio.webp',
-                        'link' => ['url'=> 'https://kozzztia.github.io/scooter/home', 'title' => 'show it' ]
+                        'link' => ['url'=> 'https://kozzztia.github.io/scooter/home', 'title' => 'show it', 'class' => 'green', 'target' => '_blank' ]
                     ],
                     [
                         'slug'  => 'animation project',
-                        'title'  => 'Scooter landing project',
                         'image' => get_template_directory_uri() . '/assets/img/scooter.webp',
-                        'link' => ['url'=> 'https://kozzztia.github.io/my-project/', 'title' => 'show' ]
+                        'link' => ['url'=> 'https://kozzztia.github.io/my-project/', 'title' => 'show', 'class' => 'green', 'target' => '_blank' ]
                     ],
 
                     [
                         'slug'  => 'pet project',
-                        'title'  => 'Diploma project at Beetroot Academy',
                         'image' => get_template_directory_uri() . '/assets/img/i-love-my-bike.webp',
-                        'link' => ['url'=> 'https://i-love-my-bike.netlify.app/', 'title' => 'view' ]
+                        'link' => ['url'=> 'https://i-love-my-bike.netlify.app/', 'title' => 'view', 'class' => 'green', 'target' => '_blank' ]
                     ],
                     [
                         'slug'  => 'pet project',

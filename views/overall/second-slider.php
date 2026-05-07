@@ -18,9 +18,7 @@
                 <span class="second-slider-slide-title"><?= esc_html($slide['title']); ?></span>
             <?php endif; ?>
 
-            <?php if (!empty($slide['link'])): ?>
-                <a href="<?= esc_html($slide['link']['url']); ?>" target="_blank" class="second-slider-slide-link"><?= esc_html($slide['link']['title']); ?></a>
-            <?php endif; ?>
+            <?php if (!empty($slide['link'])): get_template_part('views/overall/customButton', null , ['button' => $slide['link']]); endif; ?>
             </div>
         </div>
     <?php endforeach; ?>
