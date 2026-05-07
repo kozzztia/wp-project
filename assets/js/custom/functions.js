@@ -123,7 +123,7 @@ function init_slider(el) {
     const swiper = new Swiper(swiperEl, {
         loop: false,
         slidesPerView: 1,
-        spaceBetween: 16,
+        spaceBetween: 0,
         navigation: {
             nextEl: el.find('.swiper-button-next')[0],
             prevEl: el.find('.swiper-button-prev')[0],
@@ -131,7 +131,7 @@ function init_slider(el) {
     });
 
     const paginationEl = el.find('.single-slider-pagination');
-    const thumb = paginationEl.find('.single-slider-thumb'); // уже есть в HTML
+    const thumb = paginationEl.find('.single-slider-thumb');
 
     const bullets = [];
 
@@ -158,7 +158,6 @@ function init_slider(el) {
         bullets.forEach(b => b.removeClass('active'));
         activeBullet.addClass('active');
 
-        // считаем позицию относительно контейнера
         const left = activeBullet.offset().left - paginationEl.offset().left;
         const width = activeBullet.outerWidth();
 
