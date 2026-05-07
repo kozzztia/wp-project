@@ -8,10 +8,13 @@
 @use 'main';
 @use 'logo';
 @use 'header';
+@use 'single-slider';
+@use 'second-slider';
 
 // blocks
 
 @use 'blocks/example';
 @use 'blocks/hero';
 @use 'blocks/multi-slider';
+
 

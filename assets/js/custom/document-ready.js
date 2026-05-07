@@ -38,7 +38,7 @@
 
         if($('.multi-slider').length) {
             $('.multi-slider').each(function () {
-                init_multi_slider($(this));
+                init_second_slider($(this));
             });
         }
 

@@ -174,20 +174,41 @@ function init_slider(el) {
 }
 
 
-function init_multi_slider(el){
+function init_second_slider(el){
     const swiperEl = el.find('.swiper')[0];
-    console.log(swiperEl);
+    const timer = swiperEl.getAttribute('data-timer');
+
     const swiper = new Swiper(swiperEl, {
-        loop: false,
-        slidesPerView: 4,
+        loop: !!timer,
+        slidesPerView: 1,
         spaceBetween: 0,
         navigation: {
             nextEl: el.find('.swiper-button-next')[0],
             prevEl: el.find('.swiper-button-prev')[0],
-        }
+        },
+        autoplay: timer ? {
+            delay: parseInt(timer, 10),
+            disableOnInteraction: false
+        } : false,
+        breakpoints: {
+            1024: { slidesPerView: 4 },
+            768:  { slidesPerView: 3 },
+            390:  { slidesPerView: 2 }
+        },
+        watchSlidesProgress: true,
+        watchSlidesVisibility: true
     });
 
+    swiperEl.addEventListener('mouseenter', () => {
+        if (swiper.autoplay) swiper.autoplay.stop();
+    });
+    swiperEl.addEventListener('mouseleave', () => {
+        if (swiper.autoplay) swiper.autoplay.start();
+    });
 }
+
+
+
 
 
 

@@ -13,7 +13,7 @@
             if(!empty($timer)) echo 'data-timer="' . $timer . '"';
         ?>>
     <div class="customBlock multi-slider">
-        <?php get_template_part('views/overall/multi-slider', null , ['slides' => $slides, 'timer' => $timer]);?>
+        <?php get_template_part('views/overall/second-slider', null , ['slides' => $slides, 'timer' => $timer]);?>
     </div>
 </div>
 <?php endif;?>
