@@ -14,6 +14,16 @@ function get_svg_code($filename) {
     }
 }
 
+
+function get_slide_count($index){
+    switch ($index % 4) {
+        case 1: return 'slide-2';
+        case 2: return 'slide-3';
+        case 3: return 'slide-4';
+        default: return 'slide-1';
+    }
+}
+
 // пример использования
 echo get_svg_code('experience');
 

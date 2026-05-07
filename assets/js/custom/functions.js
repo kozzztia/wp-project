@@ -190,9 +190,9 @@ function init_second_slider(el){
             disableOnInteraction: false
         } : false,
         breakpoints: {
-            1024: { slidesPerView: 4 },
-            768:  { slidesPerView: 3 },
-            390:  { slidesPerView: 2 }
+            1440: { slidesPerView: 4 },
+            1024:  { slidesPerView: 3 },
+            768:  { slidesPerView: 2 }
         },
         watchSlidesProgress: true,
         watchSlidesVisibility: true

@@ -107,6 +107,12 @@ function render_content()
                         'image' => get_template_directory_uri() . '/assets/img/hero.webp',
                         'link' => ['url'=> '#', 'title' => 'view' ]
                     ],
+                    [
+                        'slug'  => 'pet project',
+                        'text'  => 'Technical background in computer systems, continuously improving programming skills',
+                        'image' => get_template_directory_uri() . '/assets/img/hero.webp',
+                        'link' => ['url'=> '#', 'title' => 'view' ]
+                    ],
                 ],
 
             ],
