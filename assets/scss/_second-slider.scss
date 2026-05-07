@@ -1,4 +1,11 @@
 .second-slider {
+	padding-block: 150px;
+	position: relative;
+
+	@media (max-width: 768px){
+		padding-block: 0;
+	}
+
 	&-slide {
 		position: relative;
 		overflow: visible;
@@ -6,18 +13,30 @@
 		height: 100%;
 		background-position: center left;
 		background-size: cover;
-		transform: translateY(0px);
-		scale: 1.1;
+
+		@media (max-width: 768px){
+			background-size: contain ;
+			background-position: top center;
+		}
 
 		&.slide-{
 			&1{
-				transform: translateY(-50px);
+				transform: translateY(-50px) scale(1.1);
 			}
 			&2{
-				transform: translateY(50px);
+				transform: translateY(50px) scale(1.1);
 			}
 			&3{
-				transform: translateY(-25px);
+				transform: translateY(-25px) scale(1.1);
+			}
+			&4{
+				transform: translateY(0) scale(1.1);
+			}
+
+			@media (max-width: 768px){
+				&1,&2,&3,&4{
+					transform: translateY(0) scale(1);
+				}
 			}
 		}
 

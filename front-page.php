@@ -54,63 +54,58 @@ function render_content()
                 'slides' => [
                     [
                         'slug'  => 'commercial',
-                        'text'  => 'Passionate about creating interactive animations with SVG and JavaScript',
-//                        'image' => get_template_directory_uri() . '/assets/img/hero.webp',
-                        'link' => ['url'=> '#', 'title' => 'view' ]
+                        'title'  => 'Stolen Life',
+                        'image' => get_template_directory_uri() . '/assets/img/stolen-life.webp',
+                        'link' => ['url'=> 'https://stolenlife.org/', 'title' => 'view' ]
                     ],
                     [
                         'slug'  => 'pet project',
-                        'text'  => 'Over three years of practical experience in front‑end development',
-                        'image' => get_template_directory_uri() . '/assets/img/hero.webp',
-                        'link' => ['url'=> '#', 'title' => 'link to' ]
+                        'image' => get_template_directory_uri() . '/assets/img/pet-portfolio.webp',
+                        'link' => ['url'=> 'https://kozzztia.github.io/scooter/home', 'title' => 'show it' ]
                     ],
                     [
-                        'slug'  => 'art  project',
-                        'text'  => 'Began learning and working with web technologies in 2022',
-                        'image' => get_template_directory_uri() . '/assets/img/hero.webp',
-                        'link' => ['url'=> '#', 'title' => 'show' ]
+                        'slug'  => 'animation project',
+                        'title'  => 'Scooter landing project',
+                        'image' => get_template_directory_uri() . '/assets/img/scooter.webp',
+                        'link' => ['url'=> 'https://kozzztia.github.io/my-project/', 'title' => 'show' ]
                     ],
 
                     [
                         'slug'  => 'pet project',
-                        'text'  => 'Technical background in computer systems, continuously improving programming skills',
-                        'image' => get_template_directory_uri() . '/assets/img/hero.webp',
-                        'link' => ['url'=> '#', 'title' => 'view' ]
+                        'title'  => 'Diploma project at Beetroot Academy',
+                        'image' => get_template_directory_uri() . '/assets/img/i-love-my-bike.webp',
+                        'link' => ['url'=> 'https://i-love-my-bike.netlify.app/', 'title' => 'view' ]
                     ],
                     [
                         'slug'  => 'pet project',
-                        'text'  => 'Technical background in computer systems, continuously improving programming skills',
-                        'image' => get_template_directory_uri() . '/assets/img/hero.webp',
                         'link' => ['url'=> '#', 'title' => 'view' ]
                     ],
                     [
-                        'slug'  => 'pet project',
-                        'text'  => 'Technical background in computer systems, continuously improving programming skills',
-                        'image' => get_template_directory_uri() . '/assets/img/hero.webp',
-                        'link' => ['url'=> '#', 'title' => 'view' ]
+                        'slug'  => 'commercial',
+                        'title'  => 'Stolen Life',
+                        'image' => get_template_directory_uri() . '/assets/img/stolen-life.webp',
+                        'link' => ['url'=> 'https://stolenlife.org/', 'title' => 'view' ]
                     ],
                     [
                         'slug'  => 'pet project',
-                        'text'  => 'Technical background in computer systems, continuously improving programming skills',
-                        'image' => get_template_directory_uri() . '/assets/img/hero.webp',
-                        'link' => ['url'=> '#', 'title' => 'view' ]
+                        'image' => get_template_directory_uri() . '/assets/img/pet-portfolio.webp',
+                        'link' => ['url'=> 'https://kozzztia.github.io/scooter/home', 'title' => 'show it' ]
+                    ],
+                    [
+                        'slug'  => 'animation project',
+                        'title'  => 'Scooter landing project',
+                        'image' => get_template_directory_uri() . '/assets/img/scooter.webp',
+                        'link' => ['url'=> 'https://kozzztia.github.io/my-project/', 'title' => 'show' ]
+                    ],
+
+                    [
+                        'slug'  => 'pet project',
+                        'title'  => 'Diploma project at Beetroot Academy',
+                        'image' => get_template_directory_uri() . '/assets/img/i-love-my-bike.webp',
+                        'link' => ['url'=> 'https://i-love-my-bike.netlify.app/', 'title' => 'view' ]
                     ],
                     [
                         'slug'  => 'pet project',
-                        'text'  => 'Technical background in computer systems, continuously improving programming skills',
-                        'image' => get_template_directory_uri() . '/assets/img/hero.webp',
-                        'link' => ['url'=> '#', 'title' => 'view' ]
-                    ],
-                    [
-                        'slug'  => 'pet project',
-                        'text'  => 'Technical background in computer systems, continuously improving programming skills',
-                        'image' => get_template_directory_uri() . '/assets/img/hero.webp',
-                        'link' => ['url'=> '#', 'title' => 'view' ]
-                    ],
-                    [
-                        'slug'  => 'pet project',
-                        'text'  => 'Technical background in computer systems, continuously improving programming skills',
-                        'image' => get_template_directory_uri() . '/assets/img/hero.webp',
                         'link' => ['url'=> '#', 'title' => 'view' ]
                     ],
                 ],

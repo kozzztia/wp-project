@@ -185,26 +185,29 @@ function init_second_slider(el){
             nextEl: el.find('.swiper-button-next')[0],
             prevEl: el.find('.swiper-button-prev')[0],
         },
-        autoplay: timer ? {
-            delay: parseInt(timer, 10),
-            disableOnInteraction: false
-        } : false,
+
+        ...(timer ? {
+            autoplay: {
+                delay: parseInt(timer, 10),
+                disableOnInteraction: false
+            }
+        } : {}),
         breakpoints: {
             1440: { slidesPerView: 4 },
-            1024:  { slidesPerView: 3 },
-            768:  { slidesPerView: 2 }
+            1024: { slidesPerView: 3 },
+            768:  { slidesPerView: 2 },
+            390:  { slidesPerView: 1 }
         },
         watchSlidesProgress: true,
         watchSlidesVisibility: true
     });
 
-    swiperEl.addEventListener('mouseenter', () => {
-        if (swiper.autoplay) swiper.autoplay.stop();
-    });
-    swiperEl.addEventListener('mouseleave', () => {
-        if (swiper.autoplay) swiper.autoplay.start();
-    });
+    if (timer) {
+        swiperEl.addEventListener('mouseenter', () => swiper.autoplay.stop());
+        swiperEl.addEventListener('mouseleave', () => swiper.autoplay.start());
+    }
 }
+
 
 
 
