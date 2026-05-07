@@ -180,7 +180,7 @@ function init_multi_slider(el){
     const swiper = new Swiper(swiperEl, {
         loop: false,
         slidesPerView: 4,
-        spaceBetween: 16,
+        spaceBetween: 0,
         navigation: {
             nextEl: el.find('.swiper-button-next')[0],
             prevEl: el.find('.swiper-button-prev')[0],

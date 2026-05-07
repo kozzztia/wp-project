@@ -55,7 +55,7 @@ function render_content()
                     [
                         'slug'  => 'commercial',
                         'text'  => 'Passionate about creating interactive animations with SVG and JavaScript',
-                        'image' => get_template_directory_uri() . '/assets/img/hero.webp',
+//                        'image' => get_template_directory_uri() . '/assets/img/hero.webp',
                         'link' => ['url'=> '#', 'title' => 'view' ]
                     ],
                     [
