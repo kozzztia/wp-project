@@ -2,6 +2,7 @@
 .tab{
 	display: flex;
 	gap: var(--primary-padding);
+	height: auto;
 
 	//navigation
 	&-nav{
@@ -19,18 +20,19 @@
 		gap : var(--primary-padding);
 		align-items: center;
 		justify-content: space-between;
-		transition: opacity .2s ease-in-out;
+		transition: opacity .2s ease-in-out, color .2s ease-in-out;
 		text-transform: uppercase;
 		filter: var(--primary-shadow);
 		cursor: pointer;
 		padding: var(--secondary-padding);
+		opacity: var(--disabled-opacity);
 
 		svg {
 			transition: transform .2s ease-in-out;
 			display: block;
 			width: 20px;
 			height: 20px;
-			filter: var(--primary-shadow);
+
 			transform: rotate(-90deg);
 		}
 	}
@@ -38,6 +40,7 @@
 	//content
 	&-content{
 		flex: 1;
+		padding: var(--secondary-padding);
 	}
 
 	&-text{
@@ -49,6 +52,8 @@
 	@for $i from 1 through 4 {
 		&:has(#tab-#{$i}:checked) {
 			label[for="tab-#{$i}"] {
+				color: var(--color-green);
+				opacity: 1;
 				svg {
 					transform: rotate(-180deg);
 					transition: transform .3s ease;

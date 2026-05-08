@@ -15,7 +15,7 @@
                 <?php echo esc_html($tab['title']); ?>
 
                 <svg>
-                    <use href=<?php echo get_sprite("arrow-icon")?>></use>
+                    <use href=<?php echo get_sprite("arrow-2-icon")?>></use>
                 </svg>
 
             </label>
