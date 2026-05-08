@@ -12,10 +12,14 @@
 <?php if (!empty($fields)): ?>
 <div class="customWrapper hero-wrapper <?php if(!empty($class)) echo $class?>"
         <?php if(!empty($id)) echo 'id="' . $id . '"';?>
-        style="background-image: url('<?php echo $image; ?>');">
+        <?php echo 'style="'
+                . (!empty($style) ? esc_attr($style) . '; ' : '')
+                . (!empty($image) ? 'background-image: url(' . esc_url($image) . ');' : '')
+                . '"';
+        ?>
+        >
 
-    <div class="customBlock hero"
-        <?php if(!empty($style)) echo 'style="' . $style . '"'; ?>>
+    <div class="customBlock hero">
 
         <?php if(!empty($title)): ?>
         <span class="hero-decor decor-text" aria-hidden="true">

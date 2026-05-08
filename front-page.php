@@ -50,7 +50,7 @@ function render_content()
                 'style' => '',
                 'class' => '',
                 'id' => 'portfolio',
-//                'timer' => '3000',
+                'timer' => '3000',
                 'slides' => [
                     [
                         'slug'  => 'commercial',
@@ -109,13 +109,13 @@ function render_content()
     );
 
 
-    get_template_part('views/blocks/hero', null,
+    get_template_part('views/blocks/banner', null,
         [
             'fields' => [
                 'style' => '',
-                'class' => 'animate up',
+                'class' => '',
                 'id' => 'study',
-                'image' => get_template_directory_uri() . '/assets/img/hero.webp',
+                'image' => get_template_directory_uri() . '/assets/svg/map.svg',
             ],
         ]
     );
