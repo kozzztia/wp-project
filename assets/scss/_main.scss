@@ -11,7 +11,7 @@ body {
 	line-height: 1.6;
 	position: relative;
 	display: flex;
-	overflow-x: hidden;
+	overflow-x: clip;
 	align-items: stretch;
 	flex-direction: column;
 	justify-content: space-between;
@@ -45,7 +45,7 @@ body {
 main {
 	position: relative;
 	z-index: 100;
-	overflow: clip;
+	overflow: visible;
 	flex: 1 0 auto;
 }
 

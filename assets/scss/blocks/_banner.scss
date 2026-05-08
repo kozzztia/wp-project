@@ -6,21 +6,26 @@
 	background-repeat: no-repeat;
 	background-position: center;
 	background-size: contain;
-
-	@media (max-width: 1024px){
+	@media (max-width: 1024px) {
 		background-size: cover;
 	}
 	@include min-height();
 
 	.banner {
+		display: flex;
+		flex-direction: column;
 
-		&-header{
-			display: flex;
-			flex-direction: column;
-			align-items: flex-end;
+		&-tab {
+			flex: 1;
 		}
 
-		&-title{
+		&-header {
+			display: flex;
+			align-items: flex-end;
+			flex-direction: column;
+		}
+
+		&-title {
 			font-size: var(--subtitle-font-size);
 			font-weight: 800;
 			display: flex;
@@ -29,9 +34,7 @@
 			gap: var(--secondary-padding);
 		}
 
-		&-subtitle{
-
+		&-subtitle {
 		}
-
 	}
 }

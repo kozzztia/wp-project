@@ -255,6 +255,7 @@
 	width: 100%;
 
 	.customBlock {
+		width: 100%;
 		flex: 1;
 		max-width: calc(var(--primary-width) + (var(--primary-padding) * 2));
 		padding: var(--primary-padding) var(--primary-padding) var(--primary-padding) 180px;
