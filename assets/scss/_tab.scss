@@ -46,51 +46,19 @@
 
 	.tab-text-desc{ display: none; }
 
-	&:has(#tab-1:checked){
-		label[for="tab-1"]{
-			svg{
-				transform: rotate(-180deg);
+	@for $i from 1 through 4 {
+		&:has(#tab-#{$i}:checked) {
+			label[for="tab-#{$i}"] {
+				svg {
+					transform: rotate(-180deg);
+					transition: transform .3s ease;
+				}
 			}
-		}
-		.tab-text:has(#tab-1){
-			.tab-text-desc{
-				display: block;
-			}
-		}
-	}
-	&:has(#tab-2:checked){
-		label[for="tab-2"]{
-			svg{
-				transform: rotate(-180deg);
-			}
-		}
-		.tab-text:has(#tab-2){
-			.tab-text-desc{
-				display: block;
-			}
-		}
-	}
-	&:has(#tab-3:checked){
-		label[for="tab-3"]{
-			svg{
-				transform: rotate(-180deg);
-			}
-		}
-		.tab-text:has(#tab-3){
-			.tab-text-desc{
-				display: block;
-			}
-		}
-	}
-	&:has(#tab-4:checked){
-		label[for="tab-4"]{
-			svg{
-				transform: rotate(-180deg);
-			}
-		}
-		.tab-text:has(#tab-4){
-			.tab-text-desc{
-				display: block;
+
+			.tab-text:has(#tab-#{$i}) {
+				.tab-text-desc {
+					display: block;
+				}
 			}
 		}
 	}
