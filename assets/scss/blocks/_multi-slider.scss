@@ -16,5 +16,11 @@
 		justify-content: center;
 		width: 100%;
 		padding: 0;
+
+		&-subtitle{
+			position: absolute;
+			top: var(--primary-padding);
+			right: 0;
+		}
 	}
 }

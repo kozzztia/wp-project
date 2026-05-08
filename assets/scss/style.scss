@@ -2,6 +2,7 @@
 @use 'plugins/swiper.min';
 //main
 @use 'reset';
+@use 'extend';
 @use 'variables';
 @use 'mixins';
 @use 'animations';
@@ -10,7 +11,8 @@
 @use 'header';
 @use 'single-slider';
 @use 'second-slider';
-@use 'extend';
+@use 'tab';
+
 
 // blocks
 

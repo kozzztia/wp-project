@@ -51,6 +51,7 @@ function render_content()
                 'class' => '',
                 'id' => 'portfolio',
                 'timer' => '3000',
+                'subtitle' => 'portfolio',
                 'slides' => [
                     [
                         'slug'  => 'commercial',
@@ -61,7 +62,7 @@ function render_content()
                     [
                         'slug'  => 'pet project',
                         'image' => get_template_directory_uri() . '/assets/img/pet-portfolio.webp',
-                        'link' => ['url'=> 'https://kozzztia.github.io/my-project/', 'title' => 'show it', 'class' => 'green', 'target' => '_blank' ]
+                        'link' => ['url'=> 'https://kozzztia.github.io/my-project/', 'title' => 'show', 'class' => 'green', 'target' => '_blank' ]
                     ],
                     [
                         'slug'  => 'animation project',
@@ -72,7 +73,7 @@ function render_content()
                     [
                         'slug'  => 'pet project',
                         'image' => get_template_directory_uri() . '/assets/img/i-love-my-bike.webp',
-                        'link' => ['url'=> 'https://i-love-my-bike.netlify.app/', 'title' => 'vieview viewview view view view view view vieww', 'class' => 'green', 'target' => '_blank' ]
+                        'link' => ['url'=> 'https://i-love-my-bike.netlify.app/', 'title' => 'show', 'class' => 'green', 'target' => '_blank' ]
                     ],
                     [
                         'slug'  => 'empty project',
@@ -86,12 +87,12 @@ function render_content()
                     [
                         'slug'  => 'pet project',
                         'image' => get_template_directory_uri() . '/assets/img/pet-portfolio.webp',
-                        'link' => ['url'=> 'https://kozzztia.github.io/scooter/home', 'title' => 'show it', 'class' => 'green', 'target' => '_blank' ]
+                        'link' => ['url'=> 'https://kozzztia.github.io/my-project/', 'title' => 'show', 'class' => 'green', 'target' => '_blank' ]
                     ],
                     [
                         'slug'  => 'animation project',
                         'image' => get_template_directory_uri() . '/assets/img/scooter.webp',
-                        'link' => ['url'=> 'https://kozzztia.github.io/my-project/', 'title' => 'show', 'class' => 'green', 'target' => '_blank' ]
+                        'link' => ['url'=> 'https://kozzztia.github.io/scooter/home', 'title' => 'show', 'class' => 'green', 'target' => '_blank' ]
                     ],
 
                     [
@@ -114,8 +115,32 @@ function render_content()
             'fields' => [
                 'style' => '',
                 'class' => '',
-                'id' => 'study',
+                'id' => 'experience',
                 'image' => get_template_directory_uri() . '/assets/svg/map.svg',
+                'subtitle' => 'experience',
+                'title' => 'My  work  experience',
+                'tabs' => [
+                    [
+                        'title'=> 'title-1',
+                        'desc_title'=> 'desc-1',
+                        'desc'=> 'description 1',
+                    ],
+                    [
+                        'title'=> 'title-2',
+                        'desc_title'=> 'desc-2',
+                        'desc'=> 'description 2',
+                    ],
+                    [
+                        'title'=> 'title-3',
+                        'desc_title'=> 'desc-3',
+                        'desc'=> 'description 3',
+                    ],
+                    [
+                        'title'=> 'title-4',
+                        'desc_title'=> 'desc-4',
+                        'desc'=> 'description 4',
+                    ],
+                ]
             ],
         ]
     );
@@ -125,7 +150,7 @@ function render_content()
             'fields' => [
                 'style' => '',
                 'class' => 'animate up',
-                'id' => 'experience',
+                'id' => 'study',
                 'image' => get_template_directory_uri() . '/assets/img/hero.webp',
             ],
         ]

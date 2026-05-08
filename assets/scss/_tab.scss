@@ -1,0 +1,100 @@
+
+.tab{
+	display: flex;
+	gap: var(--primary-padding);
+
+	//navigation
+	&-nav{
+		display: flex;
+		flex-direction: column;
+		flex-wrap: wrap;
+		width: min(150px, 100%)
+	}
+
+	&-toggler{
+		font-size: var(--secondary-font-size);
+		line-height: 2;
+		display: flex;
+		flex-direction: row;
+		gap : var(--primary-padding);
+		align-items: center;
+		justify-content: space-between;
+		transition: opacity .2s ease-in-out;
+		text-transform: uppercase;
+		filter: var(--primary-shadow);
+		cursor: pointer;
+		padding: var(--secondary-padding);
+
+		svg {
+			transition: transform .2s ease-in-out;
+			display: block;
+			width: 20px;
+			height: 20px;
+			filter: var(--primary-shadow);
+			transform: rotate(-90deg);
+		}
+	}
+
+	//content
+	&-content{
+		flex: 1;
+	}
+
+	&-text{
+
+	}
+
+	.tab-text-desc{ display: none; }
+
+	&:has(#tab-1:checked){
+		label[for="tab-1"]{
+			svg{
+				transform: rotate(-180deg);
+			}
+		}
+		.tab-text:has(#tab-1){
+			.tab-text-desc{
+				display: block;
+			}
+		}
+	}
+	&:has(#tab-2:checked){
+		label[for="tab-2"]{
+			svg{
+				transform: rotate(-180deg);
+			}
+		}
+		.tab-text:has(#tab-2){
+			.tab-text-desc{
+				display: block;
+			}
+		}
+	}
+	&:has(#tab-3:checked){
+		label[for="tab-3"]{
+			svg{
+				transform: rotate(-180deg);
+			}
+		}
+		.tab-text:has(#tab-3){
+			.tab-text-desc{
+				display: block;
+			}
+		}
+	}
+	&:has(#tab-4:checked){
+		label[for="tab-4"]{
+			svg{
+				transform: rotate(-180deg);
+			}
+		}
+		.tab-text:has(#tab-4){
+			.tab-text-desc{
+				display: block;
+			}
+		}
+	}
+
+
+
+}

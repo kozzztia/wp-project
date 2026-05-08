@@ -26,9 +26,6 @@
 			align-items: center;
 		}
 
-		&-decor {
-		}
-
 		&-single-slider {
 			overflow: visible;
 			flex: 1;
@@ -50,37 +47,6 @@
 			@media (max-width: 768px) {
 				align-items: center;
 				text-align: center;
-			}
-		}
-
-		.with-line {
-			font-size: var(--decor-font-size);
-			position: relative;
-			display: flex;
-			align-items: center;
-			flex-direction: row;
-			width: auto;
-			letter-spacing: var(--decor-spacing);
-			text-transform: uppercase;
-			color: rgba(var(--color-white-rgb), var(--disabled-opacity));
-			gap: var(--primary-padding);
-
-			&:before {
-				position: absolute;
-				top: 50%;
-				right: calc(100% + var(--primary-padding));
-				display: block;
-				flex-shrink: 0;
-				width: 80px;
-				height: 1px;
-				content: '';
-				background: currentColor;
-				@media (max-width: 1024px) {
-					width: 60px;
-				}
-				@media (max-width: 768px) {
-					display: none;
-				}
 			}
 		}
 
