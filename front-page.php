@@ -72,7 +72,7 @@ function render_content()
                     [
                         'slug'  => 'pet project',
                         'image' => get_template_directory_uri() . '/assets/img/i-love-my-bike.webp',
-                        'link' => ['url'=> 'https://i-love-my-bike.netlify.app/', 'title' => 'view', 'class' => 'green', 'target' => '_blank' ]
+                        'link' => ['url'=> 'https://i-love-my-bike.netlify.app/', 'title' => 'vieview viewview view view view view view vieww', 'class' => 'green', 'target' => '_blank' ]
                     ],
                     [
                         'slug'  => 'empty project',

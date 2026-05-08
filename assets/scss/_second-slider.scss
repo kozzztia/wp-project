@@ -28,10 +28,17 @@
 	}
 	.swiper-button-next, .swiper-button-prev{
 		color: var(--color-green);
+		transition: transform .2s;
 		&:after{
 			transform-origin: center;
 			transform: scaleY(2);
 			filter: var(--primary-shadow);
+		}
+
+		@media (min-width: 769px){
+			&:hover{
+				transform: scale(1.1);
+			}
 		}
 	}
 
@@ -118,8 +125,9 @@
 			bottom: var(--primary-padding);
 			left: var(--primary-padding);
 			margin-inline: auto;
-			transition: transform 0.2s;
+			transition: transform 0.2s , opacity 0.2s ;
 			transform: translateY(0);
+			opacity: 0;
 
 			@media (min-width: 769px) {
 				transform: translateY(100px);
@@ -129,6 +137,7 @@
 		&:hover{
 			@media (min-width: 769px) {
 				.customButton{
+					opacity: 1;
 					transform: translateY(0);
 				}
 			}

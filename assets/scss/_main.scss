@@ -30,7 +30,7 @@ body {
 		.header {
 			&:before {
 				filter: blur(2px);
-				background-color: rgba(var(--color-black-rgb), .7);
+				background-color: rgba(var(--color-black-rgb), .8);
 			}
 		}
 	}
