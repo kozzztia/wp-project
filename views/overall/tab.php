@@ -4,6 +4,7 @@
     $title = $tabs['title'] ?? null;
     $desc_title = $tabs['desc_title'] ?? null;
     $desc = $tabs['desc'] ?? null;
+    $picture = $tabs['picture'] ?? null;
 ?>
 
 <?php if (!empty($tabs)): ?>
@@ -31,13 +32,17 @@
                        <?php echo $index === 0 ? 'checked' : ''; ?>
                        hidden>
 
-                <div class="tab-text-desc">
+                <div class="tab-text-desc typo">
                     <?php if (!empty($tab['desc_title'])): ?>
                         <h3><?php echo esc_html($tab['desc_title']); ?></h3>
                     <?php endif; ?>
 
                     <?php if (!empty($tab['desc'])): ?>
                         <p><?php echo wp_kses_post($tab['desc']); ?></p>
+                    <?php endif; ?>
+
+                    <?php if (!empty($tab['picture'])): ?>
+                        <img src="<?php echo esc_url($tab['picture']); ?>" alt="<?php echo $tab['title']; ?>" />
                     <?php endif; ?>
                 </div>
             </div>

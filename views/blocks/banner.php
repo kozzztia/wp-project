@@ -17,14 +17,8 @@
 
     <div class="customBlock banner">
         <div class="banner-header">
-        <?php if(!empty($subtitle)): ?>
-            <span class="banner-subtitle with-line" aria-hidden="true">
-            <?php echo esc_html($subtitle); ?>
-            </span>
-        <?php endif; ?>
-
         <?php if(!empty($title)): ?>
-            <h4 class="banner-title" aria-hidden="true">
+            <h4 class="banner-title with-line">
             <?php echo esc_html($title); ?>
             </h4>
         <?php endif; ?>

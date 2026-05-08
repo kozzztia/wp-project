@@ -117,28 +117,45 @@ function render_content()
                 'class' => '',
                 'id' => 'experience',
                 'image' => get_template_directory_uri() . '/assets/svg/map.svg',
-                'subtitle' => 'experience',
-                'title' => 'My  work  experience',
+                'title' => 'experience',
                 'tabs' => [
                     [
-                        'title'=> 'title-1',
-                        'desc_title'=> 'desc-1',
-                        'desc'=> 'description 1',
+                        'title'=> 'Front-end developer',
+                        'desc_title'=> 'Freelance Front-End Developer | 2024 – Present',
+                        'picture' => get_template_directory_uri() . '/assets/svg/freelancer.svg',
+                        'desc'=> '
+                                <p>Started my career as part of the team developing <strong>Caroinspection</strong> — a tool for car diagnostics. This was my first experience of teamwork: from setting tasks to deployment. Used React.js, TypeScript, SCSS, Canvas, SVG, Redux, Node.js. Independently explored Next.js and integrated AI tools during the development process.</p>
+                                <p>Since moving to <strong>freelancing</strong>, I have been engaged in the full cycle of creating web projects — from architecture to deployment. I develop component systems in PHP + Twig for WordPress, apply SCSS with BEM structure. I choose projects that allow creativity: SVG animations, pure CSS solutions without JS, interactive interfaces that respond to user interaction.</p>
+                                ',
+                        ],
+                    [
+                        'title'=> 'Drone engineer',
+                        'desc_title'=> 'Engineering | 2025 – 2026',
+                        'picture' => get_template_directory_uri() . '/assets/svg/drone.svg',
+                        'desc'=> '
+                                <p>Managed the development and maintenance of networks — Internet, video surveillance, radio communications, signaling. Ensured uninterrupted operation of critical infrastructure.</p>
+                                <p>Administered the Armor database, optimized access and security, and maintained specialized equipment.</p>
+                                <p>Engineer‑operator of UAVs. Participant in the ATO and defense forces, with official veteran status of combat operations.</p>
+                                ',
                     ],
                     [
-                        'title'=> 'title-2',
-                        'desc_title'=> 'desc-2',
-                        'desc'=> 'description 2',
+                        'title'=> 'Senior Engineer',
+                        'desc_title'=> 'National Police of Ukraine | 20014 – 2020',
+                        'picture' => get_template_directory_uri() . '/assets/svg/engineer.svg',
+                        'desc'=> '
+                                <p>Managed the development and maintenance of networks — Internet, video surveillance, radio communications, signaling. Ensured uninterrupted operation of critical infrastructure.</p>
+                                <p>Administered the Armor database, optimized access and security, and maintained specialized equipment.</p>
+                                <p>Engineer‑operator of UAVs. Participant in the ATO and defense forces, with official veteran status of combat operations.</p>
+                                ',
                     ],
                     [
-                        'title'=> 'title-3',
-                        'desc_title'=> 'desc-3',
-                        'desc'=> 'description 3',
-                    ],
-                    [
-                        'title'=> 'title-4',
-                        'desc_title'=> 'desc-4',
-                        'desc'=> 'description 4',
+                        'title'=> 'Network Engineer',
+                        'desc_title'=> 'Lan-line provider | 2008 – 2014',
+                        'picture' => get_template_directory_uri() . '/assets/svg/internet.svg',
+                        'desc' => '
+                                <p>Designed and built Internet networks for a regional provider, leading infrastructure projects to improve reliability and efficiency.</p>
+                                <p>Delivered high-quality customer support and ensured prompt resolution of technical issues.</p>
+                                ',
                     ],
                 ]
             ],
