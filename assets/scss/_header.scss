@@ -17,6 +17,7 @@
 		height: var(--header-height);
 		padding-inline: var(--primary-padding);
 		margin-inline: auto;
+		filter: var(--primary-shadow);
 
 		&:before{
 			transition: all .2s ease-in-out ;
@@ -72,7 +73,6 @@
 						color: var(--color-white);
 						border-radius: 5px;
 						gap: var(--primary-padding);
-						filter: var(--primary-shadow);
 
 						svg {
 							display: block;
@@ -125,7 +125,6 @@
 					display: block;
 					width: 20px;
 					height: 20px;
-					filter: var(--primary-shadow);
 				}
 
 				&.next {

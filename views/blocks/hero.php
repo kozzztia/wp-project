@@ -10,7 +10,7 @@
     $slides = $fields['slides'] ?? null;
 ?>
 <?php if (!empty($fields)): ?>
-<div class="customWrapper hero-wrapper <?php if(!empty($class)) echo $class?>"
+<section class="customWrapper hero-wrapper <?php if(!empty($class)) echo $class?>"
         <?php if(!empty($id)) echo 'id="' . $id . '"';?>
         <?php echo 'style="'
                 . (!empty($style) ? esc_attr($style) . '; ' : '')
@@ -22,9 +22,9 @@
     <div class="customBlock hero">
 
         <?php if(!empty($title)): ?>
-        <span class="hero-decor decor-text" aria-hidden="true">
+        <h1 class="hero-decor decor-text">
             <?php echo esc_html($title); ?>
-        </span>
+        </h1>
         <?php endif; ?>
 
         <?php if(!empty($slides)): ?>
@@ -35,21 +35,21 @@
 
         <article class="hero-article">
             <?php if(!empty($title)): ?>
-            <h1 class="hero-title with-line">
+            <h2 class="hero-title with-line">
                 <?php echo esc_html($title); ?>
-            </h1>
-            <?php endif; ?>
-
-            <?php if(!empty($name)): ?>
-            <h2 class="hero-name">
-                <?php echo esc_html($name); ?>
             </h2>
             <?php endif; ?>
 
-            <?php if(!empty($techtitle)): ?>
-            <h3 class="hero-techtile with-line">
-                <?php echo esc_html($techtitle); ?>
+            <?php if(!empty($name)): ?>
+            <h3 class="hero-name">
+                <?php echo esc_html($name); ?>
             </h3>
+            <?php endif; ?>
+
+            <?php if(!empty($techtitle)): ?>
+            <h2 class="hero-techtile with-line">
+                <?php echo esc_html($techtitle); ?>
+            </h2>
             <?php endif; ?>
 
             <?php if(!empty($tech)): ?>
@@ -65,5 +65,5 @@
         <div class="single-slider-pagination"><span class="single-slider-thumb"></span></div>
         <?php endif;?>
     </div>
-</div>
+</section>
 <?php endif;?>

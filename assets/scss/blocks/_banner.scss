@@ -16,7 +16,6 @@
 	.banner {
 		display: flex;
 		flex-direction: column;
-		filter: var(--primary-shadow);
 
 		&-inner{
 			display: flex;

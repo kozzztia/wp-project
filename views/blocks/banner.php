@@ -9,7 +9,7 @@
     $tabs_2 = $fields['tabs_2'] ?? null;
 ?>
 <?php if (!empty($fields)): ?>
-<div class="customWrapper banner-wrapper <?php if(!empty($class)) echo $class?>"
+<section class="customWrapper banner-wrapper <?php if(!empty($class)) echo $class?>"
     <?php if(!empty($id)) echo 'id="' . $id . '"';?>
     <?php echo 'style="'
             . (!empty($style) ? esc_attr($style) . '; ' : '')
@@ -25,7 +25,7 @@
         <?php endif; ?>
         <?php if(!empty($tabs_1)): ?>
             <?php foreach ( $tabs_1 as $tab_1): ?>
-                <div class="banner-article experience">
+                <article class="banner-article experience">
                     <?php if(!empty($tab_1['title'])): ?>
                         <h3 class="banner-article-title"><?= $tab_1['title']?></h3>
                     <?php endif;?>
@@ -37,7 +37,7 @@
                     <?php if(!empty($tab_1['desc'])): ?>
                         <?= $tab_1['desc']?>
                     <?php endif;?>
-                </div>
+                </article>
             <?php endforeach?>
         <?php endif?>
         </div>
@@ -51,7 +51,7 @@
         <?php endif; ?>
         <?php if(!empty($tabs_2)): ?>
             <?php foreach ( $tabs_2 as $tab_2): ?>
-                <div class="banner-article study">
+                <article class="banner-article study">
                     <?php if(!empty($tab_2['title'])): ?>
                         <h3 class="banner-article-title"><?= $tab_2['title']?></h3>
                     <?php endif;?>
@@ -63,11 +63,11 @@
                     <?php if(!empty($tab_2['desc'])): ?>
                         <?= $tab_2['desc']?>
                     <?php endif;?>
-                </div>
+                </article>
             <?php endforeach?>
         <?php endif?>
         </div>
 
     </div>
-</div>
+</section>
 <?php endif;?>

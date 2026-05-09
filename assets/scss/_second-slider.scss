@@ -35,7 +35,6 @@
 		&:after {
 			transform: scaleY(2);
 			transform-origin: center;
-			filter: var(--primary-shadow);
 		}
 
 		@media (min-width: 769px) {
@@ -106,7 +105,6 @@
 			transform-origin: top left;
 			letter-spacing: 5px;
 			text-transform: uppercase;
-			filter: var(--primary-shadow);
 		}
 
 		&-title {
@@ -115,7 +113,6 @@
 			text-align: center;
 			letter-spacing: 5px;
 			text-transform: uppercase;
-			filter: var(--primary-shadow);
 		}
 
 		&.empty {

@@ -261,6 +261,7 @@
 		padding: var(--primary-padding) var(--primary-padding) var(--primary-padding) 180px;
 		gap: var(--primary-padding);
 		margin-inline: auto;
+		filter: var(--primary-shadow);
 		@media(max-width: 1024px) {
 			padding-left: 80px;
 		}
@@ -285,7 +286,6 @@
 
 	&.green {
 		background-color: rgba(var(--color-green-rgb), 1);
-		filter: var(--primary-shadow);
 		border-radius: 5px;
 		color: var(--color-black);
 

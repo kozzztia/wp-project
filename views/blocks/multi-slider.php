@@ -7,7 +7,7 @@
     $timer = $fields['timer'] ?? null;
 ?>
 <?php if (!empty($slides)): ?>
-<div class="customWrapper multi-slider-wrapper <?php if(!empty($class)) echo $class?>"
+<section class="customWrapper multi-slider-wrapper <?php if(!empty($class)) echo $class?>"
         <?php
             if(!empty($id)) echo 'id="' . $id . '"';
             if(!empty($style)) echo 'style="' . $style . '"';
@@ -23,5 +23,5 @@
         </span>
         <?php endif; ?>
     </div>
-</div>
+</section>
 <?php endif;?>

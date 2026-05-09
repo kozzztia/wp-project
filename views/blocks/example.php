@@ -4,7 +4,7 @@
 ?>
 
 <?php if (!empty($fields)): ?>
-<div class="customWrapper example-wrapper" >
+<section class="customWrapper example-wrapper" >
     <div class="customBlock example <?=$class = $fields['class'] ?? ''?>"
         <?php echo $style ? 'style="'.$style.'"' : ''; ?>
     >
@@ -12,5 +12,5 @@
             example
         </div>
     </div>
-</div>
+</section>
 <?php endif;?>

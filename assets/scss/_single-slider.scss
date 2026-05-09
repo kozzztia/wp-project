@@ -20,7 +20,6 @@
 		transition: opacity .2s ease-in-out;
 		text-transform: uppercase;
 		opacity: var(--disabled-opacity);
-		filter: var(--primary-shadow);
 
 		i {
 			font-weight: 800;
@@ -59,7 +58,6 @@
 		.slide-image {
 			width: auto;
 			height: 100%;
-			filter: var(--primary-shadow);
 
 			svg {
 				width: 100%;
@@ -93,7 +91,6 @@
 			max-width: 70%;
 			text-align: center;
 			color: var(--color-white);
-			filter: var(--primary-shadow);
 			letter-spacing: 5px;
 
 			@media(max-width: 768px) {
