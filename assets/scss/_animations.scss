@@ -31,7 +31,119 @@
 }
 
 
-.svg{
+.svg-{
+	&animation{
+		.st0{opacity:0.7;fill:#FFFFFF;}
+		.st1{fill:#4AF6CD;}
+		.st2{fill:none;stroke:#263238;stroke-linecap:round;stroke-linejoin:round;}
+		.st3{fill:#757575;stroke:#263238;stroke-linecap:round;stroke-linejoin:round;}
+		.st4{fill:#263238;}
+		.st5{fill:#BFBFBF;stroke:#263238;stroke-miterlimit:10;}
+		.st6{fill:#4AF6CD;stroke:#263238;stroke-linecap:round;stroke-linejoin:round;}
+		.st7{clip-path:url(#SVGID_2_);}
+		.st8{opacity:0.3;fill-opacity:0.7;}
+		.st9{fill:#FFFFFF;}
+		.st10{clip-path:url(#SVGID_4_);}
+		.st11{opacity:0.4;fill:#4AF6CD;}
+		.st12{clip-path:url(#SVGID_6_);}
+		.st13{clip-path:url(#SVGID_8_);}
+		.st14{clip-path:url(#SVGID_10_);}
+		.st15{fill:#FFFFFF;stroke:#263238;stroke-linecap:round;stroke-linejoin:round;}
+		.st16{clip-path:url(#SVGID_12_);}
+		.st17{clip-path:url(#SVGID_14_);}
+		.st18{opacity:0.2;}
+		.st19{fill:none;stroke:#FFFFFF;stroke-linecap:round;stroke-linejoin:round;}
+		.st20{opacity:0.4;fill:none;stroke:#FFFFFF;stroke-linecap:round;stroke-linejoin:round;}
+		.st21{clip-path:url(#SVGID_16_);}
+		.st22{clip-path:url(#SVGID_18_);}
+		.st23{clip-path:url(#SVGID_20_);}
+		.st24{clip-path:url(#SVGID_22_);}
+		.st25{fill:#757575;}
+		.st26{clip-path:url(#SVGID_24_);}
+		.st27{clip-path:url(#SVGID_26_);}
+		.st28{clip-path:url(#SVGID_28_);}
+		.st29{clip-path:url(#SVGID_30_);}
+		.st30{clip-path:url(#SVGID_32_);}
+	}
 
+
+
+	&animation{
+		&>*{
+			transform-origin: center;
+		}
+
+		.background{
+			animation: fadeLoop 10s infinite;
+		}
+		.person-front{
+			opacity: 0;
+			transform: translateY(-100%) scale(0.1);
+			animation: showTop 0.5s ease-out forwards, fly 15s infinite 0.5s;
+		}
+		.person-middle{
+			opacity: 0;
+			transform: translateY(-100%) translateX(100%) scale(0.1);
+			animation: showRightTop 0.5s ease-out forwards .2s, fly 10s infinite 0.7s;
+		}
+		.person-back{
+			opacity: 0;
+			transform: translateY(-100%) translateX(-100%) scale(0.1);
+			animation:  showLeftTop 0.5s ease-out forwards .5s, fly 8s infinite 1s;
+		}
+		.clouds{
+			animation: up 15s infinite;
+		}
+	}
+
+	//infinity
+	@keyframes fadeLoop {
+		0%   { opacity: 0.5; transform: scale(1)}
+		50%  { opacity: 1; transform: scale(1.05)}
+		100% { opacity: 0.5; transform: scale(1)}
+	}
+	@keyframes fly {
+		0%   { transform: translateX(0px) scale(1)}
+		25%  { transform: translateX(-10px) scale(1.1)}
+		50%  { transform: translateX(10px) scale(.9)}
+		75%  { transform: translateX(-10px) scale(1.1)}
+		100% { transform: translateX(0) scale(1)}
+	}
+	@keyframes up {
+		0%   { transform: translateY(-10px)}
+		50%  { transform: translateY(10px)}
+		100% { transform: translateY(-10px)}
+	}
+	//once
+	@keyframes showLeftTop{
+		from {
+			opacity: 0;
+			transform: translateY(-100%) translateX(-100%) scale(0.1);
+		}
+		to {
+			opacity: 1;
+			transform: translateY(0) translateX(0) scale(1);
+		}
+	}
+	@keyframes showRightTop{
+		from {
+			opacity: 0;
+			transform: translateY(-100%) translateX(100%) scale(0.1);
+		}
+		to {
+			opacity: 1;
+			transform: translateY(0) translateX(0)scale(1);
+		}
+	}
+	@keyframes showTop {
+		from {
+			opacity: 0;
+			transform: translateY(-100%) scale(0.1);
+		}
+		to {
+			opacity: 1;
+			transform: translateY(0) scale(1);
+		}
+	}
 
 }

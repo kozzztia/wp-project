@@ -138,7 +138,7 @@ function render_content()
                                 ',
                     ],
                     [
-                        'title'=> 'Senior Engineer in National Police of Ukraine | 20014 – 2020',
+                        'title'=> 'Senior Engineer in National Police of Ukraine | 2014 – 2020',
                         'picture' => get_template_directory_uri() . '/assets/img/drone.jpg',
 
                         'desc'=> '
@@ -176,7 +176,7 @@ function render_content()
                                 ',
                     ],
                     [
-                        'title'=> 'Senior Engineer in National Police of Ukraine | 20014 – 2020',
+                        'title'=> 'Senior Engineer in National Police of Ukraine | 2014 – 2020',
                         'desc'=> '
                                 <p>Managed the development and maintenance of networks — <strong>Internet</strong>, video surveillance, radio communications, signaling. Ensured uninterrupted operation of critical infrastructure.</p>
                                 <p>Administered the Armor database, optimized access and security, and maintained specialized equipment.</p>

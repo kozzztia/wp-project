@@ -18,13 +18,8 @@ function init_animation(el) {
 function init_navigation(el) {
     const navigationItems = el.find('.menu-item');
     const wrappers = $('.customWrapper[id]');
-    const logoText = $('.logo-text'); // логотип берём один раз
+    const logoText = $('.logo-text');
     let currentIndex = 0;
-
-    function updateButtons() {
-        el.find('.header-btn.prev').toggleClass('is-disabled', currentIndex === 0);
-        el.find('.header-btn.next').toggleClass('is-disabled', currentIndex === navigationItems.length - 1);
-    }
 
     function updateLogoTextById(id) {
         if (window.innerWidth <= 768) {
@@ -39,65 +34,91 @@ function init_navigation(el) {
     }
 
     function setActiveById(id) {
-        const targetItem = navigationItems.has('a[href="#' + id + '"]');
+        const targetItem = navigationItems.filter(function () {
+            return $(this).find('a').attr('href') === '#' + id;
+        });
+
         if (targetItem.length) {
             const index = navigationItems.index(targetItem);
 
             navigationItems.removeClass('active prev next');
             navigationItems.eq(index).addClass('active');
-            if (index > 0) navigationItems.eq(index - 1).addClass('prev');
-            if (index < navigationItems.length - 1) navigationItems.eq(index + 1).addClass('next');
+            navigationItems.eq((index - 1 + navigationItems.length) % navigationItems.length).addClass('prev');
+            navigationItems.eq((index + 1) % navigationItems.length).addClass('next');
 
             currentIndex = index;
-            updateButtons();
             updateLogoTextById(id);
         }
     }
 
-    const observer = new IntersectionObserver(entries => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                const id = entry.target.id;
+    // переключение по скроллу: ближайший блок к верху окна
+    $(window).on('scroll', function () {
+        let closest = null;
+        let minDiff = Infinity;
+
+        wrappers.each(function () {
+            const rect = this.getBoundingClientRect();
+            const diff = Math.abs(rect.top);
+            if (diff < minDiff) {
+                minDiff = diff;
+                closest = this;
+            }
+        });
+
+        if (closest) {
+            const id = closest.id;
+            // обновляем только если hash реально изменился
+            if ('#' + id !== window.location.hash) {
                 history.replaceState(null, null, '#' + id);
                 setActiveById(id);
             }
-        });
-    }, { threshold: 0.6 });
-
-    wrappers.each(function() {
-        observer.observe(this);
+        }
     });
 
-    navigationItems.find('a').on('click', function(e) {
+    // клик по пункту меню: активируем сразу и обновляем hash
+    navigationItems.find('a').on('click', function (e) {
         e.preventDefault();
         const targetId = $(this).attr('href');
         const targetEl = document.querySelector(targetId);
         if (targetEl) {
             targetEl.scrollIntoView({ behavior: 'smooth' });
+            setActiveById(targetId.replace('#', ''));
+            history.replaceState(null, null, targetId);
         }
     });
 
-    el.find('.header-btn.prev').on('click', function() {
-        if (currentIndex > 0) {
-            navigationItems.eq(currentIndex - 1).find('a')[0].click();
-        }
+    // кнопка prev по кругу
+    el.find('.header-btn.prev').on('click', function () {
+        const newIndex = (currentIndex - 1 + navigationItems.length) % navigationItems.length;
+        navigationItems.eq(newIndex).find('a')[0].click();
     });
 
-    el.find('.header-btn.next').on('click', function() {
-        if (currentIndex < navigationItems.length - 1) {
-            navigationItems.eq(currentIndex + 1).find('a')[0].click();
-        }
+    // кнопка next по кругу
+    el.find('.header-btn.next').on('click', function () {
+        const newIndex = (currentIndex + 1) % navigationItems.length;
+        navigationItems.eq(newIndex).find('a')[0].click();
     });
 
-    $(window).on('resize', function() {
+    $(window).on('resize', function () {
         const id = window.location.hash.replace('#', '');
         if (id) updateLogoTextById(id);
     });
 
     const startId = window.location.hash.replace('#', '');
-    if (startId) setActiveById(startId);
-    updateButtons();
+    if (startId) {
+        setActiveById(startId);
+    } else {
+        setActiveById(navigationItems.first().find('a').attr('href').replace('#', ''));
+    }
 }
+
+
+
+
+
+
+
+
 
 
 function init_menu_toggler(el) {

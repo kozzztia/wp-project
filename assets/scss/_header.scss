@@ -93,10 +93,6 @@
 							color: var(--color-green);
 						}
 					}
-
-					&.active {
-						opacity: 1;
-					}
 				}
 			}
 		}
@@ -120,6 +116,7 @@
 				border: none;
 				outline: none;
 				background: transparent;
+				z-index: 1000;
 
 				svg {
 					display: block;
@@ -129,11 +126,6 @@
 
 				&.next {
 					transform: rotate(180deg);
-				}
-
-				&.is-disabled {
-					pointer-events: none;
-					opacity: var(--disabled-opacity);
 				}
 			}
 		}
