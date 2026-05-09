@@ -44,14 +44,14 @@
                         <span>experience</span>
                     </a>
                 </li>
-                <li class="menu-item">
-                    <a href="#study">
-                        <svg>
-                            <use href="<?php echo get_sprite('idea-icon')?>" ></use>
-                        </svg>
-                        <span>study</span>
-                    </a>
-                </li>
+<!--                <li class="menu-item">-->
+<!--                    <a href="#study">-->
+<!--                        <svg>-->
+<!--                            <use href="--><?php //echo get_sprite('idea-icon')?><!--" ></use>-->
+<!--                        </svg>-->
+<!--                        <span>study</span>-->
+<!--                    </a>-->
+<!--                </li>-->
                 <li class="menu-item">
                     <a href="#contacts">
                         <svg>

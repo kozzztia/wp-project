@@ -6,35 +6,64 @@
 	background-repeat: no-repeat;
 	background-position: center;
 	background-size: contain;
+	background-attachment: fixed;
 	@media (max-width: 1024px) {
 		background-size: cover;
 	}
+
 	@include min-height();
 
 	.banner {
 		display: flex;
 		flex-direction: column;
+		filter: var(--primary-shadow);
 
-		&-tab {
-			flex: 1;
-		}
-
-		&-header {
+		&-inner{
 			display: flex;
-			align-items: flex-end;
 			flex-direction: column;
+			gap: var(--primary-padding)
 		}
 
 		&-title {
-			font-size: var(--subtitle-font-size);
-			font-weight: 800;
-			display: flex;
-			flex-wrap: wrap;
-			justify-content: center;
-			gap: var(--secondary-padding);
+			align-self: flex-end;
 		}
 
-		&-subtitle {
+		&-article{
+
+			img{
+				width : 45%;
+				height : auto;
+				object-fit: cover;
+				object-position: center;
+				border-radius: 2px;
+				overflow: hidden;
+				display: block;
+
+				@media(max-width: 768px) {
+					width : 100%;
+					margin-bottom: var(--primary-padding);
+				}
+			}
+
+			&-title{
+				margin-bottom: var(--primary-padding);
+				font-weight: 800;
+				letter-spacing: 5px;
+				font-size: var(--decor-font-size);
+			}
+
+			&:nth-child(odd){
+				img{
+					float: left;
+					margin-right:  var(--primary-padding);
+				}
+			}
+			&:nth-child(even){
+				img{
+					float: right;
+					margin-left:  var(--primary-padding);
+				}
+			}
 		}
 	}
 }
