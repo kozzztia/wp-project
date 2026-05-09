@@ -110,57 +110,56 @@ function render_content()
     );
 
 
-    get_template_part('views/blocks/banner', null,
-        [
-            'fields' => [
-                'style' => '',
-                'class' => '',
-                'id' => 'experience',
-                'image' => get_template_directory_uri() . '/assets/svg/map.svg',
-                'title' => 'experience',
-                'tabs' => [
-                    [
-                        'title'=> 'Front-end developer',
-                        'desc_title'=> 'Freelance Front-End Developer | 2024 – Present',
-                        'picture' => get_template_directory_uri() . '/assets/svg/freelancer.svg',
-                        'desc'=> '
-                                <p>Started my career as part of the team developing <strong>Caroinspection</strong> — a tool for car diagnostics. This was my first experience of teamwork: from setting tasks to deployment. Used React.js, TypeScript, SCSS, Canvas, SVG, Redux, Node.js. Independently explored Next.js and integrated AI tools during the development process.</p>
-                                <p>Since moving to <strong>freelancing</strong>, I have been engaged in the full cycle of creating web projects — from architecture to deployment. I develop component systems in PHP + Twig for WordPress, apply SCSS with BEM structure. I choose projects that allow creativity: SVG animations, pure CSS solutions without JS, interactive interfaces that respond to user interaction.</p>
-                                ',
-                        ],
-                    [
-                        'title'=> 'Drone engineer',
-                        'desc_title'=> 'Engineering | 2025 – 2026',
-                        'picture' => get_template_directory_uri() . '/assets/svg/drone.svg',
-                        'desc'=> '
-                                <p>Managed the development and maintenance of networks — Internet, video surveillance, radio communications, signaling. Ensured uninterrupted operation of critical infrastructure.</p>
-                                <p>Administered the Armor database, optimized access and security, and maintained specialized equipment.</p>
-                                <p>Engineer‑operator of UAVs. Participant in the ATO and defense forces, with official veteran status of combat operations.</p>
-                                ',
-                    ],
-                    [
-                        'title'=> 'Senior Engineer',
-                        'desc_title'=> 'National Police of Ukraine | 20014 – 2020',
-                        'picture' => get_template_directory_uri() . '/assets/svg/engineer.svg',
-                        'desc'=> '
-                                <p>Managed the development and maintenance of networks — Internet, video surveillance, radio communications, signaling. Ensured uninterrupted operation of critical infrastructure.</p>
-                                <p>Administered the Armor database, optimized access and security, and maintained specialized equipment.</p>
-                                <p>Engineer‑operator of UAVs. Participant in the ATO and defense forces, with official veteran status of combat operations.</p>
-                                ',
-                    ],
-                    [
-                        'title'=> 'Network Engineer',
-                        'desc_title'=> 'Lan-line provider | 2008 – 2014',
-                        'picture' => get_template_directory_uri() . '/assets/svg/internet.svg',
-                        'desc' => '
-                                <p>Designed and built Internet networks for a regional provider, leading infrastructure projects to improve reliability and efficiency.</p>
-                                <p>Delivered high-quality customer support and ensured prompt resolution of technical issues.</p>
-                                ',
-                    ],
-                ]
-            ],
-        ]
-    );
+//    get_template_part('views/blocks/banner', null,
+//        [
+//            'fields' => [
+//                'style' => '',
+//                'class' => '',
+//                'id' => 'experience',
+//                'image' => get_template_directory_uri() . '/assets/svg/map.svg',
+//                'title_1' => 'experience',
+//                'title_2' => 'study',
+//                'tabs' => [
+//                    [
+//                        'title'=> 'Front-end developer',
+//                        'desc_title'=> 'Freelance Front-End Developer | 2024 – Present',
+//                        'desc'=> '
+//                                <p>Started my career as part of the team developing <strong>Caroinspection</strong> — a tool for car diagnostics. This was my first experience of teamwork: from setting tasks to deployment. Used React.js, TypeScript, SCSS, Canvas, SVG, Redux, Node.js. Independently explored Next.js and integrated AI tools during the development process.</p>
+//                                <p>Since moving to <strong>freelancing</strong>, I have been engaged in the full cycle of creating web projects — from architecture to deployment. I develop component systems in PHP + Twig for WordPress, apply SCSS with BEM structure. I choose projects that allow creativity: SVG animations, pure CSS solutions without JS, interactive interfaces that respond to user interaction.</p>
+//                                ',
+//                        ],
+//                    [
+//                        'title'=> 'Drone engineer',
+//                        'desc_title'=> 'Engineering | 2025 – 2026',
+//                        'picture' => get_template_directory_uri() . '/assets/img/drone.jpg',
+//                        'desc'=> '
+//                                <p>Managed the development and maintenance of networks — Internet, video surveillance, radio communications, signaling. Ensured uninterrupted operation of critical infrastructure.</p>
+//                                <p>Administered the Armor database, optimized access and security, and maintained specialized equipment.</p>
+//                                <p>Engineer‑operator of UAVs. Participant in the ATO and defense forces, with official veteran status of combat operations.</p>
+//                                ',
+//                    ],
+//                    [
+//                        'title'=> 'Senior Engineer',
+//                        'desc_title'=> 'National Police of Ukraine | 20014 – 2020',
+//                        'desc'=> '
+//                                <p>Managed the development and maintenance of networks — Internet, video surveillance, radio communications, signaling. Ensured uninterrupted operation of critical infrastructure.</p>
+//                                <p>Administered the Armor database, optimized access and security, and maintained specialized equipment.</p>
+//                                <p>Engineer‑operator of UAVs. Participant in the ATO and defense forces, with official veteran status of combat operations.</p>
+//                                ',
+//                    ],
+//                    [
+//                        'title'=> 'Network Engineer',
+//                        'desc_title'=> 'Lan-line provider | 2008 – 2014',
+//                        'picture' => get_template_directory_uri() . '/assets/img/optic.jpg',
+//                        'desc' => '
+//                                <p>Designed and built Internet networks for a regional provider, leading infrastructure projects to improve reliability and efficiency.</p>
+//                                <p>Delivered high-quality customer support and ensured prompt resolution of technical issues.</p>
+//                                ',
+//                    ],
+//                ]
+//            ],
+//        ]
+//    );
 
     get_template_part('views/blocks/hero', null,
         [

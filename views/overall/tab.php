@@ -1,14 +1,10 @@
 <?php
     $tabs = $args['tabs'] ?? null;
     $class = $args['class'] ?? null;
-    $title = $tabs['title'] ?? null;
-    $desc_title = $tabs['desc_title'] ?? null;
-    $desc = $tabs['desc'] ?? null;
-    $picture = $tabs['picture'] ?? null;
 ?>
 
 <?php if (!empty($tabs)): ?>
-<div class="tab<?php echo !empty($class) ? ' ' . esc_attr($class) . '-tab' : ''; ?>">
+<div class="tab <?php echo !empty($class) ? ' ' . esc_attr($class) . '-tab' : ''; ?>">
 
     <div class="tab-nav">
         <?php foreach ($tabs as $index => $tab): ?>
@@ -26,25 +22,26 @@
     <div class="tab-content">
         <?php foreach ($tabs as $index => $tab): ?>
             <div class="tab-text">
-                <input type="radio"
-                       id="tab-<?php echo $index + 1; ?>"
-                       name="<?= esc_attr($class) . '-tab'?>"
-                       <?php echo $index === 0 ? 'checked' : ''; ?>
-                       hidden>
 
-                <div class="tab-text-desc typo">
+                <label class="tab-text-desc typo">
+                    <input type="radio"
+                           id="tab-<?php echo $index + 1; ?>"
+                           name="<?= esc_attr($class) . '-tab'?>"
+                            <?php echo $index === 0 ? 'checked' : ''; ?>
+                           hidden>
+
                     <?php if (!empty($tab['desc_title'])): ?>
-                        <h3><?php echo esc_html($tab['desc_title']); ?></h3>
+                        <h4><?php echo esc_html($tab['desc_title']); ?></h4>
+                    <?php endif; ?>
+
+                    <?php if (!empty($tab['picture'])): ?>
+                        <img class="tab-text-image" src="<?php echo esc_url($tab['picture']); ?>" alt="<?php echo $tab['title']; ?>" />
                     <?php endif; ?>
 
                     <?php if (!empty($tab['desc'])): ?>
                         <p><?php echo wp_kses_post($tab['desc']); ?></p>
                     <?php endif; ?>
-
-                    <?php if (!empty($tab['picture'])): ?>
-                        <img src="<?php echo esc_url($tab['picture']); ?>" alt="<?php echo $tab['title']; ?>" />
-                    <?php endif; ?>
-                </div>
+                </label>
             </div>
         <?php endforeach; ?>
     </div>
