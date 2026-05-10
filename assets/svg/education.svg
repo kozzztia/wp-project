@@ -1,81 +1,7 @@
 <svg xmlns="http://www.w3.org/2000/svg" height="0" width="0"
 	 viewBox="0 0 500 500">
-<style type="text/css">
-     .education-svg .st0{fill:#4AF6CD;}
-     .education-svg .st1{opacity:0.6;}
-     .education-svg .st2{fill:#FFFFFF;}
-     .education-svg .st3{fill:none;stroke:#2E353A;stroke-miterlimit:10;}
-     .education-svg .st4{fill:none;stroke:#2E353A;stroke-miterlimit:10;stroke-dasharray:2.0077,2.0077;}
-     .education-svg .st5{fill:none;stroke:#2E353A;stroke-miterlimit:10;stroke-dasharray:1.9998,1.9998;}
-     .education-svg .st6{fill:none;stroke:#2E353A;stroke-miterlimit:10;stroke-dasharray:1.9883,1.9883;}
-     .education-svg .st7{fill:#FFFFFF;stroke:#2E353A;stroke-miterlimit:10;}
-     .education-svg .st8{fill:none;stroke:#2E353A;stroke-linecap:round;stroke-linejoin:round;}
-     .education-svg .st9{fill:#2E353A;stroke:#2E353A;stroke-miterlimit:10;}
-     .education-svg .st10{fill:#4AF6CD;stroke:#2E353A;stroke-miterlimit:10;}
-     .education-svg .st11{fill:#2E353A;}
-     .education-svg .st12{fill:#FFFFFF;stroke:#2E353A;stroke-linecap:round;stroke-linejoin:round;}
-     .education-svg .st13{fill:none;stroke:#2E353A;stroke-width:0.5;stroke-linecap:round;stroke-linejoin:round;}
-     .education-svg .st14{fill:#FFFFFF;stroke:#2E353A;stroke-width:0.25;stroke-miterlimit:10;}
-     .education-svg .st15{fill:#2E353A;stroke:#2E353A;stroke-linecap:round;stroke-linejoin:round;}
-     .education-svg .st16{fill:#FFFFFF;stroke:#000000;stroke-miterlimit:10;}
-    <!--    animations-->
-    #education-background {
-    animation: fadeLoop  15s ease-in-out infinite;
-    transform-origin: center;
-    }
-    <!--    frames-->
-    #education-background {
-    animation: fadeLoop  15s ease-in-out infinite;
-    transform-origin: center;
-    }
-    #education-pc {
-    animation: move 10s ease-in-out infinite;
-    transform-origin: center;
-    }
-
-    #education-clouds {
-    animation: move 10s ease-in-out infinite 5s;
-    transform-origin: center;
-    }
-
-    #education-mech {
-    animation: showScale 10s ease-in-out infinite 5s;
-    opacity: 0.5;
-    transform-origin: center;
-    }
-
-    #education-routers {
-    animation: showScale 10s ease-in-out infinite;
-    opacity: 0.5;
-    transform-origin: center;
-    }
-
-    #education-server {
-    animation: fadeLoop 10s ease-in-out infinite;
-    transform-origin: center;
-    }
-
-
-    <!--    frames-->
-    @keyframes fadeLoop {
-    0%   { opacity: 0.5; transform: scale(1)}
-    50%  { opacity: 1; transform: scale(1.1)}
-    100% { opacity: 0.5; transform: scale(1)}
-    }
-    @keyframes showScale {
-    0%   { opacity: 0.5; transform: scale(1)}
-    50% { opacity: 0.8; transform: scale(0.9)}
-    100% { opacity: 0.5; transform: scale(1)}
-    }
-    @keyframes move {
-    0%   { transform: translateX(-10px)}
-    50%  { transform: translateX(10px)}
-    100% { transform: translateX(-10px)}
-    }
-
-</style>
-    <g class="education-svg">
-        <g id="education-background">
+    <g class="svg-education">
+        <g class="background">
             <polygon class="st0" points="375.4,165.1 370.2,174.1 375.4,183.1 385.8,183.1 391,174.1 385.8,165.1 	"/>
             <polygon class="st0" points="359.4,174.4 354.1,183.4 359.4,192.4 369.7,192.4 374.9,183.4 369.7,174.4 	"/>
             <polygon class="st0" points="343.3,183.7 338.1,192.7 343.3,201.7 353.6,201.7 358.9,192.7 353.6,183.7 	"/>
@@ -753,11 +679,11 @@
                 <polygon class="st2" points="192.9,331.8 198.1,322.8 192.9,313.8 182.5,313.8 177.3,322.8 182.5,331.8 		"/>
             </g>
         </g>
-        <g id="education-shadows">
+        <g class="shadows">
             <polygon class="st0" points="381.8,408.7 307.7,389.7 377.6,389.7 453.5,408.7 	"/>
             <polygon class="st0" points="117.7,408.7 191.8,389.7 121.9,389.7 46,408.7 	"/>
         </g>
-        <g id="education-clouds">
+        <g class="clouds">
             <path class="st3" d="M253.2,329.6c0,0-0.1-0.4-0.2-1"/>
             <path class="st4" d="M252.7,326.7c-1.1-6.9-2.9-24.2,3.9-31.9c8.6-9.8,18.9-1.4,47.7,0s43.6-2.8,43.9-27.5S331.5,241,331.5,241
 		h-10.7"/>
@@ -788,7 +714,7 @@
             <path class="st8" d="M135.3,227c4.2-2.9,9.1-4.3,14.2-4"/>
             <path class="st8" d="M131,231c0.7-0.9,1.5-1.7,2.4-2.5"/>
         </g>
-        <g id="education-server">
+        <g class="server">
             <rect x="314.1" y="159.8" class="st9" width="4.8" height="12.6"/>
             <rect x="314.1" y="233.9" class="st9" width="4.8" height="12.6"/>
             <rect x="186.4" y="87.1" class="st9" width="4.8" height="12.6"/>
@@ -834,7 +760,7 @@
                 <circle class="st7" cx="294.5" cy="93.1" r="3.3"/>
             </g>
         </g>
-        <g id="education-routers">
+        <g class="routers">
             <path class="st11" d="M369.9,133.1l-7-13.8c-0.2-0.4-0.6-0.6-1-0.4c-0.4,0.2-0.6,0.6-0.4,1c0,0,0,0.1,0,0.1l6.7,14
 		c-0.3,0.3-0.4,0.7-0.2,1.1l7.1,13.3c0.2,0.4,0.8,0.5,1.4,0.2s0.9-0.8,0.7-1.2l-6.2-13.7C370.7,133.2,370.3,133,369.9,133.1z"/>
             <path class="st11" d="M408.7,133.1l7-13.8c0.2-0.4,0.6-0.5,1-0.3c0.4,0.2,0.5,0.6,0.4,1l-6.7,14c0.3,0.3,0.4,0.7,0.2,1.1l-7.1,13.3
@@ -920,7 +846,7 @@
             <path class="st13" d="M62.1,201.6c0.6,0.1,1.1,0.4,1.5,0.8"/>
             <path class="st13" d="M58.8,204.5C58.8,204.5,58.8,204.5,58.8,204.5c0-1.5,1-2.7,2.4-2.9"/>
         </g>
-        <g id="education-pc">
+        <g class="pc">
             <rect x="208.9" y="329.6" class="st9" width="89.1" height="61"/>
             <polygon class="st12" points="311.4,417.7 195.6,417.7 208.9,390.7 298.1,390.7 	"/>
             <rect x="214.4" y="334.5" class="st7" width="78.3" height="51.4"/>

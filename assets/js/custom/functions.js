@@ -186,11 +186,36 @@ function init_slider(el) {
         });
     }
 
-
     updateThumb();
     swiper.on('slideChange', updateThumb);
-}
 
+    // функция для навешивания svg-active
+    function activateSvgForSlide(slide) {
+        // снимаем svg-active со всех svg-групп
+        swiper.slides.forEach(s => {
+            const svgGroups = s.querySelectorAll('g[class^="svg"]');
+            svgGroups.forEach(g => g.classList.remove('svg-active'));
+        });
+
+        // добавляем svg-active на активный слайд
+        const svgGroups = slide.querySelectorAll('g[class^="svg"]');
+        svgGroups.forEach(g => g.classList.add('svg-active'));
+    }
+
+    // при завершении перехода
+    swiper.on('slideChangeTransitionEnd', () => {
+        const activeSlide = swiper.slides[swiper.activeIndex];
+        if (activeSlide) {
+            activateSvgForSlide(activeSlide);
+        }
+    });
+
+    // сразу активируем svg для первого слайда
+    const firstSlide = swiper.slides[swiper.activeIndex];
+    if (firstSlide) {
+        activateSvgForSlide(firstSlide);
+    }
+}
 
 function init_second_slider(el){
     const swiperEl = el.find('.swiper')[0];
