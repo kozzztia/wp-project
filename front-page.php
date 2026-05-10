@@ -15,7 +15,7 @@ function render_content()
                 'title' => 'Front-End Developer',
                 'name' => 'Zadorozhniy Kostiantyn',
                 'techtitle' => 'technology',
-                'tech' => ['HTML', 'CSS', 'JavaScript', 'PHP', 'React', 'Next'],
+                'tech' => ['HTML', 'CSS', 'SCSS', 'JavaScript', 'TypeScript', 'PHP', 'React', 'Next', 'WordPress', 'Twig'],
                 'slides' => [
                     [
                         'slug' => 'animation',

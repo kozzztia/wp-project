@@ -59,11 +59,17 @@
 					margin-right:  var(--primary-padding);
 				}
 			}
+
 			&:nth-child(even){
 				img{
 					float: right;
 					margin-left:  var(--primary-padding);
 				}
+			}
+
+			a{
+				color: inherit;
+				font-weight: 600;
 			}
 		}
 	}
