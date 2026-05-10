@@ -30,8 +30,10 @@
 		&-article{
 
 			img{
-				width : 45%;
-				height : auto;
+				width : auto;
+				max-width : 50%;
+				height : inherit;
+				max-height : 400px;
 				object-fit: cover;
 				object-position: center;
 				border-radius: 2px;
@@ -39,7 +41,7 @@
 				display: block;
 
 				@media(max-width: 768px) {
-					width : 100%;
+					max-width : 100%;
 					margin-bottom: var(--primary-padding);
 				}
 			}
