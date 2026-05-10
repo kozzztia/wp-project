@@ -19,55 +19,49 @@
     <div class="customBlock banner">
         <div class="banner-inner">
         <?php if(!empty($title_1)): ?>
-            <h2 class="banner-title with-line">
-            <?php echo esc_html($title_1); ?>
-            </h2>
+            <h2 class="banner-title with-line"><?php echo esc_html($title_1); ?></h2>
         <?php endif; ?>
         <?php if(!empty($tabs_1)): ?>
-            <?php foreach ( $tabs_1 as $tab_1): ?>
-                <article class="banner-article experience">
-                    <?php if(!empty($tab_1['title'])): ?>
-                        <h3 class="banner-article-title"><?= $tab_1['title']?></h3>
-                    <?php endif;?>
+        <?php foreach ( $tabs_1 as $tab_1): ?>
+            <article class="banner-article experience">
+            <?php if(!empty($tab_1['title'])): ?>
+                <h3 class="banner-article-title"><?= $tab_1['title']?></h3>
+            <?php endif;?>
 
-                    <?php if(!empty($tab_1['picture'])): ?>
-                        <img src="<?= $tab_1['picture']?>" alt="<?= $tab_1['title'] ?? ''?>"/>
-                    <?php endif;?>
+            <?php if(!empty($tab_1['picture'])): ?>
+                <img src="<?= $tab_1['picture']?>" alt="<?= $tab_1['title'] ?? ''?>"/>
+            <?php endif;?>
 
-                    <?php if(!empty($tab_1['desc'])): ?>
-                        <?= $tab_1['desc']?>
-                    <?php endif;?>
-                </article>
-            <?php endforeach?>
+            <?php if(!empty($tab_1['desc'])): ?>
+                <?= $tab_1['desc']?>
+            <?php endif;?>
+            </article>
+        <?php endforeach?>
         <?php endif?>
         </div>
-
 
         <div class="banner-inner">
         <?php if(!empty($title_2)): ?>
-            <h4 class="banner-title with-line">
-                <?php echo esc_html($title_2); ?>
-            </h4>
+            <h2 class="banner-title with-line"><?php echo esc_html($title_2); ?></h2>
         <?php endif; ?>
         <?php if(!empty($tabs_2)): ?>
-            <?php foreach ( $tabs_2 as $tab_2): ?>
-                <article class="banner-article study">
-                    <?php if(!empty($tab_2['title'])): ?>
-                        <h3 class="banner-article-title"><?= $tab_2['title']?></h3>
-                    <?php endif;?>
+        <?php foreach ( $tabs_2 as $tab_2): ?>
+            <article class="banner-article study">
+            <?php if(!empty($tab_2['title'])): ?>
+                <h3 class="banner-article-title"><?= $tab_2['title']?></h3>
+            <?php endif;?>
 
-                    <?php if(!empty($tab_2['picture'])): ?>
-                        <img src="<?= $tab_2['picture']?>" alt="<?= $tab_2['title'] ?? ''?>"/>
-                    <?php endif;?>
+            <?php if(!empty($tab_2['picture'])): ?>
+                <img src="<?= $tab_2['picture']?>" alt="<?= $tab_2['title'] ?? ''?>"/>
+            <?php endif;?>
 
-                    <?php if(!empty($tab_2['desc'])): ?>
-                        <?= $tab_2['desc']?>
-                    <?php endif;?>
-                </article>
-            <?php endforeach?>
+            <?php if(!empty($tab_2['desc'])): ?>
+                <?= $tab_2['desc']?>
+            <?php endif;?>
+            </article>
+        <?php endforeach?>
         <?php endif?>
         </div>
-
     </div>
 </section>
 <?php endif;?>

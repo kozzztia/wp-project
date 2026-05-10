@@ -48,7 +48,7 @@ function init_navigation(el) {
 
             currentIndex = index;
             updateLogoTextById(id);
-            updateButtons(); // обновляем состояние кнопок
+            updateButtons();
         }
     }
 
@@ -57,7 +57,6 @@ function init_navigation(el) {
         el.find('.header-btn.next').toggleClass('is-disabled', currentIndex === navigationItems.length - 1);
     }
 
-    // переключение по скроллу: ближайший блок к верху окна
     $(window).on('scroll', function () {
         let closest = null;
         let minDiff = Infinity;
@@ -80,7 +79,6 @@ function init_navigation(el) {
         }
     });
 
-    // клик по пункту меню
     navigationItems.find('a').on('click', function (e) {
         e.preventDefault();
         const targetId = $(this).attr('href');
@@ -92,7 +90,6 @@ function init_navigation(el) {
         }
     });
 
-    // кнопка prev
     el.find('.header-btn.prev').on('click', function () {
         if (currentIndex > 0) {
             const newIndex = currentIndex - 1;
@@ -100,7 +97,6 @@ function init_navigation(el) {
         }
     });
 
-    // кнопка next
     el.find('.header-btn.next').on('click', function () {
         if (currentIndex < navigationItems.length - 1) {
             const newIndex = currentIndex + 1;
@@ -113,7 +109,6 @@ function init_navigation(el) {
         if (id) updateLogoTextById(id);
     });
 
-    // стартовое состояние
     const startId = window.location.hash.replace('#', '');
     if (startId) {
         setActiveById(startId);
@@ -189,20 +184,16 @@ function init_slider(el) {
     updateThumb();
     swiper.on('slideChange', updateThumb);
 
-    // функция для навешивания svg-active
     function activateSvgForSlide(slide) {
-        // снимаем svg-active со всех svg-групп
         swiper.slides.forEach(s => {
             const svgGroups = s.querySelectorAll('g[class^="svg"]');
             svgGroups.forEach(g => g.classList.remove('svg-active'));
         });
 
-        // добавляем svg-active на активный слайд
         const svgGroups = slide.querySelectorAll('g[class^="svg"]');
         svgGroups.forEach(g => g.classList.add('svg-active'));
     }
 
-    // при завершении перехода
     swiper.on('slideChangeTransitionEnd', () => {
         const activeSlide = swiper.slides[swiper.activeIndex];
         if (activeSlide) {
@@ -210,7 +201,6 @@ function init_slider(el) {
         }
     });
 
-    // сразу активируем svg для первого слайда
     const firstSlide = swiper.slides[swiper.activeIndex];
     if (firstSlide) {
         activateSvgForSlide(firstSlide);

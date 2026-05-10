@@ -2,7 +2,6 @@
 
 <main>
     <?php
-    
     if ( function_exists('render_content') ) {
         render_content();
     }

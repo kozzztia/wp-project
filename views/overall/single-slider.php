@@ -5,14 +5,12 @@
         <?php foreach ($slides as $slide): ?>
         <div class="single-slide swiper-slide" data-slug="<?= $slide['slug'] ?>">
             <?php if(!empty($slide['image'])): ?>
-                <div class="slide-image">
-                    <?php echo get_svg_code( $slide['image']); ?>
-                </div>
+            <div class="slide-image">
+                <?php echo get_svg_code( $slide['image']); ?>
+            </div>
             <?php endif; ?>
 
-            <?php if(!empty($slide['slug'])): ?>
-                <span class="slide-text"><?= $slide['text']?></span>
-            <?php endif; ?>
+            <?php if(!empty($slide['slug'])): ?><span class="slide-text"><?= $slide['text']?></span><?php endif; ?>
         </div>
         <?php endforeach; ?>
     </div>

@@ -5,9 +5,9 @@
     $url = $button['url'] ?? null;
 if (!empty($button)): ?>
     <a
-            <?php if (!empty($url))   echo 'href="' . esc_url($url) . '"'; ?>
-            <?php if (!empty($target)) echo 'target="' . $target . '"'; ?>
-            <?php echo 'class="customButton' . (!empty($class) ? ' ' . esc_attr($class) : '') . '"';?>
+        <?php if (!empty($url))   echo 'href="' . esc_url($url) . '"'; ?>
+        <?php if (!empty($target)) echo 'target="' . $target . '"'; ?>
+        <?php echo 'class="customButton' . (!empty($class) ? ' ' . esc_attr($class) : '') . '"';?>
     >
         <?php if (!empty($title)) echo esc_html($title); ?>
     </a>

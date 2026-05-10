@@ -15,13 +15,11 @@
         ?>>
 
     <div class="customBlock multi-slider">
-        <?php get_template_part('views/overall/second-slider', null , ['slides' => $slides, 'timer' => $timer]);?>
+    <?php get_template_part('views/overall/second-slider', null , ['slides' => $slides, 'timer' => $timer]);?>
 
-        <?php if(!empty($subtitle)): ?>
-            <span class="multi-slider-subtitle with-line">
-            <?php echo esc_html($subtitle); ?>
-        </span>
-        <?php endif; ?>
+    <?php if(!empty($subtitle)): ?>
+        <span class="multi-slider-subtitle with-line"><?php echo esc_html($subtitle); ?></span>
+    <?php endif; ?>
     </div>
 </section>
 <?php endif;?>

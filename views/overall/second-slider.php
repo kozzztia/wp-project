@@ -4,9 +4,7 @@
 
 <div class="swiper second-slider" <?php if (!empty($timer)) echo 'data-timer="' . esc_attr($timer) . '"'; ?>>
     <div class="swiper-wrapper">
-    <?php foreach ($slides as $index => $slide):
-
-        ?>
+    <?php foreach ($slides as $index => $slide):?>
         <div class="swiper-slide">
             <div class="second-slider-slide <?= empty($slide['image']) ? 'empty ' : ''; echo get_slide_count($index)?>"
             <?= !empty($slide['image']) ? 'style="background-image: url(\'' . esc_url($slide['image']) . '\');"' : '' ?>>
@@ -27,5 +25,4 @@
     <div class="swiper-button-prev"></div>
     <div class="swiper-button-next"></div>
 </div>
-
  <?php endif; ?>
