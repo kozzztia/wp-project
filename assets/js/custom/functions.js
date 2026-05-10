@@ -43,12 +43,18 @@ function init_navigation(el) {
 
             navigationItems.removeClass('active prev next');
             navigationItems.eq(index).addClass('active');
-            navigationItems.eq((index - 1 + navigationItems.length) % navigationItems.length).addClass('prev');
-            navigationItems.eq((index + 1) % navigationItems.length).addClass('next');
+            if (index > 0) navigationItems.eq(index - 1).addClass('prev');
+            if (index < navigationItems.length - 1) navigationItems.eq(index + 1).addClass('next');
 
             currentIndex = index;
             updateLogoTextById(id);
+            updateButtons(); // обновляем состояние кнопок
         }
+    }
+
+    function updateButtons() {
+        el.find('.header-btn.prev').toggleClass('is-disabled', currentIndex === 0);
+        el.find('.header-btn.next').toggleClass('is-disabled', currentIndex === navigationItems.length - 1);
     }
 
     // переключение по скроллу: ближайший блок к верху окна
@@ -67,7 +73,6 @@ function init_navigation(el) {
 
         if (closest) {
             const id = closest.id;
-            // обновляем только если hash реально изменился
             if ('#' + id !== window.location.hash) {
                 history.replaceState(null, null, '#' + id);
                 setActiveById(id);
@@ -75,7 +80,7 @@ function init_navigation(el) {
         }
     });
 
-    // клик по пункту меню: активируем сразу и обновляем hash
+    // клик по пункту меню
     navigationItems.find('a').on('click', function (e) {
         e.preventDefault();
         const targetId = $(this).attr('href');
@@ -87,16 +92,20 @@ function init_navigation(el) {
         }
     });
 
-    // кнопка prev по кругу
+    // кнопка prev
     el.find('.header-btn.prev').on('click', function () {
-        const newIndex = (currentIndex - 1 + navigationItems.length) % navigationItems.length;
-        navigationItems.eq(newIndex).find('a')[0].click();
+        if (currentIndex > 0) {
+            const newIndex = currentIndex - 1;
+            navigationItems.eq(newIndex).find('a')[0].click();
+        }
     });
 
-    // кнопка next по кругу
+    // кнопка next
     el.find('.header-btn.next').on('click', function () {
-        const newIndex = (currentIndex + 1) % navigationItems.length;
-        navigationItems.eq(newIndex).find('a')[0].click();
+        if (currentIndex < navigationItems.length - 1) {
+            const newIndex = currentIndex + 1;
+            navigationItems.eq(newIndex).find('a')[0].click();
+        }
     });
 
     $(window).on('resize', function () {
@@ -104,22 +113,15 @@ function init_navigation(el) {
         if (id) updateLogoTextById(id);
     });
 
+    // стартовое состояние
     const startId = window.location.hash.replace('#', '');
     if (startId) {
         setActiveById(startId);
     } else {
         setActiveById(navigationItems.first().find('a').attr('href').replace('#', ''));
     }
+    updateButtons();
 }
-
-
-
-
-
-
-
-
-
 
 function init_menu_toggler(el) {
     const menuList = $('.header-menu > ul');
