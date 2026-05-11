@@ -5,8 +5,8 @@
 	width: 100%;
 
 	.customBlock {
-		width: 100%;
 		flex: 1;
+		width: 100%;
 		max-width: calc(var(--primary-width) + (var(--primary-padding) * 2));
 		padding: var(--primary-padding) var(--primary-padding) var(--primary-padding) 180px;
 		gap: var(--primary-padding);
@@ -22,28 +22,26 @@
 }
 
 .customButton {
-	padding: 10px;
-	max-width: 300px;
-	width: 100%;
-	text-align: center;
-	text-decoration: none;
-	text-transform: uppercase;
 	font-weight: 800;
-	letter-spacing: 5px;
+	width: 100%;
+	max-width: 300px;
+	padding: 10px;
 	cursor: pointer;
 	transition: all 0.2s ease;
+	text-align: center;
+	text-decoration: none;
+	letter-spacing: 5px;
+	text-transform: uppercase;
 	outline: none;
 
 	&.green {
-		background-color: rgba(var(--color-green-rgb), 1);
-		border-radius: 5px;
 		color: var(--color-black);
-
-		@media (min-width: 769px){
+		border-radius: 5px;
+		background-color: rgba(var(--color-green-rgb), 1);
+		@media (min-width: 769px) {
 			&:hover {
 				transform: scale(1.05);
 			}
-
 			&:active {
 				transform: scale(0.95);
 			}
@@ -62,7 +60,6 @@
 	text-transform: uppercase;
 	color: rgba(var(--color-white-rgb), var(--disabled-opacity));
 	gap: var(--primary-padding);
-
 
 	&:before {
 		position: absolute;
