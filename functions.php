@@ -48,6 +48,7 @@ function debian_setup() {
 }
 add_action('after_setup_theme', 'debian_setup');
 
+
 // scripts
 function debian_scripts() {
     wp_enqueue_style('debian-style', get_template_directory_uri() . '/assets/css/style.min.css', array(), get_version() );
