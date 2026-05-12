@@ -55,9 +55,9 @@ function render_content()
                 'style' => '',
                 'class' => '',
                 'id' => 'portfolio',
-                'timer' => '3000',
-                'subtitle' => 'portfolio',
-                'slides' => [
+                'timer' => get_project_field( 'multi_slider_timer','3000'),
+                'title' => get_project_field( 'multi_slider_title','portfolio'),
+                'slides' => get_project_field( 'multi_slider_slides', [
                     [
                         'slug' => 'commercial',
                         'title' => 'Stolen Life',
@@ -79,9 +79,6 @@ function render_content()
                         'slug' => 'pet project',
                         'image' => get_template_directory_uri() . '/assets/img/i-love-my-bike.webp',
                         'link' => ['url' => 'https://i-love-my-bike.netlify.app/', 'title' => 'show', 'class' => 'green', 'target' => '_blank']
-                    ],
-                    [
-                        'slug' => 'empty project',
                     ],
                     [
                         'slug' => 'commercial',
@@ -108,7 +105,7 @@ function render_content()
                     [
                         'slug' => 'pet project',
                     ],
-                ],
+                ],),
 
             ],
         ]

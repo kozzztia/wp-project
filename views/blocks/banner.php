@@ -2,7 +2,7 @@
     $style = $fields['style'] ?? null;
     $class = $fields['class'] ?? null;
     $id = $fields['id'] ?? null;
-    $image = $fields['image'] ?? get_template_directory_uri() . '/assets/img/banner.webp';
+    $image = $fields['image'] ?? null;
     $title_1 = $fields['title_1'] ?? null;
     $title_2 = $fields['title_2'] ?? null;
     $tabs_1 = $fields['tabs_1'] ?? null;

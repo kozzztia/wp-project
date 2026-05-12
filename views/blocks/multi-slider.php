@@ -2,7 +2,7 @@
     $style = $fields['style'] ?? null;
     $class = $fields['class'] ?? null;
     $id = $fields['id'] ?? null;
-    $subtitle = $fields['subtitle'] ?? null;
+    $title = $fields['title'] ?? null;
     $slides = $fields['slides'] ?? null;
     $timer = $fields['timer'] ?? null;
 ?>
@@ -17,8 +17,8 @@
     <div class="customBlock multi-slider">
     <?php get_template_part('views/overall/second-slider', null , ['slides' => $slides, 'timer' => $timer]);?>
 
-    <?php if(!empty($subtitle)): ?>
-        <span class="multi-slider-subtitle with-line"><?php echo esc_html($subtitle); ?></span>
+    <?php if(!empty($title)): ?>
+        <h2 class="multi-slider-subtitle with-line"><?php echo esc_html($title); ?></h2>
     <?php endif; ?>
     </div>
 </section>
