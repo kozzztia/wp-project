@@ -10,35 +10,40 @@ function render_content()
             'fields' => [
                 'style' => '',
                 'class' => '',
-                'id' => 'about',
-                'image' => get_template_directory_uri() . '/assets/img/hero.webp',
-                'title' => 'Front-End Developer',
-                'name' => 'Zadorozhniy Kostiantyn',
-                'techtitle' => 'technology',
-                'tech' => ['HTML', 'CSS', 'SCSS', 'JavaScript', 'TypeScript', 'PHP', 'React', 'Next', 'WordPress', 'Twig'],
-                'slides' => [
+                'id' => get_project_field('about_id',  'about'),
+                'image' => get_project_field('about_image',get_template_directory_uri() . '/assets/img/hero.webp'),
+                'title' => get_project_field('about_title', 'Front-End Developer'),
+                'name' => get_project_field('about_name', 'Zadorozhniy Kostiantyn'),
+                'techtitle' => get_project_field('about_techtitle', 'technology'),
+                'tech' => get_project_field('about_tech',
+                    ['HTML', 'CSS', 'SCSS', 'JavaScript', 'TypeScript', 'PHP', 'React', 'Next', 'WordPress', 'Twig']
+                ),
+                'slides' => get_project_field('about_slides',
                     [
-                        'slug' => 'animation',
-                        'text' => 'Passionate about creating interactive animations with SVG and JavaScript',
-                        'image' => 'animation',
-                    ],
-                    [
-                        'slug' => 'experience',
-                        'text' => 'Over three years of practical experience in front‑end development',
-                        'image' => 'experience',
-                    ],
-                    [
-                        'slug' => 'start',
-                        'text' => 'Began learning and working with web technologies in 2022',
-                        'image' => 'start',
+                        [
+                            'slug' => 'animation',
+                            'text' => 'Passionate about creating interactive animations with SVG and JavaScript',
+                            'image' => 'animation',
+                        ],
+                        [
+                            'slug' => 'experience',
+                            'text' => 'Over three years of practical experience in front‑end development',
+                            'image' => 'experience',
+                        ],
+                        [
+                            'slug' => 'start',
+                            'text' => 'Began learning and working with web technologies in 2022',
+                            'image' => 'start',
+                        ],
+
+                        [
+                            'slug' => 'education',
+                            'text' => 'Technical background in computer systems, continuously improving programming skills',
+                            'image' => 'education',
+                        ],
                     ],
 
-                    [
-                        'slug' => 'education',
-                        'text' => 'Technical background in computer systems, continuously improving programming skills',
-                        'image' => 'education',
-                    ],
-                ],
+                ),
 
             ],
         ]

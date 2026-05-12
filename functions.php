@@ -14,6 +14,25 @@ function get_svg_code($filename) {
     }
 }
 
+function get_project_field($fieldName, $default = null) {
+    $field = get_field($fieldName);
+
+    if (is_object($field)) {
+        $field = (array)$field;
+    }
+
+    if (is_array($field)) {
+        return array_values($field);
+    }
+
+    return $field !== null && $field !== ''
+        ? $field
+        : $default;
+}
+
+
+
+
 
 function get_slide_count($index){
     switch ($index % 4) {
