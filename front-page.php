@@ -10,7 +10,7 @@ function render_content()
             'fields' => [
                 'style' => '',
                 'class' => '',
-                'id' => get_project_field('about_id',  'about'),
+                'id' => 'about',
                 'image' => get_project_field('about_image',get_template_directory_uri() . '/assets/img/hero.webp'),
                 'title' => get_project_field('about_title', 'Front-End Developer'),
                 'name' => get_project_field('about_name', 'Zadorozhniy Kostiantyn'),
@@ -23,23 +23,23 @@ function render_content()
                         [
                             'slug' => 'animation',
                             'text' => 'Passionate about creating interactive animations with SVG and JavaScript',
-                            'image' => 'animation',
+                            'svg' => 'animation',
                         ],
                         [
                             'slug' => 'experience',
                             'text' => 'Over three years of practical experience in front‑end development',
-                            'image' => 'experience',
+                            'svg' => 'experience',
                         ],
                         [
                             'slug' => 'start',
                             'text' => 'Began learning and working with web technologies in 2022',
-                            'image' => 'start',
+                            'svg' => 'start',
                         ],
 
                         [
                             'slug' => 'education',
                             'text' => 'Technical background in computer systems, continuously improving programming skills',
-                            'image' => 'education',
+                            'svg' => 'education',
                         ],
                     ],
 

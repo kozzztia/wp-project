@@ -4,9 +4,9 @@
     <div class="swiper-wrapper">
         <?php foreach ($slides as $slide): ?>
         <div class="single-slide swiper-slide" data-slug="<?= $slide['slug'] ?>">
-            <?php if(!empty($slide['image'])): ?>
+            <?php if(!empty($slide['svg'])): ?>
             <div class="slide-image">
-                <?php echo get_svg_code( $slide['image']); ?>
+                <?php echo get_svg_code( $slide['svg']); ?>
             </div>
             <?php endif; ?>
 
