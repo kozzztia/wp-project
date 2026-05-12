@@ -30,10 +30,6 @@ function get_project_field($fieldName, $default = null) {
         : $default;
 }
 
-
-
-
-
 function get_slide_count($index){
     switch ($index % 4) {
         case 1: return 'slide-2';
@@ -43,10 +39,6 @@ function get_slide_count($index){
     }
 }
 
-// пример использования
-echo get_svg_code('experience');
-
-
 function get_sprite($icon){
     return "/wp-content/themes/debian/assets/svg/sprite.svg" . "?v=" . get_version() . "#" . $icon ;
 }
@@ -55,7 +47,6 @@ function debian_setup() {
     add_theme_support('post-thumbnails');
 }
 add_action('after_setup_theme', 'debian_setup');
-
 
 // scripts
 function debian_scripts() {
