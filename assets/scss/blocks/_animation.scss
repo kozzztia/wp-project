@@ -1,0 +1,33 @@
+@use '../mixins' as *;
+
+.animation-wrapper {
+	position: relative;
+	border-bottom: 1px solid rgba(var(--color-white-rgb), .1);
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
+	@include min-height();
+
+	&:before {
+		position: absolute;
+		content: '';
+		background-image: var(--black-gradient);
+		inset: 0;
+	}
+	.animation {
+		display: flex;
+		flex-direction: row;
+		flex-wrap: wrap;
+		align-items: center;
+		justify-content: center;
+
+
+		&-preloader{
+			flex: 0 0 calc(300px - var(--primary-padding));
+			&.preloader{
+				width : 100%;
+				aspect-ratio: 1/1;
+			}
+		}
+	}
+}

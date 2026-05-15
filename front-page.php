@@ -201,17 +201,17 @@ function render_content()
             ],
         ]
     );
-//
-//    get_template_part('views/blocks/hero', null,
-//        [
-//            'fields' => [
-//                'style' => '',
-//                'class' => 'animate up',
-//                'id' => 'study',
-//                'image' => get_template_directory_uri() . '/assets/img/hero.webp',
-//            ],
-//        ]
-//    );
+
+    get_template_part('views/blocks/animation', null,
+        [
+            'fields' => [
+                'style' => '',
+                'class' => '',
+                'id' => 'animations',
+                'image' => get_template_directory_uri() . '/assets/img/hero.webp',
+            ],
+        ]
+    );
 
 
     get_template_part('views/blocks/hero', null,
