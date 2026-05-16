@@ -21,11 +21,10 @@
 		align-items: center;
 		justify-content: center;
 
-
 		&-preloader {
 			flex: 0 0 calc(25% - var(--primary-padding));
 			position: relative;
-			perspective: 800px;
+
 
 			&.preloader {
 				width: 100%;
@@ -38,22 +37,12 @@
 					transform: rotateX(45deg) rotateY(45deg);
 				}
 
-				// половина стороны куба = половина ширины блока
-				--cube-half: calc(50%);
-
 				.side {
 					position: absolute;
 					width: 100%;
 					height: 100%;
 					border: 2px solid #000;
 				}
-
-				.side-front  { transform: translateZ(var(--cube-half));background-color: red; display: block}
-				.side-back   { transform: rotateY(180deg) translateZ(var(--cube-half)); background-color: green; display: none}
-				.side-right  { transform: rotateY(90deg) translateZ(var(--cube-half)); background-color: orange; display: none}
-				.side-left   { transform: rotateY(-90deg) translateZ(var(--cube-half)); background-color: blue; display: none}
-				.side-top    { transform: rotateX(90deg) translateZ(var(--cube-half)); background-color: yellow; display: none}
-				.side-bottom { transform: rotateX(-90deg) translateZ(var(--cube-half)); background-color: pink; display: none}
 			}
 		}
 
