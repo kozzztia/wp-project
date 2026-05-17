@@ -13,7 +13,8 @@ $image = $fields['image'] ?? null;
             . '"';?>>
 
         <div class="customBlock animation">
-            <?php get_template_part('views/overall/preloader', null , ['fields' => ['class' => 'animation']]); ?>
+            <?php get_template_part('views/overall/spinner', null , ['fields' => ['class' => 'animation-cube']]); ?>
+            <?php get_template_part('views/overall/spinner', null , ['fields' => ['class' => 'animation-pyramid']]); ?>
 
         </div>
     </section>

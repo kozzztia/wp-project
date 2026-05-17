@@ -14,62 +14,138 @@
 		background-image: var(--black-gradient);
 		inset: 0;
 	}
+
 	.animation {
 		display: flex;
-		flex-direction: row;
-		flex-wrap: wrap;
-		align-items: flex-start;
+		align-items: center;
+		flex-direction: column;
 		justify-content: center;
-		gap : 20px;
+		gap: 50px;
 
-		&-preloader {
-			flex: 0 0 calc(25% - var(--primary-padding));
-			position: relative;
-
-
-			&.preloader {
-				width: 300px;
-				height: 300px;
-				position: relative;
-				transform-style: preserve-3d;
-				perspective: 8000px;
-				transform-origin: 50% 50%;
-				transition: transform 2s ease;
-
-				// базовое вращение
-				animation: spin 10s linear infinite;
-
-				&:hover {
-					animation-play-state: paused;
-				}
-
-				.side {
-					position: absolute;
-					width: 300px;
-					height: 300px;
-					border: 2px solid #000;
-					display: flex;
-					align-items: center;
-					justify-content: center;
-					opacity: .8;
-					color: black;
-
-					&-back   { background: red;    transform: translateZ(-150px) rotateY(180deg); }
-					&-front  { background: white;  transform: translateZ(150px); }
-					&-left   { background: green;  transform: rotateY(-90deg) translateZ(150px); }
-					&-right  { background: yellow; transform: rotateY(90deg) translateZ(150px); }
-					&-top    { background: orange; transform: rotateX(90deg) translateZ(150px); }
-					&-bottom { background: blue;   transform: rotateX(-90deg) translateZ(150px); }
-				}
-			}
-
-			// ключевые кадры вращения
-			@keyframes spin {
-				from { transform: rotateX(0) rotateY(0); }
-				to   { transform: rotateX(360deg) rotateY(360deg); }
-			}
-
+		.side{
+			position: absolute;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			width: 300px;
+			height: 300px;
+			opacity: .2;
+			border: 2px solid #000;
+			color: red;
 		}
 
+
+		&-cube {
+			position: relative;
+			flex: 0 0 auto;
+			width: 300px;
+			height: 300px;
+			transform-origin: 50% 50%;
+			animation: spin 12s linear infinite;
+			transform-style: preserve-3d;
+			perspective: 8000px;
+
+			&:hover {
+				animation-play-state: paused;
+			}
+
+			.side {
+
+				&-front {
+					transform: translateZ(150px);
+					background: white;
+				}
+
+				&-back {
+					transform: translateZ(-150px) rotateY(180deg);
+					background: red;
+				}
+
+				&-left {
+					transform: rotateY(-90deg) translateZ(150px);
+					background: green;
+				}
+
+				&-right {
+					transform: rotateY(90deg) translateZ(150px);
+					background: yellow;
+				}
+
+				&-top {
+					transform: rotateX(90deg) translateZ(150px);
+					background: orange;
+				}
+
+				&-bottom {
+					transform: rotateX(-90deg) translateZ(150px);
+					background: blue;
+				}
+			}
+		}
+
+		&-pyramid {
+			position: relative;
+			width: 300px;
+			height: 300px;
+			transform-style: preserve-3d;
+			perspective: 2000px;
+			animation: spin 10s linear infinite;
+
+			&:hover {
+				animation-play-state: paused;
+			}
+
+			.side {
+				position: absolute;
+				width: 300px;
+				height: 300px;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				color: black;
+
+				&-base {
+					background: blue;
+					transform: rotateX(90deg) translateZ(-86px);
+				}
+
+				&-front,
+				&-back,
+				&-left,
+				&-right {
+					background: white;
+					clip-path: polygon(50% 0, 0 100%, 100% 100%);
+				}
+
+				&-front {
+					background: white;
+					transform: rotateX(-30deg) translateZ(-85px);
+				}
+
+				&-back {
+					background: red;
+					transform: rotateX(30deg) translateZ(85px);
+				}
+
+				&-left {
+					background: green;
+					transform: rotateY(-90deg) rotateX(30deg) translateZ(85px);
+				}
+
+				&-right {
+					background: yellow;
+					transform: rotateY(90deg) rotateX(30deg) translateZ(85px);
+				}
+			}
+		}
+
+		@keyframes spin {
+			from {
+				transform: rotateX(0) rotateY(0);
+			}
+			to {
+				transform: rotateX(360deg) rotateY(360deg);
+			}
+		}
 	}
 }
