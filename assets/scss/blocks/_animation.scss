@@ -89,7 +89,7 @@
 			height: 300px;
 			transform-style: preserve-3d;
 			perspective: 2000px;
-			animation: spin 10s linear infinite;
+			animation: spin-2 10s linear infinite;
 
 			&:hover {
 				animation-play-state: paused;
@@ -145,6 +145,15 @@
 			}
 			to {
 				transform: rotateX(360deg) rotateY(360deg);
+			}
+		}
+
+		@keyframes spin-2 {
+			from {
+				transform: rotateY(0) rotateX(15deg);
+			}
+			to {
+				transform: rotateY(360deg) rotateX(15deg);
 			}
 		}
 	}
