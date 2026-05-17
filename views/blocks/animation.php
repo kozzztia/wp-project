@@ -14,13 +14,6 @@ $image = $fields['image'] ?? null;
 
         <div class="customBlock animation">
             <?php get_template_part('views/overall/preloader', null , ['fields' => ['class' => 'animation']]); ?>
-            <?php get_template_part('views/overall/preloader', null , ['fields' => ['class' => 'animation']]); ?>
-            <?php get_template_part('views/overall/preloader', null , ['fields' => ['class' => 'animation']]); ?>
-            <?php get_template_part('views/overall/preloader', null , ['fields' => ['class' => 'animation']]); ?>
-            <?php get_template_part('views/overall/preloader', null , ['fields' => ['class' => 'animation']]); ?>
-            <?php get_template_part('views/overall/preloader', null , ['fields' => ['class' => 'animation']]); ?>
-            <?php get_template_part('views/overall/preloader', null , ['fields' => ['class' => 'animation']]); ?>
-            <?php get_template_part('views/overall/preloader', null , ['fields' => ['class' => 'animation']]); ?>
 
         </div>
     </section>

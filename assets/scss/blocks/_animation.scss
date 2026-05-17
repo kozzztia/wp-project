@@ -18,8 +18,9 @@
 		display: flex;
 		flex-direction: row;
 		flex-wrap: wrap;
-		align-items: center;
+		align-items: flex-start;
 		justify-content: center;
+		gap : 20px;
 
 		&-preloader {
 			flex: 0 0 calc(25% - var(--primary-padding));
@@ -27,14 +28,21 @@
 
 
 			&.preloader {
-				width: 100%;
-				aspect-ratio: 1 / 1;
+				width: 300px;
+				height: 300px;
 				position: relative;
 				transform-style: preserve-3d;
+				perspective: 8000px;
+				transform-origin: 50% 50%;
 				transition: transform 2s ease;
 
+				// базовое вращение
+				animation: spin 10s linear infinite;
+
 				&:hover {
-					transform: rotateX(45deg) rotateY(45deg);
+					animation-play-state: paused; // при ховере можно остановить
+					// или наоборот ускорить:
+					// animation: spin 3s linear infinite;
 				}
 
 				.side {
@@ -42,8 +50,27 @@
 					width: 100%;
 					height: 100%;
 					border: 2px solid #000;
+					display: flex;
+					align-items: center;
+					justify-content: center;
+					opacity: .8;
+					color: black;
+
+					&-back   { background: red;    transform: translateZ(-150px) rotateY(180deg); }
+					&-front  { background: white;  transform: translateZ(150px); }
+					&-left   { background: green;  transform: rotateY(-90deg) translateZ(150px); }
+					&-right  { background: yellow; transform: rotateY(90deg) translateZ(150px); }
+					&-top    { background: orange; transform: rotateX(90deg) translateZ(150px); }
+					&-bottom { background: blue;   transform: rotateX(-90deg) translateZ(150px); }
 				}
 			}
+
+			// ключевые кадры вращения
+			@keyframes spin {
+				from { transform: rotateX(0) rotateY(0); }
+				to   { transform: rotateX(360deg) rotateY(360deg); }
+			}
+
 		}
 
 	}
