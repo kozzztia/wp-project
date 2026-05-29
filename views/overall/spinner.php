@@ -35,5 +35,11 @@ $title = $fields['title'] ?? null;
         <div class="side-y side">y</div>
         <div class="side-z side">z</div>
     <?php endif; ?>
+    <?php if ($class == 'animation-triangle'): ?>
+        <div class="side-base side">base</div>
+        <div class="side-front side">front</div>
+        <div class="side-left side">left</div>
+        <div class="side-right side">right</div>
+    <?php endif; ?>
 </div>
 <?php endif; ?>

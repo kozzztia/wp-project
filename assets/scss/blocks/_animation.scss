@@ -22,14 +22,14 @@
 		justify-content: center;
 		gap: 50px;
 
-		&-cube, &-pyramid, &-rhombus, &-circle {
+		&-cube, &-pyramid, &-rhombus, &-circle, &-triangle {
 			position: relative;
 			flex: 0 0 auto;
 			width: 300px;
 			height: 300px;
 			transform-origin: 50% 50%;
 			transform-style: preserve-3d;
-			perspective: 10000px;
+			perspective: 20000px;
 
 			&:hover {
 				animation-play-state: paused;
@@ -44,8 +44,7 @@
 			width: 300px;
 			height: 300px;
 			opacity: .2;
-			color: white;
-			border: 2px solid #FFF;
+			color: #fff;
 		}
 
 		&-cube {
@@ -86,6 +85,7 @@
 
 		&-pyramid {
 			animation: spin 9s linear infinite;
+			scale: 0.8;
 
 			.side {
 				&-base {
@@ -190,18 +190,49 @@
 				}
 
 				&-x{
-					transform: translateX(0) scale(1.2);
+					transform: translateX(0);
 					background-color: #007aff;
 				}
 
 				&-y{
-					transform: rotateX(90deg) scale(1.2);
+					transform: rotateX(90deg);
 					background-color: #45ff45;
 				}
 
 				&-z{
-					transform: rotateY(90deg) scale(1.2);
+					transform: rotateY(90deg);
 					background-color: #f63535;
+				}
+			}
+		}
+
+		&-triangle {
+			animation: spin 20s linear infinite;
+
+			.side {
+				--radius : 25deg;
+				&-front, &-left, &-right {
+					clip-path: polygon(0 0, 100% 0, 50% 100%);
+				}
+
+				&-base{
+					clip-path: polygon(0 0, 100% 0, 50% calc(100% - 40px));
+					background-color: #007aff;
+					transform: rotateX(-90deg) translateZ(-150px);
+				}
+
+				&-front{
+					background-color: #45ff45;
+					transform: rotateY(0) translateZ(110px) rotateX(-18deg);
+				}
+
+				&-left{
+					background-color: #f63535;
+					transform: translateX(30px) translateZ(40px) rotateY(-60deg)  rotateX(18deg);
+				}
+				&-right{
+					background-color: #FFF;
+					transform: translateX(-30px) translateZ(40px) rotateY(60deg) rotateX(18deg);
 				}
 			}
 		}
