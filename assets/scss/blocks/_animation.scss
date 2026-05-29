@@ -54,32 +54,32 @@
 			.side {
 				&-front {
 					transform: translateZ(150px);
-					background: white;
+					background-color: white;
 				}
 
 				&-back {
 					transform: translateZ(-150px) rotateY(180deg);
-					background: red;
+					background-color: red;
 				}
 
 				&-left {
 					transform: rotateY(-90deg) translateZ(150px);
-					background: green;
+					background-color: green;
 				}
 
 				&-right {
 					transform: rotateY(90deg) translateZ(150px);
-					background: yellow;
+					background-color: yellow;
 				}
 
 				&-top {
 					transform: rotateX(90deg) translateZ(150px);
-					background: orange;
+					background-color: orange;
 				}
 
 				&-bottom {
 					transform: rotateX(-90deg) translateZ(150px);
-					background: blue;
+					background-color: blue;
 				}
 			}
 		}
@@ -88,42 +88,37 @@
 			animation: spin 9s linear infinite;
 
 			.side {
-				display: flex;
-				align-items: center;
-				justify-content: center;
-				color: black;
-
 				&-base {
 					transform: rotateX(90deg) translateZ(-86px);
-					background: blue;
+					background-color: blue;
 				}
 
 				&-front,
 				&-back,
 				&-left,
 				&-right {
-					background: white;
+					background-color: white;
 					clip-path: polygon(50% 0, 0 100%, 100% 100%);
 				}
 
 				&-front {
 					transform: rotateX(-30deg) translateZ(-85px);
-					background: white;
+					background-color: white;
 				}
 
 				&-back {
 					transform: rotateX(30deg) translateZ(85px);
-					background: red;
+					background-color: red;
 				}
 
 				&-left {
 					transform: rotateY(-90deg) rotateX(30deg) translateZ(85px);
-					background: green;
+					background-color: green;
 				}
 
 				&-right {
 					transform: rotateY(90deg) rotateX(30deg) translateZ(85px);
-					background: yellow;
+					background-color: yellow;
 				}
 			}
 		}
@@ -139,22 +134,22 @@
 
 					&-left-front {
 						transform: rotateY(-45deg) rotateX(-30deg) translateZ(130px) translateY(74px);
-						background: red;
+						background-color: red;
 					}
 
 					&-left-back {
 						transform: rotateY(-135deg) rotateX(-30deg) translateZ(130px) translateY(74px);
-						background: orange;
+						background-color: orange;
 					}
 
 					&-right-front {
 						transform: rotateY(45deg) rotateX(-30deg) translateZ(130px) translateY(74px);
-						background: yellow;
+						background-color: yellow;
 					}
 
 					&-right-back {
 						transform: rotateY(135deg) rotateX(-30deg) translateZ(130px) translateY(74px);
-						background: green;
+						background-color: green;
 					}
 				}
 
@@ -165,29 +160,29 @@
 
 					&-left-front {
 						transform: rotateY(-45deg) rotateX(30deg) translateZ(130px) translateY(-74px);
-						background: blue;
+						background-color: blue;
 					}
 
 					&-left-back {
 						transform: rotateY(-135deg) rotateX(30deg) translateZ(130px) translateY(-74px);
-						background: purple;
+						background-color: purple;
 					}
 
 					&-right-front {
 						transform: rotateY(45deg) rotateX(30deg) translateZ(130px) translateY(-74px);
-						background: pink;
+						background-color: pink;
 					}
 
 					&-right-back {
 						transform: rotateY(135deg) rotateX(30deg) translateZ(130px) translateY(-74px);
-						background: cyan;
+						background-color: cyan;
 					}
 				}
 			}
 		}
 
 		&-circle {
-			animation: spin 15s linear infinite;
+			animation: spin 8s linear infinite;
 
 			.side {
 				&-x, &-y, &-z {
@@ -195,17 +190,17 @@
 				}
 
 				&-x{
-					transform: translateX(0);
+					transform: translateX(0) scale(1.2);
 					background-color: #007aff;
 				}
 
 				&-y{
-					transform: rotateX(90deg);
+					transform: rotateX(90deg) scale(1.2);
 					background-color: #45ff45;
 				}
 
 				&-z{
-					transform: rotateY(90deg);
+					transform: rotateY(90deg) scale(1.2);
 					background-color: #f63535;
 				}
 			}
@@ -213,10 +208,10 @@
 
 		@keyframes spin {
 			from {
-				transform: rotateX(0) rotateY(0);
+				transform: rotateX(0) rotateY(0) rotateZ(0);
 			}
 			to {
-				transform: rotateX(360deg) rotateY(360deg);
+				transform: rotateX(360deg) rotateY(360deg) rotateZ(360deg);
 			}
 		}
 	}
