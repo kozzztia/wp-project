@@ -30,5 +30,10 @@ $title = $fields['title'] ?? null;
         <div class="side-bottom-right-back side">bottom right back</div>
         <div class="side-bottom-right-front side">bottom right back</div>
     <?php endif; ?>
+    <?php if ($class == 'animation-circle'): ?>
+        <div class="side-x side">x</div>
+        <div class="side-y side">y</div>
+        <div class="side-z side">z</div>
+    <?php endif; ?>
 </div>
 <?php endif; ?>

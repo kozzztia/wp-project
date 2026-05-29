@@ -16,6 +16,7 @@ $image = $fields['image'] ?? null;
             <?php get_template_part('views/overall/spinner', null , ['fields' => ['class' => 'animation-cube']]); ?>
             <?php get_template_part('views/overall/spinner', null , ['fields' => ['class' => 'animation-pyramid']]); ?>
             <?php get_template_part('views/overall/spinner', null , ['fields' => ['class' => 'animation-rhombus']]); ?>
+            <?php get_template_part('views/overall/spinner', null , ['fields' => ['class' => 'animation-circle']]); ?>
 
         </div>
     </section>

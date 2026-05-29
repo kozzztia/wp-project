@@ -22,7 +22,7 @@
 		justify-content: center;
 		gap: 50px;
 
-		&-cube, &-pyramid, &-rhombus {
+		&-cube, &-pyramid, &-rhombus, &-circle {
 			position: relative;
 			flex: 0 0 auto;
 			width: 300px;
@@ -44,8 +44,8 @@
 			width: 300px;
 			height: 300px;
 			opacity: .2;
-			color: red;
-			border: 2px solid #000;
+			color: white;
+			border: 2px solid #FFF;
 		}
 
 		&-cube {
@@ -182,6 +182,31 @@
 						transform: rotateY(135deg) rotateX(30deg) translateZ(130px) translateY(-74px);
 						background: cyan;
 					}
+				}
+			}
+		}
+
+		&-circle {
+			animation: spin 15s linear infinite;
+
+			.side {
+				&-x, &-y, &-z {
+					border-radius: 50%;
+				}
+
+				&-x{
+					transform: translateX(0);
+					background-color: #007aff;
+				}
+
+				&-y{
+					transform: rotateX(90deg);
+					background-color: #45ff45;
+				}
+
+				&-z{
+					transform: rotateY(90deg);
+					background-color: #f63535;
 				}
 			}
 		}
