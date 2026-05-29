@@ -34,7 +34,6 @@
 			color: red;
 		}
 
-
 		&-cube {
 			position: relative;
 			flex: 0 0 auto;
@@ -96,9 +95,6 @@
 			}
 
 			.side {
-				position: absolute;
-				width: 300px;
-				height: 300px;
 				display: flex;
 				align-items: center;
 				justify-content: center;
@@ -152,17 +148,11 @@
 			}
 
 			.side {
-				position: absolute;
-				width: 300px;
-				height: 300px;
-				opacity: .8;
-
-
 				&-top{
 					&-left-front, &-left-back, &-right-front , &-right-back {
 						clip-path: polygon(0 0, 100% 0, 50% 100%);
-						--rhombus-z: 260px;
-						--rhombus-y: 300px;
+						--rhombus-z: 130px;
+						--rhombus-y: 74px;
 						--rhombus-x: 0;
 					}
 
@@ -188,10 +178,9 @@
 				&-bottom{
 					&-left-front, &-left-back, &-right-front , &-right-back {
 						clip-path: polygon(50% 0, 0 100%, 100% 100%);
-						--rhombus-z: 260px;
-						--rhombus-y: -300px;
+						--rhombus-z: 130px;
+						--rhombus-y: -74px;
 						--rhombus-x: 0;
-
 					}
 
 					&-left-front {
