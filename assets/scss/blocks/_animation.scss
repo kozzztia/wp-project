@@ -139,6 +139,81 @@
 			}
 		}
 
+		&-rhombus {
+			position: relative;
+			width: 300px;
+			height: 300px;
+			transform-style: preserve-3d;
+			perspective: 2000px;
+			animation: spin-3 10s linear infinite;
+
+			&:hover {
+				animation-play-state: paused;
+			}
+
+			.side {
+				position: absolute;
+				width: 300px;
+				height: 300px;
+				opacity: .8;
+
+
+				&-top{
+					&-left-front, &-left-back, &-right-front , &-right-back {
+						clip-path: polygon(0 0, 100% 0, 50% 100%);
+						--rhombus-z: 260px;
+						--rhombus-y: 300px;
+						--rhombus-x: 0;
+					}
+
+					&-left-front {
+						background: red;
+						transform: rotateY(-45deg) rotateX(-30deg) translateZ(var(--rhombus-z)) translateY(var(--rhombus-y))  translateX(var(--rhombus-x));
+
+					}
+					&-left-back {
+						background: orange;
+						transform: rotateY(-135deg) rotateX(-30deg) translateZ(var(--rhombus-z)) translateY(var(--rhombus-y)) translateX(var(--rhombus-x));
+					}
+					&-right-front {
+						background: yellow;
+						transform: rotateY(45deg) rotateX(-30deg) translateZ(var(--rhombus-z)) translateY(var(--rhombus-y)) translateX(var(--rhombus-x));
+					}
+					&-right-back {
+						background: green;
+						transform: rotateY(135deg) rotateX(-30deg) translateZ(var(--rhombus-z)) translateY(var(--rhombus-y)) translateX(var(--rhombus-x));
+					}
+				}
+
+				&-bottom{
+					&-left-front, &-left-back, &-right-front , &-right-back {
+						clip-path: polygon(50% 0, 0 100%, 100% 100%);
+						--rhombus-z: 260px;
+						--rhombus-y: -300px;
+						--rhombus-x: 0;
+
+					}
+
+					&-left-front {
+						background: blue;
+						transform: rotateY(-45deg) rotateX(30deg) translateZ(var(--rhombus-z)) translateY(var(--rhombus-y)) translateX(var(--rhombus-x));
+					}
+					&-left-back {
+						background: purple;
+						transform: rotateY(-135deg) rotateX(30deg) translateZ(var(--rhombus-z)) translateY(var(--rhombus-y)) translateX(var(--rhombus-x));
+					}
+					&-right-front {
+						background: pink;
+						transform: rotateY(45deg) rotateX(30deg) translateZ(var(--rhombus-z)) translateY(var(--rhombus-y)) translateX(var(--rhombus-x));
+					}
+					&-right-back {
+						background: cyan;
+						transform: rotateY(135deg) rotateX(30deg) translateZ(var(--rhombus-z)) translateY(var(--rhombus-y)) translateX(var(--rhombus-x));
+					}
+				}
+			}
+		}
+
 		@keyframes spin {
 			from {
 				transform: rotateX(0) rotateY(0);
@@ -156,5 +231,11 @@
 				transform: rotateY(360deg) rotateX(15deg);
 			}
 		}
+
+		@keyframes spin-3 {
+			from { transform: rotateX(0) rotateY(0); }
+			to   { transform: rotateX(360deg) rotateY(360deg); }
+		}
+
 	}
 }

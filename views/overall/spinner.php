@@ -20,5 +20,15 @@ $title = $fields['title'] ?? null;
         <div class="side-left side">left</div>
         <div class="side-right side">right</div>
     <?php endif; ?>
+    <?php if ($class == 'animation-rhombus'): ?>
+        <div class="side-top-left-back side">top left back</div>
+        <div class="side-top-left-front side">top left front</div>
+        <div class="side-top-right-back side">top right back</div>
+        <div class="side-top-right-front side">top right back</div>
+        <div class="side-bottom-left-back side">bottom left back</div>
+        <div class="side-bottom-left-front side">bottom left front</div>
+        <div class="side-bottom-right-back side">bottom right back</div>
+        <div class="side-bottom-right-front side">bottom right back</div>
+    <?php endif; ?>
 </div>
 <?php endif; ?>
